@@ -1,0 +1,480 @@
+@charset "UTF-8";
+
+/* 基本タグのフォントサイズを指定（12px -> 120% or 1.2em ） */
+h1,h2,h3,h4,h5,h6,input,button,textarea,select,p,blockquote,th,td,pre,address,li,dt,dd {
+	font-size: 140%;
+}
+	
+h1 {
+	color: #999999;
+	font-family: "ＭＳ ゴシック";
+	font-size: 100%;
+	line-height: 2em;
+	margin: 0;
+	padding: 7px 0 5px 0;
+	text-align: right;
+} /* Header内で設定 */
+h2 {}
+h3 {}
+h4 {}
+
+a { color: #DA503D; }
+a:hover,
+a:active { color: #f96; text-decoration: none; }
+a:visited {
+}
+
+ul {
+}
+li {
+}
+
+dl {
+}
+dt {
+}
+dd {
+}
+
+table {
+	border:#CCC;
+}
+
+th,
+td {
+	border: 1px solid #E3E3E3;
+}
+th {
+	color: #DA503D;
+	background: #fdf5f6;
+	
+}
+td {
+}
+
+p { margin: 0 0 1em; line-height: 2em; }
+
+.section { padding: .5em 1em 1em; }
+.section .section { padding: .5em .5em 1em; }
+
+.image_l { float: left; margin: 0 16px 8px 0; }
+.image_r { float: right; margin: 0 0 8px 16px; }
+
+.case {
+	margin: 10px 20px;
+	background: url(../images/arrow_h.jpg) center center no-repeat;
+}
+
+ul.totop,
+ul.totop li {
+	clear: both;
+	padding-bottom: 20px;
+	float: right;
+	list-style: none;
+}
+
+
+/* add
+------------------------------------------------------------------------*/
+
+.mb05 { margin-bottom : 5px; }
+.mb10 { margin-bottom : 10px; }
+.mb15 { margin-bottom : 15px; }
+.mb20 { margin-bottom : 20px; }
+
+
+/*==========================================================================*/
+/*                            Container                                     */
+/*==========================================================================*/
+
+html {
+	background: none;
+}
+
+body#inside {
+    background: url(../images/header_bg.jpg) no-repeat center 0;
+	color: #333;
+	text-align: center;
+}
+body#index {
+    background: url(../images/index_header_bg3.jpg) no-repeat center 0;
+	color: #333;
+	text-align: center;
+}
+#container {
+    background: url(../images/footer_bg.jpg) no-repeat center bottom;
+}
+#wrapper {
+	width: 950px;
+	margin: 0 auto;
+    background: url(../images/header_bg.jpg) no-repeat center 0;
+}
+#wrapperindex  {
+	width: 950px;
+	margin: 0 auto;
+}
+#main {
+	width: 950px;
+	margin: 0 auto;
+	text-align: left;
+	background: url(../images/main_bg.jpg) 0 0 repeat-y;
+	clear:both;
+}
+#content {
+	width: 690px;
+	text-align: left;
+	float: right;
+}
+#index #content {
+	width: 950px;
+	text-align: left;
+	float: right;
+}
+
+#content .wasaikyoushitsu p,#content .kitsuke p,#content .wayuukai p,#content .kiarai p {
+	line-height: 1.6em;
+	padding-bottom: 0;
+	margin-bottom: 10px;
+}
+
+#content .wasaikyoushitsu,#content .kitsuke {
+	float: left;
+	width: 455px;
+	margin: 0 40px 10px 0;
+}
+.image_r {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.newstitle_01 {
+	font-size: 18px;
+	color: #DA503D;
+	font-weight: bold;
+}
+.day {
+	color: #999;
+	line-height: 5px;
+}
+
+.wasaikyoushitsu .newstitle_01,.wasaikyoushitsu .newstitle_01 a {
+	color: #DA503D;
+}
+.wayuukai .newstitle_01,.wayuukai .newstitle_01 a {
+	color: #be8d1c;
+}
+.kitsuke .newstitle_01,.kitsuke .newstitle_01 a {
+	color: #76a32d;
+}
+.kiarai .newstitle_01,.kiarai .newstitle_01 a {
+	color: #ba79b1;
+}
+
+.message {
+	float: left;
+	width: 690px;
+	background: url(../images/indeximg_06.jpg) 0 0 no-repeat;
+}
+.w350 {
+	width: 350px;
+	margin-left: 40px;
+}
+.w610 {
+	width: 610px;
+	margin-left: 40px;
+}
+
+.bnr {
+	float: right;
+}
+#inner_store {
+	height: 650px;
+	display: inline;
+}
+.store {
+	height: 200px;
+}
+.store p {
+	float: left;
+}
+
+
+/*==========================================================================*/
+/*                               Header                                     */
+/*==========================================================================*/
+
+#header {
+	width: 950px;
+	margin: 0 auto;
+	height: 375px;
+	text-align: left;
+}
+
+#index #header {
+    height: 565px;
+}
+#header01 {
+	height: 85px;
+}
+
+#header .logo {
+    float: left;
+    margin: 0;
+}
+#header .tel {
+	float: right;
+	margin: 0;
+	padding: 12px 0 0 0;
+}
+#header .tel2 {
+	float: right;
+	margin: 0;
+	padding: 15px 15px 0 0;
+}
+
+#header_nav {
+    height: 35px;
+    width: 950px;
+}
+#header_nav li {
+    float: left;
+    font-size: 1%;
+    line-height: 1%;
+}
+
+#header h2 {
+	margin: 43px 0 0 150px;
+	padding: 0;
+}
+#index #header h2 {
+	margin: 30px 0 0 660px;
+	padding: 0;
+}
+/*==========================================================================*/
+/*                              Footer                                      */
+/*==========================================================================*/
+
+#footer {
+	clear: both;
+	text-align: center;
+	height: 220px;
+	width: 950px;
+	 background:url(../images/footer_bg.jpg) no-repeat center 0;
+}
+#footer02 {
+	width: 950px;
+	height: 200px;
+	text-align: left;
+	background: url(../images/footer_bg.jpg) no-repeat scroll center 0 transparent;
+}
+#footer .sitemap {
+	width:370px;
+	float: left;
+	text-align: left;
+	padding: 60px 0 0 25px;
+}
+#footer .sitemap ul {
+	float: left;
+	text-align: left;
+	font-size: 80%;
+	line-height: 20px;
+}
+#footer .sitemap ul li a {
+    color: #3c3b39;
+    padding: 0 0 0 5px;
+    text-decoration: underline;
+}
+#footer .sitemap ul li a:hover {
+    color: #DA503D;
+}
+#footer .sitemap ul li a:active {
+    color: #DA503D;
+}
+#footer .sitemap ul li a:visited {
+    color: #DA503D;
+}
+#footer address {
+	width: 950px;
+	text-align: center;
+}
+.inline {
+	display: inline;
+}
+.w275 {
+	width: 275px;
+	margin:0 30px 0 0;
+	padding-top: 60px;
+}
+.alpha {
+	float: left;
+	text-align: left;
+}
+
+.copy {
+	width: 950px;
+	text-align: center;
+	height: 60px;
+}
+/*==========================================================================*/
+/*                             Contents                                     */
+/*==========================================================================*/
+
+/* 店舗紹介
+------------------------------------------------------------------------*/
+.shop {
+	background: url(../images/shop_under.jpg) center bottom no-repeat;
+	padding-bottom:20px;
+}
+
+.shop h4 {
+	font-size:24px;
+	background: url(../images/h4_back.jpg) left center no-repeat;
+	height:40px;
+	padding:20px 0 0 45px;
+
+}
+
+.fL {
+	margin:0 0 0 10px;
+	float:left;
+}
+
+.fR table {
+	margin: 0 15px 0 250px;
+	width:420px;
+}
+
+.fR th {
+	width:60px;
+	border-left:none;
+	border-right:none;
+	color:#000000;
+}
+
+.fR td {
+	border-left:none;
+	border-right:none;
+	width:350px;
+}
+
+.bN th,
+.bN td{
+	background-color:#f9f9f9;
+}
+
+.bM th,
+.bM td{
+	background-color:#ffffff;
+}
+
+
+/* サービス内容
+------------------------------------------------------------------------*/
+
+h4.service {
+	background: url(../images/h4_back_02.jpg);
+	height: 25px;
+	padding: 12px 0 0 15px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+table.servicetable {
+	margin-bottom: 20px;
+}
+
+table.servicetable th {
+	text-align: left;
+	width: 25%;
+}
+table.servicetable td {
+	text-align: left;
+	width: 25%;
+}
+
+h5.serviceh5 {
+	color: #DA503D;
+	font-weight: bold;
+	margin: 20px 0 10px 0;
+}
+ol.serviceol li img {
+	margin-right: 5px;
+}
+
+table.servicetable02 th {
+	text-align: center;
+	width: 25%;
+}
+
+
+/* お問い合わせ
+------------------------------------------------------------------------*/
+
+.originalsubmit {
+	text-align: center;
+	margin: 20px 0 0 265px;
+}
+
+
+
+/*==========================================================================*/
+/*                            navigation                                    */
+/*==========================================================================*/
+
+#navi {
+	float: left;
+	width: 230px;
+	text-align: center;
+}
+
+#navi dl,
+#navi ul {
+	margin: 0 0 20px;
+	text-align: left;
+}
+
+#navi dl dt,
+#navi dl dd,
+#navi ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 35px;
+}
+#navi ul li.lititle {
+	height: 40px;
+}
+
+#navi dl dt { text-indent: -9999em; }
+
+#navi #navi_banner {
+	margin: 20px 0 0;
+}
+#navi #navi_banner li {
+	margin-bottom: 10px;
+}
+
+
+
+.fl {float: left;}
+.fr {float: right;}
+
+
+.mt2 {margin-top: 2px;}
+.mt10 {margin-top: 10px;}
+.mt15 {margin-top: 15px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mb10 {margin-bottom: 10px;}
+.mb20 {margin-bottom: 20px;}
+.mb30 {margin-bottom: 30px;}
+.mb40 {margin-bottom: 40px;}
+.mr10 {margin-right: 10px;}
+.mr15 {margin-right: 15px;}
+.mr20 {margin-right: 20px;}
+.ml10 {margin-left: 10px;}
+.ml20 {margin-left: 20px;}
+.ml30 {margin-left: 30px;}
+.ml40 {margin-left: 40px;}
+.pt60 {padding-top: 60px;}
