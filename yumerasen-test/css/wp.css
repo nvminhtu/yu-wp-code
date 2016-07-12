@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/*==========================================================================*/
+/*                            アーカイブページ                                   */
+/*==========================================================================*/
+
+.h3-midashi {
+	background: url(../images/h3_back.jpg) center center no-repeat;
+	height:80px;
+	width:690px;
+}
+
+.h3-midashi h3{
+	color: #ffffff;
+	font-size:20px;
+	padding:32px 0 0 20px;
+}
+
+.single-article {
+	height:130px;
+	padding: 15px 0 15px 5px;
+	border-top: solid 1px #ddd;
+}
+
+.attachment-large_thumbnail {
+	background-color: #fff;
+	padding: 4px;
+	border: solid 1px #ddd;
+	float:left;
+}
+
+.entry-title {
+	font-size:20px;
+}
+
+.entry-header {
+	margin-left: 140px;
+}
+
+
+/*==========================================================================*/
+/*                            投稿ページ                                      */
+/*==========================================================================*/
+.midashi01 {
+	font-size:26px;
+    border-left:7px solid #ccc;  
+    border-bottom:1px solid #ccc;  
+    padding:.6em .8em;
+}
+
+.attachment-tate-long{
+	float:right;
+	padding-left:20px;
+}
+
+.attachment-yoko-long{
+	float:right;
+	padding-left:20px;
+}
+
+#single-table th {
+	width:200px;
+	background-color:#FAF0E6;
+}
+#single-table td {
+	width:490px;
+}
+
+.adjacent_post_links {
+	margin: 50px 0 0 0;
+}
+
+.adjacent_post_links ul {
+	margin: 0;
+}
+
+.adjacent_post_links ul:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.adjacent_post_links li {
+	max-width: 325px;
+	height: 50px;
+}
+
+.adjacent_post_links li a {
+	display: block;
+	vertical-align: middle;
+}
+
+.adjacent_post_links li.previous {
+	float: left;
+}
+
+.adjacent_post_links li.previous a {
+    background: url( ../images/bg_previous_link.png) no-repeat left center;
+	padding-left: 20px;
+}
+
+.adjacent_post_links li.next {
+	float: right;
+}
+
+.adjacent_post_links li.next a {
+    background: url( ../images/bg_next_link.png) no-repeat right center;
+	padding-right: 20px;
+}
+
+
+#back_to_top {
+	margin-top: 50px;
+	text-align: right;
+}
+
+#back_to_top a {
+	position: relative;
+	right: -9px;
+}
+
+.otherpost-list {
+	margin:20px 5px; 0 0;
+	width:218px;
+	float:left;
+	border-right: 1px solid #E3E3E3;
+	height:150px;
+}
+
+#other-post h4 {
+	background-color:#333333;
+	color:#CCCCCC;
+	line-height: 2.5em;
+	padding:0 0 0 10px;
+}
+
+#other-post h5 {
+	background: url(../images/otherpost-bg.jpg) no-repeat;	
+	line-height: 2.5em;
+	padding:0 0 0 30px;
+	font-family: "ＭＳ ゴシック";
+}
+
+#other-post ol {
+	margin: 5px 0 0 20px;
+}
+
+#other-post li {
+	line-height:2em;
+	list-style-type: square;
+}
+
+#other-post a {
+	color:#333333;
+	font-size:11px;
+}
+
+
+ul.social_buttons {
+	margin: 10px 0 0 0;
+}
+
+ul.social_buttons:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;}
+
+.social_buttons li {
+	float: left;
+	list-style: none;
+	padding-right: 10px;
+}
+
+.gallery01 { border:1px solid #bb881b;
+	padding:1px 1px 5px 1px; 
+	background:#f1eadc; 
+	text-align:center; 
+	display:block; 
+	width: 680px;
+	height: 600px; 
+	overflow:hidden; }
+.panel { border-bottom:1px solid #bb881b; }
+
+/* ================================================================================
+	#page-nav
+================================================================================ */
+.page-nav {
+	text-align: center;
+}
+.page-nav li {
+	display: inline;
+	list-style: none outside none;
+}
+.page-nav li a {
+	border: 1px solid rgb(230,230,230);
+	color: rgb(102,102,102);
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+.page-nav li a:hover {
+	border: 1px solid rgb(230,230,230);
+}
+.page-nav li a:active {
+	box-shadow: 0 0 3px rgba(0,0,0,0.2) inset;
+	top:1px;
+}
+
+.page-nav li.current span {
+	border: 1px solid rgb(186,166,132);
+	color: rgb(121,81,15);
+	font-weight: bold;
+	border-radius: 3px;
+}
+.page-nav li.first span,
+.page-nav li.previous span,
+.page-nav li.next span,
+.page-nav li.last span {
+	background: rgb(248,248,248);
+	border: 1px solid rgb(230,230,230);
+	color: rgb(180,180,180);
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+.page-nav li.page_nums span {
+	background: rgb(102,102,102);
+	border: 1px solid rgb(51,51,51);
+	color: rgb(255,255,255);
+}
+.page-nav li a,
+.page-nav li.current span,
+.page-nav li.first span,
+.page-nav li.previous span,
+.page-nav li.next span,
+.page-nav li.last span,
+.page-nav li.page_nums span {
+	padding: 0.25em 0.8em;
+	display: inline-block;
+	position:relative;
+}
+
+.pages-link {
+	text-align: center;
+}
+.pages-link a span {
+	border: 1px solid rgb(230,230,230);
+	color: rgb(102,102,102);
+	text-decoration: none;
+	font-weight: normal;
+}
+.pages-link span {
+	border: 1px solid rgb(186,166,132);
+	color: rgb(121,81,15);
+	font-weight: bold;
+	border-radius: 3px;
+	padding: 0.25em 0.8em;
+	display: inline-block;
+	position:relative;
+}
+.pages-link a:hover span {
+	border: 1px solid rgb(230,230,230);
+}
+.pages-link a:active span {
+	box-shadow: 0 0 3px rgba(0,0,0,0.2) inset;
+	top:1px;
+}
+
+/* ================================================================================
+					左ナビ
+================================================================================ */
+
+#sidebar {
+	float: left;
+	width: 230px;
+}
+
+#sidebar .lititle {
+	height: 40px;
+	background: url(../images/navi_title_back.jpg) center center no-repeat;
+	margin: 0 0 10px 0;
+}
+
+#sidebar .lititle a {
+	text-decoration:none;
+}
+
+#sidebar h3 {
+	color:#fff;
+	font-size:20px;
+	padding:12px 0 0 20px;
+}
+
+#sidebar ul li {
+	margin: 0 0 10px 0;
+	height:60px;
+}
+
+
+#sidebar .eachmenu {
+	width:165px;
+	float:left;
+	margin:0 5px 0 0;
+}
+
+#sidebar .eachmenu  h4{
+	font-size:15px;
+	padding:5px 0 5px 0;
+	line-height:20px;
+}
+
+#sidebar .entry-date {
+	color:#DCDCDC;
+	font-size:12px;
+}
+
+#sidebar .attachment-50x50  {
+	background-color: #fff;
+	padding: 2px;
+	border: solid 1px #ddd;
+}
+
+#sidebar .view p {
+	text-align:right;
+}
+
+#sidebar .view a {
+	color:#333333;
+}
