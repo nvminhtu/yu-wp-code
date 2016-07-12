@@ -58,7 +58,7 @@ function the_short_excerpt() {
 }
 
 function short_excerpt_length() {
-  return 30; 
+  return 30;
 }
 
 // 58文字表示抜粋表示テンプレートタグの定義
@@ -77,8 +77,8 @@ function get_pickup_excerpt($excerpt) {
     $excerpt_len = mb_strlen($excerpt);
     if ($excerpt_len > 58) {
       $excerpt = mb_substr($excerpt, 0, 58) . ' ...';
-    }    
-  }    
+    }
+  }
   return $excerpt;
 }
 
@@ -108,3 +108,9 @@ function get_ogp_excerpted_content($content) {
   $content = esc_attr($content) . ' ...';
   return $content;
 }
+
+// include functions to main theme
+function include_com() {
+    locate_template( array( 'inc/custom-post-types.php' ), true, true );
+}
+add_action( 'after_setup_theme', 'include_com' );
