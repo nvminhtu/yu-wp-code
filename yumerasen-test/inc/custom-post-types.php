@@ -29,7 +29,6 @@ function prefix_register_post_type(){
 			'menu_position' => 5,
 			'supports'      => array(
 				'title',
-				'editor',
 				'thumbnail',
 				'excerpt',
 				'custom-fields',

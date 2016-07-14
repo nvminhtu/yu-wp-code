@@ -114,3 +114,23 @@ function include_com() {
     locate_template( array( 'inc/custom-post-types.php' ), true, true );
 }
 add_action( 'after_setup_theme', 'include_com' );
+
+function add_theme_scripts() {
+  if(is_post_type('shop')) {
+    wp_enqueue_style( 'owl.carousel', get_template_directory_uri() . '/css/owl.carousel.css', '1.1', 'all');
+    wp_enqueue_style( 'lightbox', get_template_directory_uri() . '/css/lightbox.css', '1.1', 'all');
+    wp_enqueue_style( 'shop', get_template_directory_uri() . '/css/shop.css', '1.1', 'all');
+
+    wp_enqueue_script( 'jquery_add', get_template_directory_uri() . '/js/jquery_add.js', array ( 'jquery' ), 1.1, true);
+    wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/js/owl.carousel.js', array ( 'jquery' ), 1.1, true);
+    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js', array ( 'jquery' ), 1.1, true);
+    wp_enqueue_script( 'shop', get_template_directory_uri() . '/js/shop.js', array ( 'jquery' ), 1.1, true);
+  }
+}
+add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
+function is_post_type($type){
+  global $wp_query;
+  if($type == get_post_type($wp_query->post->ID)) return true;
+  return false;
+}
