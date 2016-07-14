@@ -23,7 +23,7 @@
 <script src="http://www.google.com/jsapi"></script>
 <script>google.load("jquery", location.search.replace(/\?/, '') || "1.4.2");</script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.bgSwitcher.js"></script>
-<?php elseif(is_single()) :
+<?php elseif(is_single()&&!is_post_type('shop')) :
 get_template_part('header_ogp'); ?>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/galleryview/jquery.galleryview-1.1.js"></script>

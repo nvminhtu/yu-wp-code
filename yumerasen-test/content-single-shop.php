@@ -43,42 +43,32 @@
    <div class="box_shop01 clearfix">
      <h4 class="service">店舗風景</h4>
      <div id="slide_img_shop" class=" clearfix">
-       <div class="box_img_shop clearfix">
-         <p class="shop_img01"><a href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/images/concept.jpg" data-lightbox="shop_detail">
-         <span class="img_title">外観</span>
-         <img src="<?php bloginfo('template_url'); ?>/images/img_shop01.jpg" alt="" /></a></p>
-         <p class="shop_cm_img01">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-       </div>
-       <div class="box_img_shop clearfix">
-         <p class="shop_img01"><a href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/images/concept.jpg" data-lightbox="shop_detail">
-           <span class="img_title">店内風景</span>
-         <img src="<?php bloginfo('template_url'); ?>/images/img_shop01.jpg" alt="" /></a></p>
-         <p class="shop_cm_img01">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-       </div>
-       <div class="box_img_shop clearfix">
-         <p class="shop_img01"><a href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/images/concept.jpg" data-lightbox="shop_detail">
-           <span class="img_title">おすすめ商品</span>
-         <img src="<?php bloginfo('template_url'); ?>/images/img_shop01.jpg" alt="" /></a></p>
-         <p class="shop_cm_img01">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-       </div>
-       <div class="box_img_shop clearfix">
-         <p class="shop_img01"><a href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/images/concept.jpg" data-lightbox="shop_detail">
-         <span class="img_title">外観</span>
-         <img src="<?php bloginfo('template_url'); ?>/images/img_shop01.jpg" alt="" /></a></p>
-         <p class="shop_cm_img01">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-       </div>
-       <div class="box_img_shop clearfix">
-         <p class="shop_img01"><a href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/images/concept.jpg" data-lightbox="shop_detail">
-           <span class="img_title">店内風景</span>
-         <img src="<?php bloginfo('template_url'); ?>/images/img_shop01.jpg" alt="" /></a></p>
-         <p class="shop_cm_img01">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-       </div>
-       <div class="box_img_shop clearfix">
-         <p class="shop_img01"><a href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/images/concept.jpg" data-lightbox="shop_detail">
-           <span class="img_title">おすすめ商品</span>
-         <img src="<?php bloginfo('template_url'); ?>/images/img_shop01.jpg" alt="" /></a></p>
-         <p class="shop_cm_img01">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-       </div>
+       <?php
+          // check if the repeater field has rows of data
+          if( have_rows('shop_picture') ):
+           	// loop through the rows of data
+            while ( have_rows('shop_picture') ) : the_row();
+              // display a sub field value
+              ?>
+              <div class="box_img_shop clearfix">
+                <?php
+                  $picID = get_sub_field('picture_thumb');
+                  $picS = wp_get_attachment_image_src($picID, 'pic_thumbnail');
+                  $picL = wp_get_attachment_image_src($picID, 'full');
+                  $smallURL = $picS[0];
+                  $largeURL = $picL[0];
+                ?>
+                <p class="shop_img01"><a href="<?php echo $smallURL; ?>" data-lightbox="shop_detail">
+                <span class="img_title"><?php the_sub_field('picture_title'); ?></span>
+                <img src="<?php echo $smallURL; ?>" alt="" width="<?php echo $picS[1]; ?>" height="<?php echo $picS[2]; ?>" /></a></p>
+                <p class="shop_cm_img01"><?php the_sub_field('picture_comment'); ?></p>
+              </div>
+              <?php
+            endwhile;
+          else :
+
+          endif;
+          ?>
      </div>
    </div>
    <div class="box_shop01 clearfix">

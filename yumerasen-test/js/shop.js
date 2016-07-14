@@ -6,6 +6,8 @@ $(document).ready(function(){
 		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplaySpeed: 600,
+    pagination: false,
+    paginationNumbers: false,
 		responsive:{
 			0:{
 				items:1,

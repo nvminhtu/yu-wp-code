@@ -11,6 +11,7 @@ set_post_thumbnail_size(90, 90 ,true);
 // サイドバー用画像サイズ設定
 add_image_size('small_thumbnail', 60, 60, true);
 
+add_image_size('pic_thumbnail', 198, 150, true);
 //トップ用画像サイズ設定
 add_image_size('top_thumbnail', 140, 140, true);
 
