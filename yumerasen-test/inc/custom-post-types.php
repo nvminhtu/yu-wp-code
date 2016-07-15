@@ -39,7 +39,45 @@ function prefix_register_post_type(){
         'revisions',
         'page-attributes'
 			),
-			'has_archive'   => true,
+			'has_archive'   => 'true',
+			'rewrite' => false
+		)
+	);
+
+  register_post_type(
+		'store',
+		array(
+			'labels'        => array(
+				'name'               => __('Store', 'text_domain'),
+				'singular_name'      => __('Store', 'text_domain'),
+				'menu_name'          => __('Store', 'text_domain'),
+				'name_admin_bar'     => __('Store Item', 'text_domain'),
+				'all_items'          => __('All Items', 'text_domain'),
+				'add_new'            => _x('Add New', 'store', 'text_domain'),
+				'add_new_item'       => __('Add New Item', 'text_domain'),
+				'edit_item'          => __('Edit Item', 'text_domain'),
+				'new_item'           => __('New Item', 'text_domain'),
+				'view_item'          => __('View Item', 'text_domain'),
+				'search_items'       => __('Search Items', 'text_domain'),
+				'not_found'          => __('No items found.', 'text_domain'),
+				'not_found_in_trash' => __('No items found in Trash.', 'text_domain'),
+				'parent_item_colon'  => __('Parent Items:', 'text_domain'),
+			),
+			'public'        => true,
+			'menu_position' => 5,
+			'supports'      => array(
+				'title',
+				'thumbnail',
+				'excerpt',
+				'custom-fields',
+        'author',
+        'excerpt',
+        'trackbacks',
+        'comments',
+        'revisions',
+        'page-attributes'
+			),
+			'has_archive'   => 'true',
 			'rewrite' => false
 		)
 	);
@@ -53,6 +91,9 @@ $shop_structure = '/shop/%shop%';
 $wp_rewrite->add_rewrite_tag("%shop%", '([^/]+)', "shop=");
 $wp_rewrite->add_permastruct('shop', $shop_structure, false);
 
+$store_structure = '/store/%store%';
+$wp_rewrite->add_rewrite_tag("%store%", '([^/]+)', "store=");
+$wp_rewrite->add_permastruct('store', $store_structure, false);
 /* Step 3 - CPT: Translate Post type link for permalink
 ----------------------------------------------*/
 add_filter('post_type_link', 'shop_permalink', 10, 3);
@@ -120,5 +161,16 @@ function shop_permalink($permalink, $post_id, $leavename) {
 
   }
   return $permalink;
+}
+
+/*custom rewrite for custom post type archive*/
+add_filter( 'rewrite_rules_array', 'custom_permalink_for_my_cpt' );
+function custom_permalink_for_my_cpt( $rules ) {
+    $custom_rules = array();
+    // for archive urls
+    $custom_rules['store/?$'] = 'index.php?post_type=store';
+    // // for individual post urls e.g: http://blog.com/shop/post-name/
+    // $custom_rules['shop/([^/]+)/?$'] = 'index.php?post_type=shop&pagename=$matches[1]';
+    return $custom_rules + $rules;
 }
 ?>
