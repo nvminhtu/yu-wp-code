@@ -14,7 +14,10 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <?php wp_head(); ?>
-<script src="<?php bloginfo('template_url'); ?>/js/jquery.scroll.js" type="text/javascript"></script>
+<!--<script src="<?php bloginfo('template_url'); ?>/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/shop.js" type="text/javascript"></script>-->
+
+<!--<script src="<?php bloginfo('template_url'); ?>/js/jquery.scroll.js" type="text/javascript"></script>-->
 <script src="<?php bloginfo('template_url'); ?>/js/rollover.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.cookie.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://www.google.com/jsapi?key="></script>

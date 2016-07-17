@@ -373,9 +373,15 @@ content: '';
 /*==========================================================================*/
 
 .shop {
-  margin: 15px 0;
+  margin: 15px 0 0 0;
 }
-
+.btn-group {
+	padding: 0;
+  margin-bottom: 15px;
+}
+.btn-group p {
+	text-align: center;
+}
 .shop h4 {
   font-size: 14px;
   height: auto;

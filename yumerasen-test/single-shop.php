@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php  get_header(); ?>
 <div id="main" class="clearfix">
 	<?php
  	if (have_posts()) :

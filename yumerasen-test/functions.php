@@ -121,10 +121,12 @@ function add_theme_scripts() {
     wp_enqueue_style( 'owl.carousel', get_template_directory_uri() . '/css/owl.carousel.css', '1.1', 'all');
     wp_enqueue_style( 'lightbox', get_template_directory_uri() . '/css/lightbox.css', '1.1', 'all');
     wp_enqueue_style( 'shop', get_template_directory_uri() . '/css/shop.css', '1.1', 'all');
+	 wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css', '1.1', 'all');
 
     wp_enqueue_script( 'jquery_add', get_template_directory_uri() . '/js/jquery_add.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/js/owl.carousel.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js', array ( 'jquery' ), 1.1, true);
+	wp_enqueue_script( 'jquery.magnific-popup', get_template_directory_uri() . '/js/jquery.magnific-popup.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script( 'shop', get_template_directory_uri() . '/js/shop.js', array ( 'jquery' ), 1.1, true);
   }
 }

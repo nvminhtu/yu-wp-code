@@ -1,3 +1,26 @@
+
+
+jQuery(document).ready(function($){
+	$('.news_des dd').magnificPopup({
+		//delegate: 'a',
+//		type: 'inline',
+//		/*tLoading: 'Loading image #%curr%...',*/
+//		mainClass: 'mfp-img-mobile',
+//		/*gallery: {
+//			enabled: true,
+//		}*/
+//		modal: true
+
+		delegate: 'a',
+		type: 'inline',
+		preloader: false,
+		focus: '#name',
+		
+
+	});
+});
+
+
 $(document).ready(function(){
  "use strict";
 	$('#slide_img_shop').owlCarousel({

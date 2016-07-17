@@ -329,7 +329,15 @@ body#index {
 	background: url(../images/shop_under.jpg) center bottom no-repeat;
 	padding-bottom:20px;
 }
-
+.page-shop .shop {
+	min-height: 215px;
+}
+.btn-group {
+	padding: 15px 15px 0 0;
+}
+.btn-group p {
+	text-align: right;
+}
 .shop h4 {
 	font-size:24px;
 	background: url(../images/h4_back.jpg) left center no-repeat;

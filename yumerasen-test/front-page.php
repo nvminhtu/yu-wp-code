@@ -95,17 +95,29 @@ wp_reset_query();
             </div>
             <div id="inner_store" class="clearfix">
               <p class="mt30 index_title" data-label="店舗情報"><img src="<?php bloginfo('template_url'); ?>/images/index_h3_02.jpg" width="950" height="60" alt="店舗情報" /></p>
+							<?php
+							  /* $arg = array(
+							           'post_type' => 'shop',
+							           'posts_per_page' => '-1'
+							         );
+							  $query = new WP_Query( $arg );
+							  if ( $query->have_posts() ) { ?>
+									<?php while ( $query->have_posts() ) {
+							          $query->the_post();
+									}
+							    wp_reset_postdata();
+							  } */ ?>
               <div class="store clearfix">
-                <p class="mr20"><a href="<?php bloginfo('template_url'); ?>/shop#koshien"><img src="<?php bloginfo('template_url'); ?>/images/store_04_off.jpg" width="222" height="200" alt="甲子園店" /></a></p>
-                <p class="mr20"><a href="<?php bloginfo('template_url'); ?>/shop#suita"><img src="<?php bloginfo('template_url'); ?>/images/store_01_off.jpg" width="222" height="200" alt="吹田店" /></a></p>
-                <p class="mr20"><a href="<?php bloginfo('template_url'); ?>/shop#moriyama"><img src="<?php bloginfo('template_url'); ?>/images/store_06_off.jpg" width="222" height="200" alt="守山店" /></a></p>
-                <p><a href="<?php bloginfo('template_url'); ?>/shop#hamamatsu"><img src="<?php bloginfo('template_url'); ?>/images/store_07_off.jpg" width="222" height="200" alt="浜松店" /></a></p>
+                <p class="mr20"><a href="/shop#koshien"><img src="<?php bloginfo('template_url'); ?>/images/store_04_off.jpg" width="222" height="200" alt="甲子園店" /></a></p>
+                <p class="mr20"><a href="/shop#suita"><img src="<?php bloginfo('template_url'); ?>/images/store_01_off.jpg" width="222" height="200" alt="吹田店" /></a></p>
+                <p class="mr20"><a href="/shop#moriyama"><img src="<?php bloginfo('template_url'); ?>/images/store_06_off.jpg" width="222" height="200" alt="守山店" /></a></p>
+                <p><a href="/shop#hamamatsu"><img src="<?php bloginfo('template_url'); ?>/images/store_07_off.jpg" width="222" height="200" alt="浜松店" /></a></p>
               </div>
               <div class="store clearfix">
-                <p class="mr20"><a href="<?php bloginfo('template_url'); ?>/shop#kounoike"><img src="<?php bloginfo('template_url'); ?>/images/store_02_off.jpg" width="222" height="200" alt="鴻池店" /></a></p>
-                <p class="mr20"><a href="<?php bloginfo('template_url'); ?>/shop#takatsuki"><img src="<?php bloginfo('template_url'); ?>/images/store_03_off.jpg" width="222" height="200" alt="高槻店" /></a></p>
-                <p class="mr20"><a href="<?php bloginfo('template_url'); ?>/shop#hachiman"><img src="<?php bloginfo('template_url'); ?>/images/store_05_off.jpg" width="222" height="200" alt="近江八幡店" /></a></p>
-                <p><a href="<?php bloginfo('template_url'); ?>/shop#marugame"><img src="<?php bloginfo('template_url'); ?>/images/store_08_off.jpg" width="222" height="200" alt="丸亀店" /></a></p>
+                <p class="mr20"><a href="/shop#kounoike"><img src="<?php bloginfo('template_url'); ?>/images/store_02_off.jpg" width="222" height="200" alt="鴻池店" /></a></p>
+                <p class="mr20"><a href="/shop#takatsuki"><img src="<?php bloginfo('template_url'); ?>/images/store_03_off.jpg" width="222" height="200" alt="高槻店" /></a></p>
+                <p class="mr20"><a href="/shop#hachiman"><img src="<?php bloginfo('template_url'); ?>/images/store_05_off.jpg" width="222" height="200" alt="近江八幡店" /></a></p>
+                <p><a href="/shop#marugame"><img src="<?php bloginfo('template_url'); ?>/images/store_08_off.jpg" width="222" height="200" alt="丸亀店" /></a></p>
               </div>
             </div>
 		</div>

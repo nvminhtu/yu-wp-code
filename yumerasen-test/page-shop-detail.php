@@ -1,58 +1,6 @@
 <?php get_header(); ?>
-<script src="<?php bloginfo('template_url'); ?>/js/jquery_add.js" type="text/javascript"></script>
-<link  href="<?php bloginfo('template_url'); ?>/css/owl.carousel.css" rel="stylesheet" type="text/css" />
-<script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/lightbox.js" type="text/javascript"></script>
-<link  href="<?php bloginfo('template_url'); ?>/css/lightbox.css" rel="stylesheet" type="text/css" />
-<script>
-$(document).ready(function(){
- "use strict";
-	$('#slide_img_shop').owlCarousel({
-			loop:true,
-		margin:15,
-		autoplay: true,
-		autoplayTimeout: 5000,
-		autoplaySpeed: 600,
-		responsive:{
-			0:{
-				items:1,
-				nav:true
-			},
-			320:{
-				margin:20,
-				items:1,
-				nav:true,
-				touchDrag: true,
-			},
-			480:{
-				margin:20,
-				items:2,
-				nav:true,
-				touchDrag: true,
-			},
-			800:{
-			
-				items:3,
-				nav:true,
-				touchDrag: true,
-			},
-			1200:{
-			
-				items:3,
-				nav:true,
-				touchDrag: true,
-			},
-			2000:{
-			
-				items:3,
-				nav:true,
-				touchDrag: true,
-			},
-			
-		}
-	});
-});
-</script>
+
+
 <style>
 .shop_detail .shop {
 	background: none;
@@ -260,13 +208,15 @@ left:5px;
 </style>
 <div id="main" class="clearfix"> 
   <!-- content start -->
+  
   <div id="shop_news" class="clearfix">
     <div class="shop_news_inner clearfix">
       <p class="shop_news_title">○○○店からのお知らせ</p>
       <div class="news_des clearfix">
         <dl>
           <dt>2016.07.27</dt>
-          <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+          <dd><a href="#test-modal">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></dd>
+           
         </dl>
         <dl>
           <dt>2016.07.27</dt>
@@ -297,8 +247,16 @@ left:5px;
           <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
         </dl>
       </div>
+      
     </div>
   </div>
+   <div id="test-modal" class="mfp-hide white-popup-block">
+                <h1>Modal dialog1</h1>
+                <p>You won't be able to dismiss this by usual means (escape or
+                    click button), but you can close it programatically based on
+                    user choices or actions.</p>
+                <p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
+            </div>
   <div id="content">
     <div class="clearfix shop_detail">
       <div class="shop clearfix ">
@@ -308,7 +266,7 @@ left:5px;
         <h4 class="service">店舗風景</h4>
         <div id="slide_img_shop" class=" clearfix">
           <div class="box_img_shop clearfix">
-            <p class="shop_img01"><a href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/images/concept.jpg" data-lightbox="shop_detail">
+            <p class="shop_img01"><a  data-title="Click the right half of the image to move forward." href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/images/concept.jpg" data-lightbox="shop_detail">
             <span class="img_title">外観</span>
             <img src="<?php bloginfo('template_url'); ?>/images/img_shop01.jpg" alt="" /></a></p>
             <p class="shop_cm_img01">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
@@ -400,6 +358,76 @@ left:5px;
   <!-- content end -->
   <?php get_sidebar(); ?>
 </div>
+<link rel="stylesheet" type="text/css" href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/css/magnific-popup.css">
+<script src="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/js/jquery_add.js" type="text/javascript"></script>
+<!--<link  href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+<script src="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/js/owl.carousel.js" type="text/javascript"></script>
+<script src="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/js/lightbox.js" type="text/javascript"></script>
+<link  href="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/css/lightbox.css" rel="stylesheet" type="text/css" />-->
 
+<script src="http://www.yumerasen.co.jp/sys/wp-content/themes/yumerasen-test/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script>
+/*$(document).ready(function(){
+ "use strict";
+	$('#slide_img_shop').owlCarousel({
+			loop:true,
+		margin:15,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplaySpeed: 600,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			320:{
+				margin:20,
+				items:1,
+				nav:true,
+				touchDrag: true,
+			},
+			480:{
+				margin:20,
+				items:2,
+				nav:true,
+				touchDrag: true,
+			},
+			800:{
+			
+				items:3,
+				nav:true,
+				touchDrag: true,
+			},
+			1200:{
+			
+				items:3,
+				nav:true,
+				touchDrag: true,
+			},
+			2000:{
+			
+				items:3,
+				nav:true,
+				touchDrag: true,
+			},
+			
+		}
+	});
+});*/
+var jq = $.noConflict();
+ jq(document).ready(function() {
+	jq('.news_des dd').magnificPopup({
+		delegate: 'a',
+		type: 'inline',
+		/*tLoading: 'Loading image #%curr%...',*/
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+		}
+
+	});
+});
+
+</script>
 <!-- main end -->
 <?php get_footer(); ?>
