@@ -41,7 +41,7 @@
 
    <?php }
  endif; ?>
- 
+
 <div id="content">
    <div class="clearfix shop_detail">
      <div class="shop clearfix ">
@@ -81,7 +81,7 @@
      </div>
 
      <div class="box_shop01 clearfix">
-       <h4 class="service">店舗風景</h4>
+       <h4 class="service">スタッフメッセージ</h4>
        <div class="box_customer_cm clearfix">
          <div class="box_img_owner">
            <?php if( get_field('owner_picture') ):
