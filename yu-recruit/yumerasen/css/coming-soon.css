@@ -1,0 +1,45 @@
+html {
+	color: #000;
+	background: #fff;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+}
+	#container{
+    background: url(../images/bg_commingsoon.jpg) right top no-repeat;
+	width:100%;
+	height:100%;
+	}
+	.inner{
+		width:80%;
+		height:80%;
+		text-align:center;
+		
+		display:table;
+		margin:0 auto;
+	}
+	.txt_cm{
+		display:table-cell;
+		vertical-align:middle;
+		color:#E04A38;
+		font-size:50px;
+	}
+	
+	.txt_cm span.txt_t{
+		color:#333;
+		display:block;
+		font-size:25px;
+		line-height:26px;
+		
+	}
+	.txt_cm span.goback{
+		color:#333;
+		display:block;
+		font-size:20px;
+		line-height:150px;
+		
+	}
+	.txt_cm span.goback a{
+		color:#039;
+	}
