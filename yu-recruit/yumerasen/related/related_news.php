@@ -31,7 +31,7 @@ $dem =1;
 					?>
                     
                     
-           <div class="box_news clearfix">
+           <div class="box_link box_news clearfix">
             <div class="box_news_img">
              <?php if ( has_post_thumbnail() ) { ?>
               <a href="<?php the_permalink(); ?>"><img src="<?php echo $img_blog[0]; ?>" alt="<?php the_title(); ?>" /></a>

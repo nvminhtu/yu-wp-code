@@ -31,7 +31,7 @@ $id= get_the_ID();
 $check_new_for_blog = get_post_meta($post->ID, 'check_new_for_blog',true);
 
 		
-$content_shortcode .= '<div class="blog_box01">';
+$content_shortcode .= '<div class="blog_box01 box_link">';
 if ( has_post_thumbnail() ) {
 	$content_shortcode .= '<p class="blog_img"><a href="'.get_the_permalink().'"><img src="'.$img_blog[0].'" alt="'.get_the_title().'" />';
 	if (!empty($check_new_for_blog)){

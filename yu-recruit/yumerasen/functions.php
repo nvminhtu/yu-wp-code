@@ -24,6 +24,7 @@ require_once (dirname(__FILE__) . '/includes/create_posttype.php');
 
 require_once (dirname(__FILE__) . '/includes/shortcode.php');
 require_once (dirname(__FILE__) . '/includes/list_blog.php');
+require_once (dirname(__FILE__) . '/includes/admin_metabox.php');
 // add menu
 
 if (function_exists('register_nav_menu'))
@@ -123,7 +124,7 @@ add_action('widgets_init', 'footer_link_col3');
 	//$request['post_type'] = 'skills';
 	 $request['post_type'] = array( 'voice',  'news' ,'post');
 	return $request;
-} 
+}
 add_filter('request', 'post_type_tags_fix');
 
 function filter_search($query) {
@@ -155,19 +156,19 @@ function close_tags($text) {
     }
     return $text;
 }
-function content_by_id($num, $id) {  
+function content_by_id($num, $id) {
 	$post_content = get_post($id);
 	//$show_content = wp_trim_words($post_content->post_content,5);
 	$show_content = $post_content->post_content;
 	$pos=strpos($show_content, ' ', 10);
-	$result= substr($show_content,0,$pos ); 
-	
+	$result= substr($show_content,0,$pos );
+
 	$theContent = $post_content ->post_content;
-	$output = preg_replace('/<img[^>]+./','', $theContent);  
-	//$limit = $num;  
-	$content = explode(' ', $output, $limit);  
-	//array_pop($content);  
-	$content = implode(" ",$content);  
+	$output = preg_replace('/<img[^>]+./','', $theContent);
+	//$limit = $num;
+	$content = explode(' ', $output, $limit);
+	//array_pop($content);
+	$content = implode(" ",$content);
 	//$content = strip_tags($content, '<p><a><address><a><abbr><acronym><b><big><blockquote><br><caption><cite><class><code><col><del><dd><div><dl><dt><em><font><h1><h2><h3><h4><h5><h6><hr><i><img><ins><kbd><li><ol><p><pre><q><s><span><strike><strong><sub><sup><table><tbody><td><tfoot><tr><tt><ul><var>');
 	$a = close_tags($content);
 	$b= $a." ...";
@@ -200,19 +201,19 @@ function truncate ( $length) {
 /* test confirm mail */
 
 add_filter( 'wpcf7_validate_email*', 'custom_email_confirmation_validation_filter', 20, 2 );
- 
+
 function custom_email_confirmation_validation_filter( $result, $tag ) {
     $tag = new WPCF7_Shortcode( $tag );
- 
+
     if ( 'your-email-confirm' == $tag->name ) {
         $your_email = isset( $_POST['your-email'] ) ? trim( $_POST['your-email'] ) : '';
         $your_email_confirm = isset( $_POST['your-email-confirm'] ) ? trim( $_POST['your-email-confirm'] ) : '';
- 
+
         if ( $your_email != $your_email_confirm ) {
             $result->invalidate( $tag, "Are you sure this is the correct address?" );
         }
     }
- 
+
     return $result;
 }
 

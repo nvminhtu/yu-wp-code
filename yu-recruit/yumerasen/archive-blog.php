@@ -39,7 +39,7 @@ $nd = get_the_content();
 $id= get_the_ID();
 $check_new_for_blog = get_post_meta($post->ID, 'check_new_for_blog',true);
 ?>
-     <div class="blog_box01">
+     <div class="blog_box01 box_link">
             <p class="blog_img"><a href="<?php the_permalink(); ?>"><img src="<?php echo $img_blog[0]; ?>" alt="<?php the_title(); ?>" />
               <?php if (!empty($check_new_for_blog)){ ?>
 			<span class="flag_new"><span>NEW</span></span>

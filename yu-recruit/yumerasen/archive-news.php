@@ -36,7 +36,7 @@ $nd = get_the_content();
 $id= get_the_ID();
 $check_new_for_blog = get_post_meta($post->ID, 'check_new_for_blog',true);
 ?>
-       <div class="box_news clearfix">
+       <div class="box_news clearfix box_link">
             <div class="box_news_img">
              <?php if ( has_post_thumbnail() ) { ?>
               <a href="<?php the_permalink(); ?>"><img src="<?php echo $img_blog[0]; ?>" alt="<?php the_title(); ?>" /></a>
