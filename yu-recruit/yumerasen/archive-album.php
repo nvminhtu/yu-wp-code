@@ -11,12 +11,11 @@ get_header();?>
         <div class="box_archive_album clearfix">
           <h3 class="titleh3_02"><span>動画ムービー</span></h3>
           <?php
-            cmb2_metabox_form('youtube_api_key');
-            echo cmb2_metabox_form('youtube_username');
-            $text = get_post_meta('youtube_username', true );
-            // Echo the metadata
-            echo esc_html( $text );
-            echo do_shortcode('[Youtube_Channel_Gallery user="dancingstrawhats" key="AIzaSyBfE4B4J3TgLur3SBquR-m8AvqmXprc5wg" player="2" maxitems="6" thumb_columns_phones="1" description="1" description_words_number="100" thumb_columns_tablets="3" title="1"]');
+            $youtube_api_key = prefixvideo_get_option( 'youtube_api_key' );
+            $youtube_username = prefixvideo_get_option( 'youtube_username' );
+            $youtube_thumbs_number = prefixvideo_get_option( 'youtube_thumbs_number' );
+            $youtube_length_text = prefixvideo_get_option( 'youtube_length_text' );
+            echo do_shortcode('[Youtube_Channel_Gallery user="'.$youtube_username.'" key="'.$youtube_api_key.'" player="2" maxitems="'.$youtube_length_text.'" thumb_columns_phones="1" description="1" description_words_number="'.$youtube_length_text.'" thumb_columns_tablets="3" title="1"]');
           ?>
           <h3 class="titleh3_02"><span>写真集</span></h3>
           <?php

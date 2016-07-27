@@ -119,6 +119,20 @@ class Videoprefix_Admin {
 			'type' => 'text',
 			'default' => '',
 		) );
+		$cmb->add_field( array(
+			'name' => __( 'Number of videos', 'prefixvideo' ),
+			'desc' => __( 'insert number of videos to display', 'prefixvideo' ),
+			'id'   => 'youtube_thumbs_number',
+			'type' => 'text',
+			'default' => '',
+		) );
+		$cmb->add_field( array(
+			'name' => __( 'Number words of description', 'prefixvideo' ),
+			'desc' => __( 'insert number words of description', 'prefixvideo' ),
+			'id'   => 'youtube_length_text',
+			'type' => 'text',
+			'default' => '',
+		) );
 	}
 	/**
 	 * Register settings notices for display
