@@ -1,0 +1,109 @@
+/* responsive */
+.box_sp {
+	display: none;
+}
+.box_pc {
+	display: block;
+}
+
+
+/*responsive */
+/* TABLET */
+
+@media screen and (min-width:769px) {
+}
+ @media screen and (max-width:1200px) {
+img {
+	max-width: 100%;
+}
+#wrapper, #header, #main, #footer, .inner {
+	width: 100% !important;
+	min-width: inherit !important;
+}
+.inner {
+	width: 100%;
+	box-sizing: border-box;/*padding:0 5%;*/
+	padding: 0 3%;
+}
+.under .inner {
+}
+/*header */
+
+
+/*main index */
+
+}
+@media screen and (max-width: 1030px) {
+}
+@media screen and (max-width: 1000px) {
+
+}
+ @media screen and (max-width: 850px) {
+
+}
+ @media screen and (min-width: 100px) and (max-width: 800px) {
+}
+ @media screen and (min-width: 768px) and (max-width: 950px) {
+}
+
+/* SMART PHONE */
+@media screen and (max-width: 768px) {
+.box_sp {
+	display: block;
+}
+.box_pc {
+	display: none;
+}
+.inner {
+	padding: 0 5%;
+}
+.under .inner {
+	padding: 0 5%;
+}
+.image_l, .image_r {
+	float: none;
+	max-width: 100%;
+	margin: 0 auto 20px auto;
+	text-align: center;
+}
+.section, section {
+	padding-bottom: 40px;
+}
+/* index */
+
+/* common */
+
+/* container01 */
+
+/* container02 */
+
+
+/* container03 */
+
+/* container04 */
+
+/* container05 */
+
+/* container06 */
+
+/* footer */
+
+}
+ @media screen and (max-width: 680px) {
+}
+ @media screen and (max-width: 640px) {
+}
+ @media screen and (max-width: 560px) {
+}
+ @media screen and (max-width: 490px) {
+}
+ @media screen and (max-width: 380px) {
+}
+ @media screen and (max-width: 350px) {
+}
+ @media screen and (max-width: 320px) {
+
+}
+ @media screen and (max-width: 280px) {
+
+}
