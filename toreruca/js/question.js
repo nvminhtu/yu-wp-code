@@ -39,7 +39,8 @@ $(function() {
     if(currentStep=='start') {
         slideStep = 0;
     } else {
-        slideStep = currentStep.slice(-1) - 1;
+        var numGet = currentStep.slice(-2);
+        slideStep = Number(numGet) - 1;
     }
     slider.goToSlide(slideStep); 
 
