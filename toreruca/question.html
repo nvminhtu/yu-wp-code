@@ -23,210 +23,204 @@
 
 <body id="index">
 <div id="modal_quiz" class="clearfix">
+
   <div id="modal_quiz_inner" class="clearfix">
     <p class="logo_l"><img src="images/logo_l.png" alt="" /></p>
     <!-- progressbar -->
     <div id="box_progressbar">
+   
+    <div class="progress">
+     
+      <div class="progress-bar">
+      	<div id="number_answered" class="number_bar"><div class="number_bar_inner">回答済み(<span id="txt_number_answered">1</span>)</div></div>
+       
+      </div>
+       <div class="progress-bar_remaining">
+      	 <div id="number_remaining" class="number_bar"><div class="number_bar_inner">残り(<span id="txt_number_remaining">14</span>)</div></div>
+       </div>
+      
+    </div>
+
     <div id="bx-pager">
-  <a data-slide-index="0" href="">1</a>
-  <a data-slide-index="1" href="">2</a>
-  <a data-slide-index="2" href="">3</a>
+  <a id="q01" data-slide-index="0" href="">1</a>
+  <a id="q02" data-slide-index="1" href="">2</a>
+  <a id="q03" data-slide-index="2" href="">3</a>
   
-  <a data-slide-index="3" href="">4</a>
-  <a data-slide-index="4" href="">5</a>
-  <a data-slide-index="5" href="">6</a>
+  <a id="q04" data-slide-index="3" href="">4</a>
+  <a id="q05" data-slide-index="4" href="">5</a>
+  <a id="q06" data-slide-index="5" href="">6</a>
   
-  <a data-slide-index="6" href="">7</a>
-  <a data-slide-index="7" href="">8</a>
-  <a data-slide-index="8" href="">9</a>
+  <a id="q07" data-slide-index="6" href="">7</a>
+  <a id="q08" data-slide-index="7" href="">8</a>
+  <a id="q09" data-slide-index="8" href="">9</a>
   
-  <a data-slide-index="9" href="">10</a>
-  <a data-slide-index="10" href="">11</a>
-  <a data-slide-index="11" href="">12</a>
+  <a id="q10" data-slide-index="9" href="">10</a>
+  <a id="q11" data-slide-index="10" href="">11</a>
+  <a id="q12" data-slide-index="11" href="">12</a>
+  
+   <a id="q13" data-slide-index="12" href="">13</a>
+    <a id="q14" data-slide-index="13" href="">14</a>
+     <a id="q15" data-slide-index="14" href="">15</a>
 </div>
     </div>
     <div id="box_qa" class="clearfix">
       <div id="slide_qa" class="box_qa_inner clearfix">
-        <div class="slide list_qa">
+        <div class="slide list_qa active" id="ques01">
           <div class="list_qa_inner">
             <h3 class="title_qa">質問 01</h3>
-            <p class="question_txt"><span>ダミーテキスト ダミーテキスト ?</span></p>
+            <p class="question_txt"><span>1.ダミーテキスト ダミーテキスト ?</span></p>
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input id="fa-01" type="checkbox" name="favorite" value="opt1" />
+                  <label for="fa-01">ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         
-        <div class="slide list_qa">
+        <div class="slide list_qa" id="ques02">
           <div class="list_qa_inner">
             <h3 class="title_qa">質問 02</h3>
-            <p class="question_txt"><span>ダミーテキスト ダミーテキスト ?</span></p>
+            <p class="question_txt"><span>2.ダミーテキスト ダミーテキスト ?</span></p>
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         
-        <div class="slide list_qa">
+        <div class="slide list_qa" id="ques03">
           <div class="list_qa_inner">
             <h3 class="title_qa">質問 03</h3>
-            <p class="question_txt"><span>ダミーテキスト ダミーテキスト ?</span></p>
+            <p class="question_txt"><span>3.ダミーテキスト ダミーテキスト ?</span></p>
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         
-        <div class="slide list_qa">
+        <div class="slide list_qa" id="ques04">
           <div class="list_qa_inner">
             <h3 class="title_qa">質問 04</h3>
-            <p class="question_txt"><span>ダミーテキスト ダミーテキスト ?</span></p>
+            <p class="question_txt"><span>4.ダミーテキスト ダミーテキスト ?</span></p>
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         
-        <div class="slide list_qa">
+        <div class="slide list_qa" id="ques05">
           <div class="list_qa_inner">
             <h3 class="title_qa">質問 05</h3>
-            <p class="question_txt"><span>ダミーテキスト ダミーテキスト ?</span></p>
+            <p class="question_txt"><span>5.ダミーテキスト ダミーテキスト ?</span></p>
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         
-        <div class="slide list_qa">
+        <!-- <div class="slide list_qa">
           <div class="list_qa_inner">
             <h3 class="title_qa">質問 06</h3>
             <p class="question_txt"><span>ダミーテキスト ダミーテキスト ?</span></p>
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
@@ -240,24 +234,20 @@
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
@@ -271,24 +261,20 @@
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
@@ -302,24 +288,20 @@
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
@@ -333,24 +315,20 @@
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
@@ -364,24 +342,20 @@
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
@@ -395,29 +369,104 @@
             <div class="box_ans clearfix">
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキストダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" id="" />
-                    ダミー テキスト ダミーテキスト </label>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+        
+        <div class="slide list_qa">
+          <div class="list_qa_inner">
+            <h3 class="title_qa">質問 13</h3>
+            <p class="question_txt"><span>ダミーテキスト ダミーテキスト ?</span></p>
+            <div class="box_ans clearfix">
+              <ul>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide list_qa">
+          <div class="list_qa_inner">
+            <h3 class="title_qa">質問 14</h3>
+            <p class="question_txt"><span>ダミーテキスト ダミーテキスト ?</span></p>
+            <div class="box_ans clearfix">
+              <ul>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide list_qa">
+          <div class="list_qa_inner">
+            <h3 class="title_qa">質問 15</h3>
+            <p class="question_txt"><span>ダミーテキスト ダミーテキスト ?</span></p>
+            <div class="box_ans clearfix">
+              <ul>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt1" />
+                  <label>ダミー テキスト ダミーテキストダミーテキストダミー テキスト </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt2" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt3" />
+                  <label>ダミー テキスト ダミーテキストダミーテキスト </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="favorite" value="opt4" />
+                  <label>ダミー テキスト ダミーテキスト </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
         
         </div>
       </div>

@@ -79,9 +79,14 @@ $(document).ready(function() {
 	  	mode: 'fade',
 		pager:false,
 		auto:true,
+		controls: false
 	  });
 	});	
 });
+
+
+
+s
 
 
 

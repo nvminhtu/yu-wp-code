@@ -183,6 +183,13 @@ h6.h6_title01 {
 	font-weight: bold;
 	margin-bottom: 15px;
 }
+.hover{
+	transition:all 0.5;
+}
+.hover:hover{
+	opacity:0.8;
+	transition:all 0.5;
+}
 /* add
 ------------------------------------------------------------------------*/
 /*==========================================================================*/
@@ -684,8 +691,10 @@ h3.title_blog{
 	/*margin-right:43px;*/
 	width:100%;
 	box-sizing:border-box;
+	cursor:pointer;
 	
 }
+
 .slide_img{
 	width:100%;
 	box-sizing:border-box;
