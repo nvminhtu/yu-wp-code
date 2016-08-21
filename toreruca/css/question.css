@@ -28,7 +28,7 @@
 }
 
 #btn_close {
-    color: #000;
+/*    color: #000;
     font-size: 50px;
     line-height: 53px;
     position: absolute;
@@ -41,7 +41,15 @@
 -moz-border-radius: 50%;
 border-radius: 50%;
 width:50px;
-height:50px;}
+height:50px;*/
+ position: absolute;
+   top: 30px;
+   right: 30px;
+ 
+}
+#btn_close img{
+	width:50px;
+}
 
 
 #modal_quiz_inner {
@@ -62,16 +70,15 @@ height:50px;}
 	border-radius: 10px;
 	background: #fff;
 	margin-bottom: 40px;
-}
-.list_qa {
-	width: 100%;
-}
-#box_qa {
-	width: 100%;
-	box-sizing: border-box;
 	padding: 30px;
 	text-align: left;
 }
+
+
+.list_qa {
+	width: 100%;
+}
+
 h3.title_qa {
 	text-align: center;
 	color: #888888;
@@ -322,3 +329,111 @@ h3.title_qa:after {
 	color: white;
 	background: rgba(0, 0, 0, 0.25);
 }
+
+@media screen and (max-width: 768px) {
+	.logo_l img{
+		width:150px;
+	}
+h3.title_qa {
+	font-size: 20px;
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+}
+h3.title_qa:after {
+	width: 50px;
+	border-top: 2px solid #35A1C2;
+	left: calc(50% - 25px);
+
+}
+.question_txt {
+	background-size:30px auto;
+	padding-left: 40px;
+	line-height: 20px;
+	height: 40px;
+	font-size: 14px;
+	margin-bottom:5px;
+}
+
+#box_qa {
+
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 12px;
+
+}
+
+.box_ans {
+
+    padding-left: 5px;
+}
+#box_qa label {
+   
+    font-size: 14px;
+
+}
+.box_ans li{
+	margin-bottom:5px;
+}
+#box_qa .bx-wrapper{
+	margin-bottom:0;
+}
+.number_bar_inner{
+	font-size:10px;
+	padding-left:15px;
+}
+
+#btn_close {
+ position: absolute;
+   top: 30px;
+   right: 30px;
+ 
+}
+#btn_close img{
+	width:40px;
+}
+}
+
+/* Quiz slider customization
+------------------------------*/
+ .startquiz,
+ .inprogress,
+ .endquiz {
+    display: none;
+  }
+  .startquiz.active,
+  .inprogress.active,
+  .endquiz.active {
+    display: block;
+  }
+  #slider-next.disable {
+    display: none;
+  }
+  #notification {
+    display: none;
+  }
+  #notification.active {
+    display: block;
+  }
+  .errors {
+    background: #fc2534;
+    color: #ffffff;
+    padding: 15px 10px;
+  }
+  .hidden-ques {
+    height: 0px;
+  }
+  .frm-fields {
+    display: block;
+  }
+  .frm-fields.disable {
+    display: none;
+  }
+  #reset-quiz {
+    display: none;
+  }
+  #reset-quiz.active {
+    display: inline-block;
+  }

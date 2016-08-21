@@ -4,6 +4,7 @@
 /* 基本タグのフォントサイズを指定（12px -> 120% or 1.2em ） */
 h1, h2, h3, h4, h5, h6, input, button, textarea, select, p, blockquote, th, td, pre, address, li, dt, dd {
 	font-size: 160%;
+	-webkit-text-size-adjust: none;
 }
 img {
 	vertical-align: bottom;
@@ -228,9 +229,13 @@ body#index {
 /*                               Header                                     */
 /*==========================================================================*/
 
-#header {
+#index #header {
 	text-align:left;
-	height:596px;
+	height:600px;
+	background-image: url("../images/main_img_01_bg.jpg");
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #head_top {
@@ -254,7 +259,7 @@ body#index {
 	
 }
 #head_info{
-	margin-top:-596px;
+	/*margin-top:-596px;*/
 	position:relative;
 	z-index:999;
 	
@@ -263,7 +268,7 @@ body#index {
 }
 #logo {
 	
-	margin:30px 0 150px 50px;
+	padding:30px 0 150px 50px;
 	
 }
 
@@ -337,6 +342,13 @@ border-radius:3px;
 #footer .inner{
 	
 }
+.footer_tel_box{
+	float:left;
+}
+.footer_right{
+	float:right;
+	width:500px;
+}
 .footer_tel{
 	font-size:25px;
 	font-weight:500;
@@ -346,7 +358,7 @@ border-radius:3px;
 	margin:24px 0 20px 40px;
 }
 address{
-	float:right;
+
 	font-size:14px;
 	font-weight:500;
 	padding:35px 135px 0 0;
@@ -354,7 +366,7 @@ address{
 }
 .footer_link{
 	padding:35px 0 0 0;
-	float:right;
+	float:left;
 	
 }
 .footer_link li{
@@ -667,6 +679,9 @@ border-radius:  2px;
 	width:656px;
 	height:531px;
 }
+.box05_right p{
+	margin-bottom:0;
+}
 /*----------------------- #container06 -----------------------*/
 #container06 {
 	
@@ -750,6 +765,7 @@ h3.title_blog{
 	width:100%;
 	z-index:99999;
 	padding:8px 0;
+	display:none;
 }
 #sticky_footer p{
 	margin:0
@@ -761,14 +777,33 @@ h3.title_blog{
 	width:280px;
 }
 .box_slide_question{
-	float:left;
+	float:right;
 	width:325px;
+	position:relative;
 	
 }
+.box_slide_question:after,.box_slide_question:before{	
+	background-size:11px auto;
+	top:calc(50% - 14px);
+	position: absolute;
+	content:"";
+	width: 11px;
+	height: 28px;
+}
+.box_slide_question:before{
+	background: url(../images/btn_next_ques_01.png) no-repeat;
+	background-size:11px auto;
+	left: 0px;
+}
+.box_slide_question:after{
+	background: url(../images/btn_pre_ques_01.png) no-repeat;
+	background-size:11px auto;
+	right: 0px;
+}
 .box_btn02{
-	float:left;
+	float:right;
 	width:280px;
-	margin-left:50px;
+	margin:0 105px 0 50px;
 }
 
 .sticky_btn_tel{
@@ -787,6 +822,9 @@ h3.title_blog{
 	padding:9px 0 0 55px;
 	border:1px solid #DCDCDC;
 }
+.sticky_btn .clear_line{
+	display:block
+}
 .sticky_btn a{
 	display:block;
 	color:#fff;
@@ -803,7 +841,8 @@ h3.title_blog{
 	text-decoration:none;
 	font-size:17px;
 	letter-spacing:2px; 
-	}
+}
+
 
 
 

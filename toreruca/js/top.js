@@ -15,7 +15,7 @@ $(document).ready(function(){
 				nav:true
 			},
 			480:{
-				margin:20,
+				margin:0,
 				items:1,
 				nav:true,
 				touchDrag: true,
@@ -34,7 +34,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('.box_slide_question_list').owlCarousel({
+	/*$('.box_slide_question_list').owlCarousel({
 		loop:true,
 		margin:50,
 		autoplay: true,
@@ -65,7 +65,7 @@ $(document).ready(function(){
 				
 			}
 		}
-	});
+	});*/
 
 
 });
@@ -83,11 +83,6 @@ $(document).ready(function() {
 	  });
 	});	
 });
-
-
-
-s
-
 
 
 $(window).bind("resize load",function() {   

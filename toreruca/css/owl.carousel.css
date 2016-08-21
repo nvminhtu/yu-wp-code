@@ -257,7 +257,7 @@
 }
 
 
-.
+
 
 
 .owl-controls {
@@ -272,16 +272,16 @@
 }
  @media screen and (max-width: 768px) {
 #idex_blog_list .owl-next {
-	width: 30px;
-	height: 30px;
-	background-size: 100% 100%;
-	left: -14%;
+		width: 12px;
+	height: 23px;
+	background-size: 12px auto;
+	left: -25px;
 }
 #idex_blog_list .owl-prev {
-	width: 30px;
-	height: 30px;
-	background-size: 100% 100%;
-	right: -14%;
+	width: 12px;
+	height: 23px;
+	background-size: 12px auto;
+	right: -25px;
 }
 /*#idex_blog_list .owl-prev {
 	right: calc(50% - 40px);

@@ -209,6 +209,7 @@
 	left: 0;
 	top: calc(50% - 15px);
 	position: absolute;
+	z-index: -1;
 }
  .owl-next {
 	background: url(../images/btn_next01.png) no-repeat;

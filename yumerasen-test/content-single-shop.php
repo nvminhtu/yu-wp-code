@@ -3,7 +3,6 @@
   * @include tempalte for single shop page
   */
  ?>
-
  <?php
    //step 1: get userID from CTF
    if( get_field('shop_user') ):
@@ -20,7 +19,7 @@
      if ( $query->have_posts() ) { ?>
      <div id="shop_news" class="clearfix">
        <div class="shop_news_inner clearfix">
-         <p class="shop_news_title">○○○店からのお知らせ</p>
+         <p class="shop_news_title"><?php the_title(); ?>からのお知らせ</p>
          <div class="news_des clearfix">
            <?php while ( $query->have_posts() ) {
              $query->the_post();
@@ -66,7 +65,7 @@
                     $smallURL = $picS[0];
                     $largeURL = $picL[0];
                   ?>
-                  <p class="shop_img01"><a href="<?php echo $smallURL; ?>" data-lightbox="shop_detail">
+                  <p class="shop_img01"><a href="<?php echo $largeURL; ?>" data-lightbox="shop_detail">
                   <span class="img_title"><?php the_sub_field('picture_title'); ?></span>
                   <img src="<?php echo $smallURL; ?>" alt="" width="<?php echo $picS[1]; ?>" height="<?php echo $picS[2]; ?>" /></a></p>
                   <p class="shop_cm_img01"><?php the_sub_field('picture_comment'); ?></p>
