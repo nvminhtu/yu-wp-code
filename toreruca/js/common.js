@@ -29,9 +29,8 @@ $(document).ready(function() {
 	
 });*/
 
-$(function(){
-	$("#totop").hide();			
-	$(window).scroll(function () {
+$(function(){	
+	$(window).bind("scroll load",function () {
 		if ($(this).scrollTop() > 300) {
 			$('#sticky_footer').fadeIn();
 		} else {

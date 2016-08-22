@@ -1,4 +1,4 @@
-(function($){
+/*(function($){
 	$(function(){
 		$('a[href^="#"]').click(function(){
 			if ( $( $(this).attr('href') ).length ) {
@@ -9,6 +9,6 @@
 		});
 	});
 })(jQuery);
-
+*/
 
 

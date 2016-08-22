@@ -1,4 +1,5 @@
-var slider;
+var slider,
+    question_url = 'http://toreruca.com/question/';
 
 $(function() {
   slider = $('#slide_qa').bxSlider({
@@ -43,16 +44,22 @@ $(function() {
 function change_hash() {
   var stepData = localStorage.getItem('step');
   window.location.hash = stepData;
+  var question_dest = question_url + '#' + stepData;
+  history.pushState(null, null, question_dest);
 }
 /**
 *** func: customize popup Slider
 **/
 $(document).ready(function() {
   "use strict";
-  $('#open_quiz').click(function() {
+
+  //load first
+  window.history.replaceState(null, null, "http://toreruca.com/"); 
+
+  $('.open_quiz').click(function() {
       $("#modal_quiz_out").fadeIn("fast");
       slider.reloadSlider();
-
+      change_hash();
       // init: go to current step 
       var currentStep = localStorage.getItem('step'),
           slideStep = 0;
@@ -66,7 +73,8 @@ $(document).ready(function() {
   });
 
   $('#btn_close').click(function() {
-      $("#modal_quiz_out").fadeOut("");
+    $("#modal_quiz_out").fadeOut("");
+    window.history.replaceState(null, null, "http://toreruca.com/"); 
   });
 });
 
@@ -227,9 +235,18 @@ function checkProgress() {
     $('.endquiz').addClass('active');
     $('.startquiz').removeClass('active');
     $('.inprogress').removeClass('active');
+
     if(formStatus == 'done') {
       $('.frm-fields').addClass('disable');
       $('#reset-quiz').addClass('active');
+      $('.title_thanks').addClass('active');
+      $('.thankyou_mess').addClass('active');
+      $('.title_contact').removeClass('active');
+    } else {
+      // Thank you page
+      $('.title_contact').addClass('active');
+      $('.title_thanks').removeClass('active');
+      $('.thankyou_mess').removeClass('active');
     }
   } else {
     $('.inprogress').addClass('active');
@@ -269,18 +286,25 @@ $('#slider-check').on("click",function(){
 
 //check if hash is changed
 $(window).bind('hashchange', function() {
-  var newhash = window.location.hash.substring(1); // it gets id of clicked element
+  //var newhash = window.location.hash.substring(1); // it gets id of clicked element
+  //window.history.replaceState(null, null, "http://toreruca.com/");
 });
 
 /* event func: start button - go to quiz */
 $('#start-now').on("click", function() {
   localStorage.setItem('step','ques01');
   //set hash
-  var startStep = localStorage.getItem('step');
-  window.location.hash = startStep;
+  // var startStep = localStorage.getItem('step');
+  // window.location.hash = startStep;
 
   checkProgress();
   slider.reloadSlider();
+//  change_hash();
+
+  var stepData = localStorage.getItem('step');
+  window.location.hash = stepData;
+  var question_dest = question_url + '#' + stepData;
+  history.pushState(null, null, question_dest);
 });
 
 /* event func: end button - go to contact form */

@@ -731,6 +731,10 @@ h3.title_blog{
 	font-weight:bold;
 	margin-bottom:5px;
 }
+.title_blog01 a{
+	color:#222;
+	text-decoration:none;
+}
 .txt_des{
 	font-size:13px;
 	margin-bottom:10px;

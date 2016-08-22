@@ -4,7 +4,7 @@
        <p class="sticky_btn sticky_btn_tel hover"><a href="">電話で診断<span class="clear_line">050-3638-2525（平日10~17時）</span></a></p>
     </div>
     <div class="box_btn02">
-      <p id="open_quiz" class="sticky_btn sticky_btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断<span class="clear_line">15の質問に答える<span class="txt_24small">（24時間）</span></span></a></p>
+      <p class="open_quiz sticky_btn sticky_btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断<span class="clear_line">15の質問に答える<span class="txt_24small">（24時間）</span></span></a></p>
     </div>
     <div class="box_slide_question">
        <div class="box_slide_question_list">

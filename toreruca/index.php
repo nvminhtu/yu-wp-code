@@ -11,7 +11,7 @@
         <h2><span>最大1,850万円、</span>うちの会社でも取れるか？<br />
           <span class="h2_l">500社以上が利用する<br class="box_sp_sm" />「助成金診断サービス」</span></h2>
             <div class="btn_main_pc">
-        <p class="btn_main btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断 <br class="box_sp_sm" />（15個の質問に答えて診断）<span>※約5分</span></a></p>
+        <p class="open_quiz btn_main btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断 <br class="box_sp_sm" />（15個の質問に答えて診断）<span>※約5分</span></a></p>
         <p class="btn_main btn_tel hover"><a href="">電話で診断 <br class="box_sp_sm" />（050-3638-2525）<span>※10:00-17:00</span></a></p>
     </div> </div>
   </div>

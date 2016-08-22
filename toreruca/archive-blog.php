@@ -3,7 +3,7 @@
 <div id="header" class="clearfix">
   <div id="head_info">
     <div class="inner clearfix">
-        <h1 id="logo"><a href="<?php bloginfo('siteurl'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="その助成金トレルカ？toreruca" /></a></h1>
+        <h1 id="logo"><a href=""><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="その助成金トレルカ？toreruca" /></a></h1>
         <h2>BLOG</h2>
         <div class="btn_main_pc">
         </div> 

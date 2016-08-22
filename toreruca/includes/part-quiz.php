@@ -12,7 +12,11 @@
       <!-- progressbar -->
       
       <div class="startquiz">
-        <p>Welcome to Quiz</p>
+      	<div class="box_qa" class="clearfix">
+        	<p class="title_quiz">クイズへようこそ</p>
+            <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+        </div>
+        
         <p id="start-now" class="btn_slide_qa">Start Quiz</p>
       <!-- start quiz --></div>
       
@@ -30,7 +34,7 @@
           </div>
         </div>
         
-        <div id="box_qa" class="clearfix">
+        <div class="box_qa" class="clearfix">
           <div id="slide_qa" class="box_qa_inner clearfix">
             <?php 
               /** load quiz from custom fields **/ 
@@ -93,24 +97,32 @@
               
           </div>
           <div id="notification" class="errors">
-            Please check at least one item
+            <p>少なくとも1つの項目をチェックしてください</p>
           </div>
         <!--end box qa --></div>
         <!-- start button -->
         <ul class="list_btn_qa">
           <li id="slider-prev" class="btn_slide_qa"></li>
          <!--  <li id="slider-next" class="btn_slide_qa"></li> -->
-         <li id="slider-check" class="btn_slide_qa">Next</li>
+         <li id="slider-check" class="btn_slide_qa">次へ</li>
         </ul>
         <!-- // end button -->
       <!-- in progress --></div>
 
       <div class="endquiz">
-        <p>Contact Form 7</p>
-        <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
-        <?php /* echo do_shortcode('[contact-form-7 id="6" title="Contact Form 2"]');  */ ?>
-        <div id="result"></div>
-        <p id="reset-quiz" class="btn_slide_qa">Do again</p>
+        <div class="box_qa" class="clearfix">
+          <p class="title_quiz title_contact">お問い合わせ</p>
+          <p class="title_quiz title_thanks">ありがとうございました</p>
+          
+          <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
+          <div id="result"></div>
+          <div class="thankyou_mess">
+            <p>
+              ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+            </p>
+          </div>
+          <div class="center"><p id="reset-quiz" class="btn_slide_qa">再び行います</p></div>
+        </div>
       <!--end endquiz --></div>
 
       </div>
