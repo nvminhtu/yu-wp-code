@@ -372,7 +372,7 @@ h3.title_qa:after {
 }
 }
 /* Quiz slider customization
-------------------------------*/
+---------------------------------------------*/
 
 .title_quiz {
 	color: #3f6888;
@@ -392,19 +392,19 @@ h3.title_qa:after {
 	left: calc(50% - 30px);
 	bottom: 0;
 }
-.startquiz, .inprogress, .endquiz {
+.startquiz, .inprogress, .endquiz, .beforequiz {
 	display: none;
 }
-.startquiz.active, .inprogress.active, .endquiz.active {
+.startquiz.active, .inprogress.active, .endquiz.active, .beforequiz.active {
 	display: block;
 }
 #slider-next.disable {
 	display: none;
 }
-#notification {
+#notify-checkbox, #notify-textarea {
 	display: none;
 }
-#notification.active {
+#notify-checkbox.active, #notify-textarea.active {
 	display: block;
 }
 .title_contact,
@@ -443,6 +443,9 @@ h3.title_qa:after {
 #reset-quiz.active {
 	display: inline-block;
 }
+/* Quiz slider end customization
+---------------------------------------------*/
+
 /* contact form */
 
 .endquiz dl {

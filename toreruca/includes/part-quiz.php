@@ -11,12 +11,28 @@
       <p class="logo_l"><img src="<?php bloginfo('template_url'); ?>/images/logo_l.png" alt="" /></p>
       <!-- progressbar -->
       
+      <div class="beforequiz">
+        <div class="box_qa" class="clearfix">
+          <p class="title_quiz">助成金とは？</p>
+          <p>助成金とは、一言でいうと「雇用促進・活発化を行う企業に対し、<br />
+            国（厚生労働省）が返済不要の金銭的支援をしてくれる」制度です。</p>
+
+          <p>"利用しなければ損" とも言える制度である一方、<br />
+            「うちの会社も対象なのか？いくら貰えるのか？が分からない」と言った声も多く、<br />
+            助成金を申請できていない会社様が多いのが現状です。</p>
+
+          <p>そんな経営者様のお悩みを解決するための手段として、<br />
+            【知識ゼロでも、無料で、誰でも簡単に、助成金取得可能性を診断できるサイト】として、<br />
+            toreruca（トレルカ）はサービスを開始いたしました。</p> 
+        </div>
+        <p id="get-started" class="btn_slide_qa">Next</p>
+      <!-- /.beforequiz --></div>
+      
       <div class="startquiz">
       	<div class="box_qa" class="clearfix">
         	<p class="title_quiz">クイズへようこそ</p>
-            <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+          <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
         </div>
-        
         <p id="start-now" class="btn_slide_qa">Start Quiz</p>
       <!-- start quiz --></div>
       
@@ -35,69 +51,12 @@
         </div>
         
         <div class="box_qa" class="clearfix">
-          <div id="slide_qa" class="box_qa_inner clearfix">
-            <?php 
-              /** load quiz from custom fields **/ 
-              $number_question = 15;
-              $quiz_page_id = 20; //15
-              $args = array( 'page_id' => $quiz_page_id );
-              $the_query = new WP_Query( $args );
-
-              if ( $the_query->have_posts() ) :
-                while ( $the_query->have_posts() ) : $the_query->the_post(); 
-                  for($i=1; $i <= $number_question; $i++) {
-                    $question = "question-".$i;
-                    if($i <= 9) {
-                      $question = "question-0".$i;  
-                      $quesID = "ques0".$i;
-                      $answer = "answer-0".$i;
-                    } else {
-                      echo $i;
-                      $question = "question-".$i;
-                      $quesID = "ques".$i;
-                      $answer = "answer-".$i;
-                    }
-                    $question_field = get_field($question,$quiz_page_id);
-                  ?>
-                    <div class="slide list_qa" id="<?php echo $quesID; ?>">
-                      <div class="list_qa_inner">
-                        <h3 class="title_qa">質問 <?php echo $i; ?></h3>
-                        <p class="question_txt"><span><?php echo $i; ?>.<?php echo $question_field; ?></span></p>
-                        <div class="box_ans clearfix">
-                          <ul>
-                          <?php
-                            if( have_rows($answer) ):
-                              $j = 0;
-                              while( have_rows($answer) ) : the_row(); 
-                                $j++;
-                                $checkID = "fa-".$i.$j;
-                                $optID = "opt".$j;
-                          ?>
-                                <li>
-                                  <input id="<?php echo $checkID; ?>" type="checkbox" value="<?php echo $optID; ?>" />
-                                  <label for="<?php echo $checkID; ?>"><?php the_sub_field('answer'); ?></label>
-                                </li>
-                              <?php
-                              endwhile;
-                            endif;
-                          ?>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <?php 
-                  } // end for
-                ?>
-                <?php endwhile;
-                wp_reset_postdata();
-              else : ?>
-              <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-            
-            <?php endif; ?>
-              
-          </div>
-          <div id="notification" class="errors">
+          <?php include('part-quiz-content.php'); ?>
+          <div id="notify-checkbox" class="errors">
             <p>少なくとも1つの項目をチェックしてください</p>
+          </div>
+          <div id="notify-textarea" class="errors">
+            <p>Please input textarea</p>
           </div>
         <!--end box qa --></div>
         <!-- start button -->
@@ -108,22 +67,6 @@
         </ul>
         <!-- // end button -->
       <!-- in progress --></div>
-
-      <div class="endquiz">
-        <div class="box_qa" class="clearfix">
-          <p class="title_quiz title_contact">お問い合わせ</p>
-          <p class="title_quiz title_thanks">ありがとうございました</p>
-          
-          <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
-          <div id="result"></div>
-          <div class="thankyou_mess">
-            <p>
-              ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
-            </p>
-          </div>
-          <div class="center"><p id="reset-quiz" class="btn_slide_qa">再び行います</p></div>
-        </div>
-      <!--end endquiz --></div>
 
       </div>
     </div>

@@ -1,5 +1,4 @@
-var slider,
-    question_url = 'http://localhost.toreruca/question/';
+var slider;
 
 $(function() {
   slider = $('#slide_qa').bxSlider({
@@ -8,6 +7,7 @@ $(function() {
     minSlides: 1,
     maxSlides: 1,
     slideMargin: 0,
+    // nextSelector: '#slider-next',
     prevSelector: '#slider-prev',
     nextText: '次へ',
     prevText: '前へ',
@@ -41,37 +41,32 @@ $(function() {
 *** func: change hash
 **/
 function change_hash() {
-  var stepData = localStorage.getItem('step'),
-      question_dest = question_url + '#' + stepData;
-  
+  var stepData = localStorage.getItem('step');
   window.location.hash = stepData;
-  history.pushState(null, null, question_dest);
 }
-
 /**
-*** func: customize popup Slider - Ready function
+*** func: customize popup Slider
 **/
 $(document).ready(function() {
   "use strict";
-  //load first
- //window.history.replaceState(null, null, "http://localhost.toreruca/"); 
-  $('.open_quiz').click(function() {
+  $('#open_quiz').click(function() {
+      $("#modal_quiz_out").fadeIn("fast");
+      slider.reloadSlider();
+
       // init: go to current step 
       var currentStep = localStorage.getItem('step'),
           slideStep = 0;
-      if(currentStep =='end') {
-        window.location = '/contact-form/';
+      if(currentStep=='start') {
+          slideStep = 0;
       } else {
-        //open popup
-        $("#modal_quiz_out").fadeIn("fast");
-        slider.reloadSlider();
-        change_hash();
+          var numGet = currentStep.slice(-2);
+          slideStep = Number(numGet) - 1;
+          slider.goToSlide(slideStep);
       }
   });
 
   $('#btn_close').click(function() {
-    $("#modal_quiz_out").fadeOut("");
-    window.history.replaceState(null, null, "http://localhost.toreruca/"); 
+      $("#modal_quiz_out").fadeOut("");
   });
 });
 
@@ -120,28 +115,10 @@ function checkItem() {
     var
         thisQuiz = $(this).attr('id'),
         quest = $(this).find('.question_txt span').text(),
-        thisChecks = "#"+ thisQuiz + " input",
-        thisSelected = "#" + thisQuiz + " select",
-        thisTextarea = "#"+ thisQuiz + " textarea";
+        thisChecks = "#"+ thisQuiz + " input";
 
-    // ---case: select ---------------------------------------
-    $(thisSelected).change(function(){
-      var
-        answers = {}, 
-        $keyItem = $(this).find(":selected").val(),
-        selectedVal = $(this).find(":selected").text();
-      
-      // 01.get value of seleted box
-      answers[$keyItem] = selectedVal;
-
-      // 02.store value
-      var thisChecked = thisQuiz+'-data',
-          thisAnswer = {question: quest, answer: answers };
-      localStorage.setItem(thisChecked,JSON.stringify(thisAnswer));
-    });
-
-    // ---case: checkboxes ---------------------------------------
-    $(thisChecks).change(function(){
+    
+    $(thisChecks).change(function () {
         var 
           answers = {},
           items =  $(thisChecks);
@@ -159,25 +136,6 @@ function checkItem() {
             thisAnswer = {question: quest, answer: answers };
         localStorage.setItem(thisChecked,JSON.stringify(thisAnswer));
     });
-
-    // ---case: textarea ---------------------------------------
-    $(thisTextarea).change(function() {
-      var
-        answers = {},
-        items =  $(thisTextarea);
-      
-      // 01.get value of seleted box
-      $.each(items,function(index,item){
-        var $keyItem = $(item).attr('id');
-        answers[$keyItem] = $(item).val();
-      });
-
-      // 02.store value
-      var thisChecked = thisQuiz+'-data',
-          thisAnswer = {question: quest, answer: answers };
-      localStorage.setItem(thisChecked,JSON.stringify(thisAnswer));
-    });
-
   });
 }
 
@@ -225,8 +183,8 @@ function clickNext() {
   }
   // 02.check if end of quiz
   if(currentEQ == $('.slide').length - 1 ) {
-    //localStorage.setItem('step','end');
-    //$('.slide').eq(currentEQ).removeClass('active');
+    localStorage.setItem('step','end');
+    $('.slide').eq(currentEQ).removeClass('active');
   }
   // 03.change status of div view 
   checkProgress();
@@ -258,27 +216,31 @@ function clickPrev() {
 *** func: check Progress of Quiz
 **/
 function checkProgress() {
-  var stepData = localStorage.getItem('step');
+  var stepData = localStorage.getItem('step'),
+      formStatus = localStorage.getItem('send');
 
-  if(stepData == 'beforestart') {
-    $('.beforequiz').addClass('active');
-  } else if(stepData == 'start') {
+  if(stepData == 'start') {
     $('.startquiz').addClass('active');
-    $('.beforequiz').removeClass('active');
     $('.inprogress').removeClass('active');
+    $('.endquiz').removeClass('active');
   } else if(stepData == 'end') {
-   
+    $('.endquiz').addClass('active');
+    $('.startquiz').removeClass('active');
+    $('.inprogress').removeClass('active');
+    if(formStatus == 'done') {
+      $('.frm-fields').addClass('disable');
+      $('#reset-quiz').addClass('active');
+    }
   } else {
     $('.inprogress').addClass('active');
-    $('.beforequiz').removeClass('active');
     $('.startquiz').removeClass('active');
+    $('.endquiz').removeClass('active');
   }
 }
 
 /**
 *** funcs: event functions for buttons
 **/
-
 /* event func: check button - go to next */
 $('#slider-check').on("click",function(){
   var curEQ = checkCurrent(),
@@ -286,86 +248,60 @@ $('#slider-check').on("click",function(){
       numGet = stepData.slice(-2),
       slideStep = Number(numGet) - 1;
   
-  // 01.check type of inputs
-  var findInput = '';
-  if($('.slide').eq(curEQ).find("input[type='checkbox']").length > 0 ) {
-    findInput = 'hasCheckbox';
-  } else if($('.slide').eq(curEQ).find("input[type='radio']").length > 0 ){
-    findInput = 'hasRadio';
-  } else if($('.slide').eq(curEQ).find("select").length > 0 ){
-    findInput = 'hasSelect';
-  } else if($('.slide').eq(curEQ).find("textarea").length > 0 ){
-    findInput = 'hasTextArea';
-  } else { }
-
-  console.log(findInput);
-
-  // 02.check which type?
-  if(findInput == 'hasCheckbox') {
-    // check at least one checkbox is checked
-    if($('.slide').eq(curEQ).find("input[type='checkbox']:checked").length > 0 ) {
-      $('#notify-checkbox').removeClass('active');
-      next_slide();
+  // check at least one checkbox is checked
+  if($('.slide').eq(curEQ).find("input:checked").length > 0 ) {
+    $('#notification').removeClass('active');
+    if(slideStep == (lengthQuiz-1)) {
+      localStorage.setItem('step','end');
+      $('.endquiz').addClass('active');
+      $('.inprogress').removeClass('active');
+      showResult();
+      //set hash
+      var endStep = localStorage.getItem('step');
+      window.location.hash = endStep;
     } else {
-      $('#notify-checkbox').addClass('active');
-    }
-  } else if(findInput == 'hasSelect' || findInput == 'hasRadio') {
-    next_slide(); //no need check validation - always have default fields
-  } else if(findInput == 'hasTextArea') {
-    var content = $.trim($('.slide').eq(curEQ).find("textarea").val());
-    if(content.length == 0) {
-      $('#notify-textarea').addClass('active');
-    } else {
-      $('#notify-textarea').removeClass('active');
-      next_slide();
+      slider.goToNextSlide();
     }
   } else {
-    next_slide();
+    $('#notification').addClass('active');
   }
-
 });
 
-/**
-*** func: next_slide for slider check
-**/
-function next_slide(){
-  var curEQ = checkCurrent(),
-      stepData = localStorage.getItem('step'),
-      numGet = stepData.slice(-2),
-      slideStep = Number(numGet) - 1;
-
-  if(slideStep == (lengthQuiz-1)) {
-    //01.update storage
-    localStorage.setItem('step','end');
-    showResult();
-    //02.set hash
-    var endStep = localStorage.getItem('step');
-    window.location.hash = endStep;
-    //03.Go to contact form
-    window.location = '/contact/';
-  } else {
-    slider.goToNextSlide();
-  }
-}
-/* event func: get started - before start quiz*/
-$('#get-started').on("click", function() {
-  localStorage.setItem('step','start');
-  checkProgress();
+//check if hash is changed
+$(window).bind('hashchange', function() {
+  var newhash = window.location.hash.substring(1); // it gets id of clicked element
 });
 
 /* event func: start button - go to quiz */
 $('#start-now').on("click", function() {
   localStorage.setItem('step','ques01');
+  //set hash
+  var startStep = localStorage.getItem('step');
+  window.location.hash = startStep;
+
   checkProgress();
   slider.reloadSlider();
-
-  //push hash to reset to default question
-  var stepData = localStorage.getItem('step');
-  window.location.hash = stepData;
-  var question_dest = question_url + '#' + stepData;
-  history.pushState(null, null, question_dest);
 });
 
+/* event func: end button - go to contact form */
+$('#reset-quiz').on("click", function() {
+   localStorage.setItem('step','start');
+   localStorage.setItem('send','notyet');
+
+   $(this).removeClass('active');
+   $('.frm-fields').removeClass('disable');
+   $('div.wpcf7-mail-sent-ok').css('display','none');
+
+  //restore status
+  checkProgress();
+  resetLocalStorage();
+  slider.reloadSlider();
+  custom_slide();
+
+  //set hash
+  var startStep = localStorage.getItem('step');
+  window.location.hash = startStep;
+});
 
 /**
 *** func: init LocalStorage
@@ -374,8 +310,8 @@ function initLocalStorage() {
     
   //step 1: load current step at the first
   var stepData = localStorage.getItem('step');
-  if(stepData === null || stepData == 'beforestart') {
-    localStorage.setItem('step','beforestart');
+  if(stepData === null || stepData == 'start') {
+    localStorage.setItem('step','start');
     $('.slide').eq(0).addClass('active');
   } else if(stepData == 'end') {
     //...
@@ -402,54 +338,32 @@ function initLocalStorage() {
         quesData = JSON.parse(localStorage.getItem(getQues));
     
     var thisChecks = "#" + order + i + " input",
-        thisSelected = "#" + order + i + " select option",
-        items =  $(thisChecks),
-        selects = $(thisSelected);
+        items =  $(thisChecks);
 
       if(quesData!==null) { //if localStorage has data
         var question = quesData.question,
             answers = quesData.answer;
           for(var key in answers){
-            
-            //Is checkbox or radio
             $.each(items,function(index,item){
               if($(item).val()==key){
                 $(item).prop('checked', true);
               }
             });
             
-            //Is selected
-            $.each(selects,function(index,item){
-              $(item).removeAttr("selected");
-              if($(item).val()==key){
-                $(item).prop("selected", "selected");
-              }
-            });
-            
           }
       } else { //if localStorage doesn't have data
-        var answers = {};
+      var answers = {};
+      $.each(items,function(index,item){
+        if($(item).is(':checked')) {
+          var $keyItem = $(item).val();  
+          answers[$keyItem] = $(item).next().text();
+        }
+      });
+      var ques = '#'+ order + i,
+          quest = $(ques).find('.question_txt span').text();
+          null_data = {question: quest, answer: answers };
 
-        // case: checkbox or radio
-        $.each(items,function(index,item){
-          if($(item).is(':checked')) {
-            var $keyItem = $(item).val();  
-            answers[$keyItem] = $(item).next().text();
-          }
-        });
-        
-        // case: select
-        $.each(selects,function(index,item){
-          if($(item).attr('selected')) {
-            var $keyItem = $(item).val();  
-            answers[$keyItem] = $(item).next().text();
-          }
-        });
-        var ques = '#'+ order + i,
-            quest = $(ques).find('.question_txt span').text();
-            null_data = {question: quest, answer: answers };
-
-        localStorage.setItem(getQues,JSON.stringify(null_data));
+      localStorage.setItem(getQues,JSON.stringify(null_data));
     }
   }
   checkProgress();
@@ -466,8 +380,7 @@ function resetLocalStorage() {
   $('.slide').eq(0).addClass('active');
   var currentEQ = checkCurrent();
 
-  console.log('reset');
-  // === reset all local Storage ===================================
+  //reset all local Storage
   for(var i = 1 ; i < $('.slide').length + 1; i++) {
     var order = '';
     if(i<=9) {
@@ -481,48 +394,17 @@ function resetLocalStorage() {
     var thisChecks = "#" + order + i + " input",
         items =  $(thisChecks);
 
-    // === reset all answers ===================================
-    var answers = {};
-    $.each(items,function(index,item){
-      if($(item).is(':checked')) {
-        $(this).prop('checked', false);
-      }
-    });
+      var answers = {};
+      $.each(items,function(index,item){
+        if($(item).is(':checked')) {
+          $(this).prop('checked', false);
+        }
+      });
+      var ques = '#' + order + i,
+          quest = $(ques).find('.question_txt span').text(),
+          null_data = {question: quest, answer: answers };
 
-    // === setup default values ===================================
-    var 
-        parentDiv = "#" + order + i,
-        thisChecked = "#" + order + i + " input:first",
-        thisSelected = "#" + order + i + " select option:first",
-        thisTextarea = "#" + order + i + " textarea";
-
-    // case: checkbox or ----------------------------------------
-    if($(parentDiv).find('select').length > 0 ) {
-      var selectVal = $(thisSelected).text(),
-        $keySelect  =  $(thisSelected).val();
-        answers[$keySelect] = selectVal;
-    }
-
-    // case: checkbox or radio -----------------------------------
-    if($(parentDiv).find('input').length > 0 ) {
-      var checkVal = $(thisChecked).next().text(),
-          $keyCheck  =  $(thisChecked).val();
-          answers[$keyCheck] = checkVal;
-        
-    }
-    // case: textarea ---------------------------------------------
-    if($(parentDiv).find('textarea').length > 0 ) {
-      var textVal = '',
-          $keyText  =  $(thisTextarea).attr('id');
-          answers[$keyText] = textVal;
-    }
-
-    // assign value: assign value to objects
-    var ques = '#' + order + i,
-        quest = $(ques).find('.question_txt span').text(),
-        null_data = {question: quest, answer: answers };
-
-    localStorage.setItem(getQues,JSON.stringify(null_data));
+      localStorage.setItem(getQues,JSON.stringify(null_data));
   }
 
 }
@@ -561,9 +443,8 @@ function showResult() {
   }
 }
 
-// running functions
-
-var stepCheck = localStorage.getItem('send');
-if(stepCheck == 'done'){
-  resetLocalStorage();
-}
+$(document).on('mailsent.wpcf7', function () {
+  $('.frm-fields').addClass('disable');
+  $('#reset-quiz').addClass('active');
+  localStorage.setItem('send', 'done');
+});
