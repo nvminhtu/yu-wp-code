@@ -25,15 +25,18 @@
             【知識ゼロでも、無料で、誰でも簡単に、助成金取得可能性を診断できるサイト】として、<br />
             toreruca（トレルカ）はサービスを開始いたしました。</p> 
         </div>
-        <p id="get-started" class="btn_slide_qa">Next</p>
+        <p id="get-started" class="btn_slide_qa">次へ</p>
       <!-- /.beforequiz --></div>
       
       <div class="startquiz">
       	<div class="box_qa" class="clearfix">
-        	<p class="title_quiz">クイズへようこそ</p>
-          <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+        	<p class="title_quiz">Let's トレルカ診断！（約5分）</p>
+          <p>今から、貴社の現状に関する「15個の質問」いたします。。
+          それらの内容を元に、「どんな助成金が貴社で取れるか？」を診断させて頂きます。</p>
+          <p>※ 回答が難しい部分があれば、「分からない」を選択ください。</p>
+          <p>それでは、診断を開始しましょう！</p>
         </div>
-        <p id="start-now" class="btn_slide_qa">Start Quiz</p>
+        <p id="start-now" class="btn_slide_qa">トレルカ診断 START</p>
       <!-- start quiz --></div>
       
       <div class="inprogress">

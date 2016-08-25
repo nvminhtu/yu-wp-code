@@ -1,5 +1,5 @@
 var slider,
-    question_url = 'http://localhost.toreruca/question/';
+    question_url = 'http://toreruca.com/question/';
 
 $(function() {
   slider = $('#slide_qa').bxSlider({
@@ -54,14 +54,18 @@ function change_hash() {
 $(document).ready(function() {
   "use strict";
   //load first
- //window.history.replaceState(null, null, "http://localhost.toreruca/"); 
+ //window.history.replaceState(null, null, "http://toreruca.com/"); 
   $('.open_quiz').click(function() {
       // init: go to current step 
       var currentStep = localStorage.getItem('step'),
           slideStep = 0;
       if(currentStep =='end') {
-        window.location = '/contact-form/';
+        window.location = 'http://toreruca.com/contact/';
       } else {
+        if(currentStep == 'beforestart') {
+          localStorage.setItem('send','notyet');
+          console.log('here');
+        }
         //open popup
         $("#modal_quiz_out").fadeIn("fast");
         slider.reloadSlider();
@@ -71,7 +75,7 @@ $(document).ready(function() {
 
   $('#btn_close').click(function() {
     $("#modal_quiz_out").fadeOut("");
-    window.history.replaceState(null, null, "http://localhost.toreruca/"); 
+    window.history.replaceState(null, null, "http://toreruca.com/"); 
   });
 });
 
@@ -298,8 +302,6 @@ $('#slider-check').on("click",function(){
     findInput = 'hasTextArea';
   } else { }
 
-  console.log(findInput);
-
   // 02.check which type?
   if(findInput == 'hasCheckbox') {
     // check at least one checkbox is checked
@@ -466,7 +468,6 @@ function resetLocalStorage() {
   $('.slide').eq(0).addClass('active');
   var currentEQ = checkCurrent();
 
-  console.log('reset');
   // === reset all local Storage ===================================
   for(var i = 1 ; i < $('.slide').length + 1; i++) {
     var order = '';
