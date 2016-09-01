@@ -132,6 +132,7 @@ h3.title_qa:after {
 	display: inline-block;
 	margin-right: 12px;
 	cursor: pointer;
+	padding:0 10px;
 }
 #reset-quiz.btn_slide_qa {
 	width: 150px;
@@ -401,10 +402,10 @@ h3.title_qa:after {
 #slider-next.disable {
 	display: none;
 }
-#notify-checkbox, #notify-textarea {
+#notify-checkbox, #notify-textarea, #notify-radio, #notify-select {
 	display: none;
 }
-#notify-checkbox.active, #notify-textarea.active {
+#notify-checkbox.active, #notify-textarea.active, #notify-radio.active, #notify-select.active {
 	display: block;
 }
 .title_contact,
@@ -554,3 +555,221 @@ div.wpcf7-mail-sent-ok, div.wpcf7-response-output, div.wpcf7-validation-errors {
 	width: 100%;
 }
 }
+
+
+
+/* contact */
+
+#header.contact h2{
+	font-size:50px;
+	margin-top:65px;
+	
+}
+.box_form h3{
+	color: #1da2c3;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+}
+
+
+
+
+
+/* style form */
+.heading{
+	padding-top:50px;
+
+	}
+.frm-fields{
+	width:100%;
+	margin:0 auto;
+	max-width:1030px;
+	padding:40px;
+	  border: 5px solid #e1eff2;
+    box-sizing: border-box;
+	margin-bottom:40px;
+
+}
+.bt_des{
+	font-weight:bold;
+}
+.box_radio_bt{
+	text-align:left;
+}
+.beforequiz p,.startquiz p{
+	text-align:center;
+}
+.box_ans select{
+	margin:0 auto;
+	
+}
+.box_ans textarea{
+	width:100%;
+	padding:15px;
+	overflow:auto;
+}
+.box_ct01{
+	margin-bottom:40px;
+}
+
+
+.box_form dl {
+	width: 100%;
+	display: table;
+	    border-bottom: 1px dotted #dfdfdf;
+}
+.box_form dl dt {
+	display: table-cell;
+	font-weight: bold;
+	padding: 15px;
+	vertical-align: middle;
+	width: 220px;
+	text-align:left;
+}
+.box_form dl dt.field_mail{
+	vertical-align:top;
+}
+.field_cm{
+	font-size:12px;
+	text-align:left;
+	margin:0;
+	margin-top:8px;
+}
+.box_form dl dt span {
+	color: #f00;
+	margin-left: 5px;
+	text-transform: uppercase;
+}
+.box_form dl dd {
+	padding: 15px 0;
+}
+.box_form dl dd.btn_submit {
+	text-align: center;
+}
+.box_form select{
+	width:100%;
+	background: #fff ;
+	border: 1px solid #ccc;
+   height: 40px;
+	}
+.box_form input {
+	background: #fff;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 15px;
+	line-height: 40px;
+	padding: 0 5px;
+}
+.box_form textarea {
+	background: #fff;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 13px;
+	height: 80px;
+	padding: 5px;
+	width: 460px;
+}
+.box_form dl dd .error {
+	color: #f00;
+	display: block;
+}
+.box_form .category_area {
+	margin-top: 10px;
+}
+.box_form .category_area li {
+	display: inline-block;
+	margin-right: 20px;
+}
+.box_form input[type="submit"] {
+	background: #35A1C2;
+	border: medium none;
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	max-width: 150px;
+	padding: 0;
+	transition: all 0.5s ease-in-out 0s;
+	width: 100%;
+	 -webkit-appearance: none !important;
+}
+.box_form input[type="submit"]:hover {
+	opacity: 0.6;
+}
+.box_form input[type="text"], .box_form input[type="email"], .box_form textarea {
+	max-width: 100% !important;
+	width: 100%;
+}
+.box_form input[type="tel"] {
+	width: 250px;
+}
+.wpcf7-list-item {
+	padding-right: 10px;
+}
+div.wpcf7-mail-sent-ok, div.wpcf7-response-output, div.wpcf7-validation-errors {
+	display: none !important;
+}
+
+.box_form_confirm dd{
+	background:#F6F6F6;
+	text-align:left;
+}
+
+.box_form_confirm dl dt,.box_form_confirm dl dd{
+	padding:5px;
+	height:29px;
+	margin:5px 0;
+}
+.box_form_confirm dl{
+	border-bottom:none;
+}
+.box_thanks{
+	padding:50px 0;
+}
+@media screen and (max-width:768px) {
+	
+	#header.contact h2{
+	font-size:30px;
+	margin-top:30px;
+	
+}
+	.box_form h3{
+		font-size:18px;
+		font-weight:bold;
+	}
+	.frm-fields{
+		padding:20px;
+	}
+.title_quiz {
+	font-size: 22px;
+}
+.box_form dl {
+	display: block;
+	margin-bottom:12px;
+}
+.box_form dl dt {
+	box-sizing: border-box;
+	padding: 0;
+	width: 100%;
+}
+.box_form dl dd {
+	box-sizing: border-box;
+	display: block;
+	padding-top: 10px;
+	width: 100%;
+}
+.box_form input[type="text"], .box_form input[type="email"], .box_form textarea, .box_form input[type="tel"] {
+	width: 100%;
+}
+.box_form_confirm dl dd{
+		box-sizing:inherit;}
+}
+

@@ -85,12 +85,21 @@ $(document).ready(function() {
 });
 
 
-$(window).bind("resize load",function() {   
+/*$(window).bind("resize load",function() {   
  "use strict"; 
 	var w_window = $(window).width();
 	var h_window = $(window).height();
 	
+});*/
+
+
+$(document).ready(function() {
+/*    $(".btn_call").click(function(){
+		alert("111");
+	});*/
 });
+
+
 
 /* fixed menu for index page */
 

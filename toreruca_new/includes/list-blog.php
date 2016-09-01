@@ -31,7 +31,7 @@ function shortcode_list_blog() {
 
 		$content_shortcode .= '<div class="slide_box hover">';
 		if ( has_post_thumbnail() ) {
-			$content_shortcode .= '<p class="slide_img"><img src="'.$img_blog[0].'" alt="'.get_the_title().'" /></p>';
+			$content_shortcode .= '<p class="slide_img"><a href="'.get_the_permalink().'"><img src="'.$img_blog[0].'" alt="'.get_the_title().'" /></a></p>';
 		}
 	    $content_shortcode .= '<p class="title_blog01"><a href="'.get_the_permalink().'">'.get_the_title().'</a></p>';
 	    $content_shortcode .= '<p class="txt_des">'.mb_substr(strip_tags($post->post_content),0,38).'...</p>';

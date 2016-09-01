@@ -31,7 +31,7 @@
       <div class="startquiz">
       	<div class="box_qa" class="clearfix">
         	<p class="title_quiz">Let's トレルカ診断！（約5分）</p>
-          <p>今から、貴社の現状に関する「15個の質問」いたします。。
+          <p>今から、貴社の現状に関する「15個の質問」いたします。。<br />
           それらの内容を元に、「どんな助成金が貴社で取れるか？」を診断させて頂きます。</p>
           <p>※ 回答が難しい部分があれば、「分からない」を選択ください。</p>
           <p>それでは、診断を開始しましょう！</p>
@@ -56,6 +56,12 @@
         <div class="box_qa" class="clearfix">
           <?php include('part-quiz-content.php'); ?>
           <div id="notify-checkbox" class="errors">
+            <p>少なくとも1つの項目をチェックしてください</p>
+          </div>
+          <div id="notify-radio" class="errors">
+            <p>少なくとも1つの項目をチェックしてください</p>
+          </div>
+          <div id="notify-select" class="errors">
             <p>少なくとも1つの項目をチェックしてください</p>
           </div>
           <div id="notify-textarea" class="errors">

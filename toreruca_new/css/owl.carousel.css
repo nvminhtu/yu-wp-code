@@ -209,6 +209,7 @@
 	left: 0;
 	top: 33%;
 	position: absolute;
+	z-index:-1;
 }
 #idex_blog_list .owl-next {
 	background: url(../images/btn_next01.png) no-repeat;
