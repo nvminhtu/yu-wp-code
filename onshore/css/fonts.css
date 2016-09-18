@@ -1,0 +1,157 @@
+/*	
+font-family: 'AvenirBlack';
+font-family: 'HuiFont';
+	 font-family: 'Lato-Regular';
+    font-family: 'LatoWebBlack';
+ font-family: 'KozGoPro-Regular';
+ font-family: 'KozGoPro-ExtraLight';
+ font-family: 'KozGoPro-Bold';
+ font-family: 'KozGoPro-Heavy';
+ font-family: 'KozGoPro-Light';
+ font-family: 'KozGoPro-Medium';
+   
+*/
+
+body {
+	font: 62.5% Meiryo, arial, clean, verdana, 'Hiragino Kaku Gothic Pro', "ＭＳ Ｐゴシック", Osaka, sans-serif;
+	color: #333;
+	line-height: 1.4;
+}
+html>/**/body {
+	font-size: 10px;
+	font-size /*\**/: 62.5%\9;
+} /* Except IE & Add IE8 */
+/**
+ * Nudge down to get to 10px equivalent for these form elements
+ */ 
+select, input, button, textarea {
+	font: 100% Meiryo, arial, clean, verdana, 'Hiragino Kaku Gothic Pro', "ＭＳ Ｐゴシック", Osaka, sans-serif;
+	color: #333;
+	line-height: 1.4;
+}
+/**
+ * To help tables remember to inherit
+ */
+table {
+	font-size: inherit;
+	font: 100%;
+	color: #333;
+	line-height: 1.4;
+}
+/**
+ * Bump up IE to get to 13px equivalent for these fixed-width elements
+ */
+pre, code, kbd, samp, tt {
+	font-family: monospace;
+	font-size: 100%;
+*font-size:108%;
+	line-height: 1.4;
+	color: #333;
+}
+/* Font-size fixed */
+li li, li dt, li dd, li input, li select, li button, li textarea, li p, li th, li td, dt li, dt dt, dt dd, dt input, dt select, dt button, dt textarea, dt p, dt th, dt td, dd li, dd dt, dd dd, dd input, dd select, dd button, dd textarea, dd p, dd th, dd td, th li, th dt, th dd, th input, th select, th button, th textarea, th p, th th, th td, td li, td dt, td dd, td input, td select, td button, td textarea, td p, td th, td td, p input {
+	font-size: 100%;
+}
+
+
+@font-face {
+font-family: 'AvenirBlack';
+font-style: normal;
+font-weight: normal;
+src: local('../fonts/Avenir LT Std 95 Black'), url('../fonts/AvenirLTStd-Black.woff') format('woff');
+}
+@font-face {
+	font-family: 'HuiFont';
+	src: url('../fonts/HuiFont.eot');
+	src: url('../fonts/HuiFont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HuiFont.woff') format('woff'),
+		url('../fonts/HuiFont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* Webfont: Lato-Black */@font-face {
+    font-family: 'LatoWebBlack';
+    src: url('../fonts/Lato-Black.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Lato-Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Regular */@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+@font-face {
+	font-family: 'KozGoPro-Regular';
+	src: url('../fonts/KozGoPro-Regular-AlphaNum.eot');
+	src: url('../fonts/KozGoPro-Regular-AlphaNum.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/KozGoPro-Regular-AlphaNum.woff') format('woff'),
+		url('../fonts/KozGoPro-Regular-AlphaNum.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KozGoPro-ExtraLight';
+	src: url('../fonts/KozGoPro-ExtraLight-AlphaNum.eot');
+	src: url('../fonts/KozGoPro-ExtraLight-AlphaNum.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/KozGoPro-ExtraLight-AlphaNum.woff') format('woff'),
+		url('../fonts/KozGoPro-ExtraLight-AlphaNum.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KozGoPro-Bold';
+	src: url('../fonts/KozGoPro-Bold-AlphaNum.eot');
+	src: url('../fonts/KozGoPro-Bold-AlphaNum.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/KozGoPro-Bold-AlphaNum.woff') format('woff'),
+		url('../fonts/KozGoPro-Bold-AlphaNum.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KozGoPro-Heavy';
+	src: url('../fonts/KozGoPro-Heavy-AlphaNum.eot');
+	src: url('../fonts/KozGoPro-Heavy-AlphaNum.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/KozGoPro-Heavy-AlphaNum.woff') format('woff'),
+		url('../fonts/KozGoPro-Heavy-AlphaNum.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KozGoPro-Light';
+	src: url('../fonts/KozGoPro-Light-AlphaNum.eot');
+	src: url('../fonts/KozGoPro-Light-AlphaNum.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/KozGoPro-Light-AlphaNum.woff') format('woff'),
+		url('../fonts/KozGoPro-Light-AlphaNum.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KozGoPro-Medium';
+	src: url('../fonts/KozGoPro-Medium-AlphaNum.eot');
+	src: url('../fonts/KozGoPro-Medium-AlphaNum.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/KozGoPro-Medium-AlphaNum.woff') format('woff'),
+		url('../fonts/KozGoPro-Medium-AlphaNum.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
