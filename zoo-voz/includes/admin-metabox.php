@@ -13,7 +13,7 @@ class Videoprefix_Admin {
  	 * Options page metabox id
  	 * @var string
  	 */
-	private $metabox_id = 'prefixservices_option_metabox';
+ 	private $metabox_id = 'prefixservices_option_metabox';
 	/**
 	 * Options Page title
 	 * @var string

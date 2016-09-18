@@ -60,7 +60,7 @@
             $id= get_the_ID();
             $check_new_for_blog = get_post_meta($post->ID, 'check_new_for_blog',true);
         ?>
-        <div class="<?php echo $color_class; ?> bloglist_box01 box_link" data-color-code="<?php echo $term_color_code; ?>">
+        <div class="<?php echo $color_class; ?> heightLine-01 bloglist_box01 box_link" data-color-code="<?php echo $term_color_code; ?>">
           <div class="blog_img">
             <a href="<?php echo get_permalink(); ?>">
               <?php if (!empty($check_new_for_blog)){ ?>

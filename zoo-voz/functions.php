@@ -36,6 +36,10 @@ require_once (dirname(__FILE__) . '/includes/shortcode-related-blogs.php');
 require_once (dirname(__FILE__) . '/includes/shortcode-related-sblogs.php');
 require_once (dirname(__FILE__) . '/includes/shortcode-other-blogs.php');
 
+// ------ alloww shortcode in widget text
+add_filter( 'widget_text', 'shortcode_unautop');
+add_filter( 'widget_text', 'do_shortcode');
+
 /*** 03.Setting for theme ***/
 if (function_exists('register_nav_menu')) {
   register_nav_menu('sticky-menu-pc', 'Sticky Menu PC');

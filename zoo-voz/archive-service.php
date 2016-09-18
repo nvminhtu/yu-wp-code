@@ -70,15 +70,17 @@
     }
     ?>
   <!-- .inner ftb --></div>
+
+  <!-- start blog list -->
+  <!-- #container03 -->
+  <div id="container03" class="clearfix">
+    <div class="inner clearfix">
+      <?php echo do_shortcode('[list_blog]'); ?>
+    </div>
+  </div>
+  <!-- end blog list -->
+  
 <!-- #main --></div>
 
-<!-- start blog list -->
-<!-- #container03 -->
-<div id="container03" class="clearfix">
-  <div class="inner clearfix">
-    <?php echo do_shortcode('[list_blog]'); ?>
-  </div>
-</div>
-<!-- end blog list -->
 
 <?php get_footer(); ?>

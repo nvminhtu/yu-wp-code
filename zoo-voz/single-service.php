@@ -47,7 +47,11 @@
       </div>
   </div>
 
-  <?php //--- start service list -------------------- ?>
+  <?php
+    //--- start service list --------------------
+    //$service_box_data = prefixservices_get_option( 'service_data' );
+    //echo $service_box_data;
+  ?>
   <div id="container05" class="clearfix">
       <div class="inner clearfix">
         <h3 class="title_h301 " data-wow-delay="0.3s">YOU MAY ALSO LIKE<br>
