@@ -25,6 +25,7 @@ require_once (dirname(__FILE__) . '/includes/custom-post-types.php');
 require_once (dirname(__FILE__) . '/includes/widgets.php');
 require_once (dirname(__FILE__) . '/includes/pagination.php');
 require_once (dirname(__FILE__) . '/includes/admin-metabox.php');
+// require_once (dirname(__FILE__) . '/includes/admin-options.php');
 
 // ------ require shortcode ----
 require_once (dirname(__FILE__) . '/includes/shortcode.php');

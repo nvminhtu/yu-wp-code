@@ -36,7 +36,7 @@ class Videoprefix_Admin {
 	 */
 	private function __construct() {
 		// Set our title
-		$this->title = __( 'General Options', 'prefixvideo' );
+		$this->title = __( 'General Options', 'prefixservices' );
 	}
 	/**
 	 * Returns the running object
@@ -106,8 +106,8 @@ class Videoprefix_Admin {
 		) );
 		// Set our CMB2 fields
 		$cmb->add_field( array(
-			'name' => __( 'Service - You may also like', 'prefixvideo' ),
-			'desc' => __( 'insert your services data', 'prefixvideo' ),
+			'name' => __( 'Service - You may also like', 'prefixservices' ),
+			'desc' => __( 'insert your services data', 'prefixservices' ),
 			'id'   => 'service_data',
 			'type' => 'wysiwyg',
 			'default' => '',
@@ -125,7 +125,7 @@ class Videoprefix_Admin {
 		if ( $object_id !== $this->key || empty( $updated ) ) {
 			return;
 		}
-		add_settings_error( $this->key . '-notices', '', __( 'Settings updated.', 'prefixvideo' ), 'updated' );
+		add_settings_error( $this->key . '-notices', '', __( 'Settings updated.', 'prefixservices' ), 'updated' );
 		settings_errors( $this->key . '-notices' );
 	}
 	/**
@@ -147,7 +147,7 @@ class Videoprefix_Admin {
  * @since  0.1.0
  * @return Videoprefix_Admin object
  */
-function prefixvideo_admin() {
+function prefixservices_admin() {
 	return Videoprefix_Admin::get_instance();
 }
 /**
@@ -156,8 +156,8 @@ function prefixvideo_admin() {
  * @param  string  $key Options array key
  * @return mixed        Option value
  */
-function prefixvideo_get_option( $key = '' ) {
-	return cmb2_get_option( prefixvideo_admin()->key, $key );
+function prefixservices_get_option( $key = '' ) {
+	return cmb2_get_option( prefixservices_admin()->key, $key );
 }
 // Get it started
-prefixvideo_admin();
+prefixservices_admin();
