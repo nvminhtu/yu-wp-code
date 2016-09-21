@@ -1,10 +1,10 @@
 <div id="sticky_footer" class="clearfix">
   <div class="inner clearfix">
     <div class="box_btn01">
-       <p class="sticky_btn sticky_btn_tel hover"><a href="tel:05068697951" class="sweetlink btn_call">電話で診断<span class="clear_line">050-6869-7951（平日10~17時）</span></a></p>
+       <p class="sticky_btn sticky_btn_tel hover"><a href="tel:05068697951" class="sweetlink btn_call">電話で診断<span class="clear_line">050-6869-7951（平日10時~17時）</span></a></p>
     </div>
     <div class="box_btn02">
-      <p class="open_quiz sticky_btn sticky_btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断<span class="clear_line">12の質問に答える<span class="txt_24small">（24時間）</span></span></a></p>
+      <p class="open_quiz sticky_btn sticky_btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断<span class="clear_line">15の質問に答える<span class="txt_24small">（約5分）</span></span></a></p>
     </div>
     <div class="box_slide_question">
        <div class="box_slide_question_list">

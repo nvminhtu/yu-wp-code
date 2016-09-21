@@ -1,30 +1,6 @@
 var slider,
     question_url = 'http://toreruca.com/question/';
 
-$(window).load(function() {
-  var href = window.location.href;
-  var n = href.search("/contact/");
-  var isContact;
-
-  //check is contact page
-  if(n!="-1") {
-    isContact = true;
-  } else {
-    isContact = false;
-  }
-
-  var finished = localStorage.getItem('finished');
-  if(finished=='xongroi' && isContact==true) {
-    //do sthing
-    //localStorage.removeItem('finished');
-    alert('cai nay thi co');
-  } else {
-    resetLocalStorage();
-    localStorage.removeItem('finished');
-    localStorage.removeItem('step');
-  }
-
-});
 $(function() {
   slider = $('#slide_qa').bxSlider({
     touchEnabled: false,
@@ -48,12 +24,12 @@ $(function() {
       change_hash();
     },
     onSlideNext: function($slideElement, oldIndex, newIndex) {
-      clickNext();
+      //clickNext();
       $('.slide').removeClass('active');
       $($slideElement).addClass('active');
     },
     onSlidePrev: function($slideElement, oldIndex, newIndex) {
-      clickPrev();
+      //clickPrev();
       $('#notify-textarea').removeClass('active');
       $('#notify-checkbox').removeClass('active');
       $('#notify-radio').removeClass('active');
@@ -80,6 +56,29 @@ function change_hash() {
 **/
 $(document).ready(function() {
   "use strict";
+  //load first
+  /*$('.open_quiz').click(function() {
+      // init: go to current step
+      slider.reloadSlider();
+      var currentStep = localStorage.getItem('step'),
+          slideStep = 0;
+      if(currentStep =='end') {
+        window.location = 'http://toreruca.com/contact/';
+      } else {
+        //open popup
+        $("#modal_quiz_out").fadeIn("fast");
+        change_hash();
+
+        if(currentStep == 'beforestart') {
+          localStorage.setItem('send','notyet');
+        } else {
+          var numGet = currentStep.slice(-2);
+            slideStep = Number(numGet) - 1;
+            console.log(slideStep);
+            slider.goToSlide(slideStep);
+        }
+      }
+  }); */
 
   $('.open_quiz').click(function() {
       $("#modal_quiz_out").fadeIn("fast");
@@ -90,16 +89,17 @@ $(document).ready(function() {
       // init: go to current step
       var currentStep = localStorage.getItem('step'),
           slideStep = 0;
-      if(currentStep=='end') {
-
+      /* if(currentStep=='end') {
+        //window.location = 'http://toreruca.com/contact/';
       }
-      if(currentStep=='start') {
+      if(currentStep=='beforestart') {
           slideStep = 0;
       } else {
           var numGet = currentStep.slice(-2);
           slideStep = Number(numGet) - 1;
           slider.goToSlide(slideStep);
-      }
+      } */
+    //  slideStep = 0;
   });
 
 
@@ -260,8 +260,8 @@ function clickNext() {
     saveStorage(currentEQ+1);
   }
   // 02.check if end of quiz
-  if(currentEQ == $('.slide').length) {
-    localStorage.setItem('finish','roi');
+  if(currentEQ == $('.slide').length - 1 ) {
+    //localStorage.setItem('step','end');
     //$('.slide').eq(currentEQ).removeClass('active');
   }
   // 03.change status of div view
@@ -297,18 +297,17 @@ function clickPrev() {
 function checkProgress() {
   var stepData = localStorage.getItem('step');
 
-  if(stepData == 'start') {
+  /*if(stepData == 'beforestart') {
+    $('.beforequiz').addClass('active');
+  } else if(stepData == 'start') {
     $('.startquiz').addClass('active');
+    $('.beforequiz').removeClass('active');
     $('.inprogress').removeClass('active');
   } else {
-    if(stepData == 'ques01') {
-      $('#slider-back').addClass('active');
-    } else {
-      $('#slider-back').removeClass('active');
-    }
     $('.inprogress').addClass('active');
+    $('.beforequiz').removeClass('active');
     $('.startquiz').removeClass('active');
-  }
+  } */
 }
 
 /**
@@ -382,13 +381,11 @@ function next_slide(){
 
   if(slideStep == (lengthQuiz-1)) {
     //01.update storage
-    localStorage.setItem('finished','xongroi');
+    //localStorage.setItem('step','end');
     showResult();
-
     //02.set hash
     var endStep = localStorage.getItem('step');
     window.location.hash = endStep;
-
     //03.Go to contact form
     window.location = '/contact/';
   } else {
@@ -414,13 +411,6 @@ $('#start-now').on("click", function() {
   history.pushState(null, null, question_dest);
 });
 
-/* event func: start button - go to quiz */
-$('#slider-back').on("click", function() {
-  localStorage.setItem('step','start');
-  checkProgress();
-  slider.reloadSlider();
-});
-
 
 /**
 *** func: init LocalStorage
@@ -429,8 +419,8 @@ function initLocalStorage() {
 
   //step 1: load current step at the first
   var stepData = localStorage.getItem('step');
-  if(stepData === null || stepData == 'start') {
-    localStorage.setItem('step','start');
+  if(stepData === null || stepData == 'beforestart') {
+    localStorage.setItem('step','beforestart');
     $('.slide').eq(0).addClass('active');
   } else if(stepData == 'end') {
     //...

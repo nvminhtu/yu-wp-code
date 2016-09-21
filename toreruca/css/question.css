@@ -149,7 +149,8 @@ h3.title_qa:after {
 #start-now {
 	margin-right: 0;
 }
-#slider-prev {
+#slider-prev,
+#slider-back {
 	background: url(../images/btn_pre_q01.png) 15% center no-repeat #888888;
 }
 #slider-next {
@@ -399,6 +400,12 @@ h3.title_qa:after {
 .startquiz.active, .inprogress.active, .endquiz.active, .beforequiz.active {
 	display: block;
 }
+#slider-back {
+	display: none;
+}
+#slider-back.active {
+	display: inline-block;
+}
 #slider-next.disable {
 	display: none;
 }
@@ -564,9 +571,32 @@ div.wpcf7-mail-sent-ok, div.wpcf7-response-output, div.wpcf7-validation-errors {
 
 #header.contact h2{
 	font-size:50px;
-	margin-top:65px;
-	
+	margin-top:40px;
+	padding-left:0;
+	font-weight:bold;
+	padding-bottom:5px;
+	line-height:60px;
+
 }
+
+#header.contact h2::after {
+    border-top: 3px solid #5d6668;
+    bottom: 0;
+    content: "";
+    left: calc(50% - 100px);
+    position: absolute;
+    width: 200px;
+}
+
+#header.contact{
+	background:none;
+	text-align:center;
+	height:250px;
+}
+#header.contact #logo {
+    padding: 20px 0 20px 0px;
+}
+
 .box_form h3{
 	color: #1da2c3;
     font-size: 32px;
@@ -598,6 +628,7 @@ div.wpcf7-mail-sent-ok, div.wpcf7-response-output, div.wpcf7-validation-errors {
 }
 .bt_des{
 	font-weight:bold;
+	margin-bottom:7px;
 }
 .box_radio_bt{
 	text-align:left;
@@ -607,7 +638,7 @@ div.wpcf7-mail-sent-ok, div.wpcf7-response-output, div.wpcf7-validation-errors {
 }
 .box_ans select{
 	margin:0 auto;
-	
+
 }
 .box_ans textarea{
 	width:100%;
@@ -746,12 +777,22 @@ div.wpcf7-mail-sent-ok, div.wpcf7-response-output, div.wpcf7-validation-errors {
 	padding:50px 0;
 }
 @media screen and (max-width:768px) {
-	
+
 	#header.contact h2{
 	font-size:30px;
 	margin-top:30px;
-	
+
 }
+
+#header.contact #logo {
+    left: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+	padding:20px 0 20px
+}
+
+
 	.box_form h3{
 		font-size:18px;
 		font-weight:bold;

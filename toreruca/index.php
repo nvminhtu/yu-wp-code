@@ -15,14 +15,13 @@
           <span class="h2_l">500社以上が利用する<br class="box_sp_sm" />「助成金診断サービス」</span></h2>-->
         
           <h2>
-          <span class="h2_l">助成金<span class="txt_box_pc">の可能性</span>を、すべての経営者に。</span><br />
-          <span class="sp_mar">あなたの会社で申請可能な<br class="box_sp_sm" />助成金は？ その金額は？</span><br />
-          診断実績は1,000社を突破。<br class="box_sp_sm" />受給見込金額は平均400万円以上。</h2>
+          <span class="h2_l">助成金<span class="txt_box_pc">の可能性</span>を、すべての経営者に。</span>
+          <span class="h2line sp_mar">あなたの会社で申請可能な<br class="box_sp_sm" />助成金は？ その金額は？</span>
+          <span class="h2line">診断実績は1,000社を突破。<br class="box_sp_sm" />受給見込金額は平均500万円以上。</span></h2>
           
           
             <div class="btn_main_pc">
-        <p class="open_quiz btn_main btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断 <br class="box_sp_sm" />（12個の質問に答えて診断）<span>※約5分</span></a></p>
-  <!-- <p class="btn_main btn_tel hover"><a href="tel:05068697951" class="sweetlink sweetlink-icon-tel" onClick="jQuery.sweetlink(function(){ _gaq.push(['_trackEvent', 'phone_call', 'header', 'txt',,true]); })">電話で診断 <br class="box_sp_sm" />（050-6869-7951）<span>※10:00-17:00</span></a></p>-->
+        <p class="open_quiz btn_main btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断 <br class="box_sp_sm" />（15個の質問に答える）<span>※約5分</span></a></p>
    <p class="btn_main btn_tel hover"><a href="tel:05068697951" class="sweetlink btn_call">電話で診断 <br class="box_sp_sm" />（050-6869-7951）<span>※10:00-17:00</span></a></p>
        
 
@@ -32,9 +31,8 @@
 </div>
 <!-- button for Sp -->
 <div class="btn_main_sp">
-  <p class="open_quiz btn_main btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断 <br class="box_sp_sm03" />（12個の質問に答えて診断）<span>※約5分</span></a></p>
-<!--  <p class="btn_main btn_tel hover"><a href="tel:05068697951" class="sweetlink sweetlink-icon-tel" onClick="jQuery.sweetlink(function(){ _gaq.push(['_trackEvent', 'phone_call', 'footer', 'bnr',,true]); })">電話で診断 <br class="box_sp_sm03" />（050-6869-7951）<span>※10:00-17:00</span></a></p>-->
-  <p class="btn_main btn_tel hover"><a href="tel:05068697951" class="sweetlink btn_call">電話で診断 <br class="box_sp_sm03" />（050-6869-7951）<span>※10:00-17:00</span></a></p>
+  <p class="open_quiz btn_main btn_ques btn_ques01 hover"><a href="javascript:void(0)">Webで診断 <br class="box_sp_sm03" /><span class="btn_main_line02">（15個の質問に答えて診断）</span><span>※約5分</span></a></p>
+  <p class="btn_main btn_tel hover"><a href="tel:05068697951" class="sweetlink btn_call">電話で診断 <br class="box_sp_sm03" /><span class="btn_main_line02">（050-6869-7951）</span><span>※10:00-17:00</span></a></p>
 </div>
 <?php include('includes/part-quiz.php'); ?>
 <!-- main start -->

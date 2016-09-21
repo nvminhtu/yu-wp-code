@@ -321,9 +321,10 @@ address{
 	font-size: 13px;
 	left: 30px;
 }
-.sp_mar {
-	margin-bottom: -23px;
+.h2line {
+	margin-bottom: 12px;
 	display: block;
+	line-height:24px;
 }
  #header h2 span {
 /*	display:block;*/
@@ -332,7 +333,7 @@ address{
 	display: block;
 }
  #header h2,  #header h2 span {
-	font-size: 18px;
+	font-size: 17px;
 }
  #header h2 span.h2_l {
 	font-size: 22px;
@@ -343,8 +344,18 @@ address{
 	text-align: center;
 	max-width: 520px;
 }
+.btn_main a{
+	font-weight:bold;
+}
+.btn_main_line02{
+	font-size:15px;
+}
 .btn_main:last-child {
 	margin-bottom: 0;
+}
+.btn_main a .btn_main_line02{
+	font-size:15px;
+
 }
 /* common */
 #footer {
@@ -397,9 +408,15 @@ address{
 	padding: 20px 0;
 }
 .h3_box01 {
-	font-size: 23px;
+	/*font-size: 7vw !important;*/
+	font-size: 25px;
 	letter-spacing: -1px;
+	line-height:40px;
 }
+.h3_box01 span{
+	line-height:27px;
+}
+
 .h3_box01:after {
 	width: 200px;
 	border-top: 3px solid #08A2C2;
@@ -521,7 +538,7 @@ address{
 	float: none;
 }
 .footer_tel {
-	font-size: 20px;
+	font-size: 18px;
 	background-size: 25px;
 	padding: 0 0 0 40px;
 	margin: 10px auto 0;
@@ -532,7 +549,7 @@ address{
 	text-align: left;
 }
 .footer_mail {
-	font-size: 20px;
+	font-size: 18px;
 	background-size: 25px;
 	padding: 0 0 0 40px;
 	margin: 10px auto 0;
@@ -541,6 +558,9 @@ address{
 	box-sizing: border-box;
 	background-position: 0 center;
 	text-align: left;
+}
+.footer_tel ,.footer_mail {
+	font-size:18px;
 }
 .footer_link {
 	float: none;
@@ -589,12 +609,29 @@ address {
 	text-align:center;
 
 }*/
+.title_rele{
+	line-height:27px;
+	margin-bottom:5px;
+	}
+.txt_light01 br,.des_rele br{
+	display:none;
+}
+/*.txt_light01,.des_rele{
+	font-size:3vw;
+	
+}*/
 
 .btn_main a {
 	font-size: 16px;
 }
  #header h2,  #header h2 span {
 	font-size: 14px;
+	margin-bottom: 7px;
+	line-height:20px;
+}
+#header h2 span.h2_l{
+	line-height:40px;
+	margin-bottom:2px;
 }
 }
  @media screen and (max-width: 490px) {
@@ -611,8 +648,13 @@ address {
 
 }
  @media screen and (max-width: 450px) {
+
 .box_sp_sm03 {
 	display: block;
+}
+.btn_main a .btn_main_line02{
+	font-size:14px;
+
 }
 .btn_main a {
 	line-height: 22px;
@@ -626,6 +668,7 @@ address {
 }
  #header h2,  #header h2 span {
 	font-size: 12px;
+	line-height:18px;
 }
 
 
@@ -672,11 +715,33 @@ address {
 .btn_main a {
 	font-size: 15px;
 }
+.title_rele{
+	font-size:18px;
+}
+.title_des{
+	font-size:14px;
+}
 /*  #header h2 span.h2_l {
-    font-size: 18px;
+    fontf-size: 18px;
 }*/
 .popup_tel_inner p{
 	font-size:14px;
+}
+.h3_box01 {
+	font-size: 21px;
+}
+.h3_box01 span{
+	font-size:16px;
+	line-height:22px;
+}
+.txt_light01 p span{
+	font-size:17px;
+}
+.title_h301, #container04 .title_h301{
+	font-size:18px;
+}
+.h3_box02{
+	font-size:20px;
 }
 
 }
@@ -698,11 +763,7 @@ address {
 .btn_main span {
 	display: block;
 }
-.h3_box01 {
-	line-height: 40px;
-	font-size: 20px;
-	letter-spacing: -2px;
-}
+
 .h3_box01 span {
 	font-size: 14px;
 	line-height: 20px;
@@ -716,4 +777,7 @@ address {
 }
 }
  @media screen and (max-width: 280px) {
+.h3_box01 {
+	font-size: 18px;
+}
 }

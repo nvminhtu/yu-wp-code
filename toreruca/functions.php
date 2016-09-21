@@ -24,6 +24,12 @@ if (function_exists('register_nav_menu')) {
   register_nav_menu('main-menu', 'Main Menu');
 }
 
+// disable post in menu wp
+function remove_menus(){
+ remove_menu_page( 'edit.php' );   //Posts
+}
+add_action( 'admin_menu', 'remove_menus' );
+
 add_filter("wpcf7_mail_tag_replaced", "suppress_wpcf7_filter");
 function suppress_wpcf7_filter($value, $sub = ""){
 	$out	=	!empty($sub) ? $sub : $value;
