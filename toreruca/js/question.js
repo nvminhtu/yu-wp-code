@@ -499,12 +499,12 @@ function initLocalStorage() {
             });
 
             //Is text field
-           texts.val(answers[key]);
-            $.each(texts,function(index,item){
-              if($(item).val()==key){
-                $(item).val(key);
-              }
-            });
+            texts.val(answers[key]);
+            // $.each(texts,function(index,item){
+            //   if($(item).val()==key){
+            //     $(item).val(key);
+            //   }
+            // });
           }
       } else { //if localStorage doesn't have data
         var answers = {};
