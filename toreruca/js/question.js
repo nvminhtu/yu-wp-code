@@ -335,8 +335,8 @@ $('#slider-check').on("click",function(){
     findInput = 'hasRadio';
   } else if($('.slide').eq(curEQ).find("select").length > 0 ){
     findInput = 'hasSelect';
-  } else if($('.slide').eq(curEQ).find("textarea").length > 0 ){
-    findInput = 'hasTextArea';
+  } else if($('.slide').eq(curEQ).find("input[type='text']").length > 0 ){
+    findInput = 'hasText';
   } else { }
 
   // 02.check which type?
@@ -362,8 +362,8 @@ $('#slider-check').on("click",function(){
     } else {
       $('#notify-select').addClass('active');
     }
-  } else if(findInput == 'hasTextArea') {
-    var content = $.trim($('.slide').eq(curEQ).find("textarea").val());
+  } else if(findInput == 'hasText') {
+    var content = $.trim($('.slide').eq(curEQ).find("input[type='text']").val());
     if(content.length == 0) {
       $('#notify-textarea').addClass('active');
     } else {

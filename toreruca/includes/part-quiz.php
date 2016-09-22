@@ -85,7 +85,7 @@
             <p>少なくとも1つの項目をチェックしてください</p>
           </div>
           <div id="notify-textarea" class="errors">
-            <p>Please input textarea</p>
+            <p>空欄に入力し、次へを押してください。</p>
           </div>
         <!--end box qa --></div>
         <!-- start button -->
