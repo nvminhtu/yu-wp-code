@@ -4,7 +4,7 @@
   <div id="head_info">
     <div class="inner clearfix">
       <h1 id="logo"><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="その助成金トレルカ？toreruca" /></a></h1>
-      <h2>ありがとうございました</h2>
+      <h2>診断結果が送信完了しました。</h2>
     </div>
   </div>
 </div>

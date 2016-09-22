@@ -529,6 +529,15 @@ ul.list01 li::before {
 .related_box:last-child {
 	border-bottom: none;
 }
+/* company */
+.dlstb dt,.dlstb dd{
+	 float: none;
+	  width: 100%;
+	  display:block;
+	border:none;
+	  text-align: left;
+	  padding:10px;
+}
 }
  @media screen and (max-width: 600px) {
 h3.title_lblog {

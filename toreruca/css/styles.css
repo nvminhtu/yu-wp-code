@@ -1160,6 +1160,7 @@ ol ol > li:before {
 	background:url(../images/icon_terms.png) 0 3px no-repeat;
 	background-size:19px auto;
 	padding-left:30px;
+	color:#09A1C2;
 }
 
 @media screen and (max-width: 1200px) {

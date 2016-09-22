@@ -335,7 +335,7 @@
       <p class="question_txt"><span>貴社の「業種」をお教えください（主事業のみ）</span></p>
       <div class="box_ans clearfix">
         <p class="descript_txt">記入例： インターネットサービス、飲食店、美容院、不動産業、経営コンサルティング など</p>
-        <textarea name="textarea-14" id="fa-14" cols="50" rows="10"></textarea>
+        <textarea name="textarea-14" autofocus="autofocus" id="fa-14" cols="50" rows="10"></textarea>
       </div>
     </div>
   </div>

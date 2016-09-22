@@ -17,7 +17,7 @@ $(window).load(function() {
   if(finished=='xongroi' && isContact==true) {
     //do sthing
     //localStorage.removeItem('finished');
-
+    alert('cai nay thi co');
   } else {
     resetLocalStorage();
     localStorage.removeItem('finished');
@@ -51,11 +51,6 @@ $(function() {
       clickNext();
       $('.slide').removeClass('active');
       $($slideElement).addClass('active');
-	  //set auto focus
-	 // alert(newIndex);
-	 if(newIndex==13){
-		// $("#fa-14").focus();
-		}
     },
     onSlidePrev: function($slideElement, oldIndex, newIndex) {
       clickPrev();
@@ -98,7 +93,7 @@ $(document).ready(function() {
       if(currentStep=='end') {
 
       }
-      if(currentStep=='start') {
+      if(currentStep=='beforestart') {
           slideStep = 0;
       } else {
           var numGet = currentStep.slice(-2);
@@ -302,16 +297,16 @@ function clickPrev() {
 function checkProgress() {
   var stepData = localStorage.getItem('step');
 
-  if(stepData == 'start') {
+  if(stepData == 'beforestart') {
+    $('.beforequiz').addClass('active');
+    $('.inprogress').removeClass('active');
+  } else if(stepData == 'start') {
     $('.startquiz').addClass('active');
+    $('.beforequiz').removeClass('active');
     $('.inprogress').removeClass('active');
   } else {
-    if(stepData == 'ques01') {
-      $('#slider-back').addClass('active');
-    } else {
-      $('#slider-back').removeClass('active');
-    }
     $('.inprogress').addClass('active');
+    $('.beforequiz').removeClass('active');
     $('.startquiz').removeClass('active');
   }
 }
@@ -419,13 +414,6 @@ $('#start-now').on("click", function() {
   history.pushState(null, null, question_dest);
 });
 
-/* event func: start button - go to quiz */
-$('#slider-back').on("click", function() {
-  localStorage.setItem('step','start');
-  checkProgress();
-  slider.reloadSlider();
-});
-
 
 /**
 *** func: init LocalStorage
@@ -434,8 +422,8 @@ function initLocalStorage() {
 
   //step 1: load current step at the first
   var stepData = localStorage.getItem('step');
-  if(stepData === null || stepData == 'start') {
-    localStorage.setItem('step','start');
+  if(stepData === null || stepData == 'beforestart') {
+    localStorage.setItem('step','beforestart');
     $('.slide').eq(0).addClass('active');
   } else if(stepData == 'end') {
     //...
@@ -472,11 +460,11 @@ function initLocalStorage() {
           for(var key in answers){
 
             //Is checkbox or radio
-          /*  $.each(items,function(index,item){
+            $.each(items,function(index,item){
               if($(item).val()==key){
                 $(item).prop('checked', true);
               }
-            }); */
+            });
 
             //Is selected
             $.each(selects,function(index,item){
@@ -491,12 +479,12 @@ function initLocalStorage() {
         var answers = {};
 
         // case: checkbox or radio
-        /*$.each(items,function(index,item){
+        $.each(items,function(index,item){
           if($(item).is(':checked')) {
             var $keyItem = $(item).val();
             answers[$keyItem] = $(item).next().text();
           }
-        }); */
+        });
 
         // case: select
         $.each(selects,function(index,item){
@@ -556,11 +544,11 @@ function resetLocalStorage() {
         thisTextarea = "#" + order + i + " textarea";
 
     // case: checkbox or ----------------------------------------
-    /* if($(parentDiv).find('select').length > 0 ) {
+    if($(parentDiv).find('select').length > 0 ) {
       var selectVal = $(thisSelected).text(),
         $keySelect  =  $(thisSelected).val();
         answers[$keySelect] = selectVal;
-    } */
+    }
 
     // case: checkbox or radio -----------------------------------
     if($(parentDiv).find('input').length > 0 ) {
