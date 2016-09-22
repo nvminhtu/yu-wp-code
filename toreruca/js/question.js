@@ -4,7 +4,9 @@ var slider,
 $(window).load(function() {
   var href = window.location.href;
   var n = href.search("/contact/");
-  var isContact;
+  var n2 = href.search("/question/");
+  var isContact,
+      isQuestion;
 
   //check is contact page
   if(n!="-1") {
@@ -13,8 +15,16 @@ $(window).load(function() {
     isContact = false;
   }
 
+  //check is question page
+  if(n!="-1") {
+    isQuestion = true;
+  } else {
+    isQuestion = false;
+  }
+
+
   var finished = localStorage.getItem('finished');
-  if(finished=='xongroi' && isContact==true) {
+  if(finished=='xongroi' && isContact==true && isQuestion == true) {
     //do sthing
     //localStorage.removeItem('finished');
 
@@ -163,7 +173,7 @@ function checkItem() {
         quest = $(this).find('.question_txt span').text(),
         thisChecks = "#"+ thisQuiz + " input",
         thisSelected = "#" + thisQuiz + " select",
-        thisTextarea = "#"+ thisQuiz + " textarea";
+        thisText = "#"+ thisQuiz + " input[type='text']";
 
     // ---case: select ---------------------------------------
     $(thisSelected).change(function(){
@@ -202,10 +212,10 @@ function checkItem() {
     });
 
     // ---case: textarea ---------------------------------------
-    $(thisTextarea).change(function() {
+    $(thisText).change(function() {
       var
         answers = {},
-        items =  $(thisTextarea);
+        items =  $(thisText);
 
       // 01.get value of seleted box
       $.each(items,function(index,item){
@@ -463,7 +473,9 @@ function initLocalStorage() {
 
     var thisChecks = "#" + order + i + " input",
         thisSelected = "#" + order + i + " select option",
+        thisText = "#" + order + i + " input[type='text']",
         items =  $(thisChecks),
+        texts = $(thisText),
         selects = $(thisSelected);
 
       if(quesData!==null) { //if localStorage has data
@@ -472,11 +484,11 @@ function initLocalStorage() {
           for(var key in answers){
 
             //Is checkbox or radio
-          /*  $.each(items,function(index,item){
+            $.each(items,function(index,item){
               if($(item).val()==key){
                 $(item).prop('checked', true);
               }
-            }); */
+            });
 
             //Is selected
             $.each(selects,function(index,item){
@@ -486,6 +498,13 @@ function initLocalStorage() {
               }
             });
 
+            //Is text field
+           texts.val(answers[key]);
+            $.each(texts,function(index,item){
+              if($(item).val()==key){
+                $(item).val(key);
+              }
+            });
           }
       } else { //if localStorage doesn't have data
         var answers = {};
@@ -563,12 +582,12 @@ function resetLocalStorage() {
     } */
 
     // case: checkbox or radio -----------------------------------
-    if($(parentDiv).find('input').length > 0 ) {
+  /*  if($(parentDiv).find('input').length > 0 ) {
       var checkVal = $(thisChecked).next().text(),
           $keyCheck  =  $(thisChecked).val();
           answers[$keyCheck] = checkVal;
 
-    }
+    } */
     // case: textarea ---------------------------------------------
     if($(parentDiv).find('textarea').length > 0 ) {
       var textVal = '',
