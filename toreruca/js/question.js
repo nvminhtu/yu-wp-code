@@ -1,6 +1,10 @@
 var slider,
     question_url = 'http://toreruca.com/question/';
 
+$(window).load(function() {
+    showResult();
+});
+
 $(function() {
   slider = $('#slide_qa').bxSlider({
     touchEnabled: false,
