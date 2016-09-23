@@ -23,7 +23,7 @@
           <div id="footer_contact" class="clearfix">
             <p class="title_footer_contact">パートナー募集</p>
             <p class="des_footer_contact">Groovoost Inc.では、動画、デザイナー、ライター、カメラマンなど、各クリエイター様とのパートナーを募集しております。ご希望いただける方は、お問い合わせくださいませ。</p>
-            <p class="btn_footer_contact btn btn01 btn_hblue"><a href="#"><span>お問い合わせ</span></a></p>
+            <p class="btn_footer_contact btn btn01 btn_hblue"><a href="<?php bloginfo('siteurl'); ?>/contact/"><span>お問い合わせ</span></a></p>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
     <!--#footer_info start -->
     <div id="footer_info" class="clearfix">
       <div class="inner clearfix">
-        <p id="footer_logo"> <a href=""><img src="<?php bloginfo('template_url'); ?>/images/footer_logo.png" alt="" /></a> </p>
+        <p id="footer_logo"> <a href="<?php bloginfo('siteurl'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/footer_logo.png" alt="" /></a> </p>
         <div class="box_info_footer">
           <p class="title_name_footer">グルーブースト株式会社<span>Groovoost Inc.</span></p>
           <p class="address_footer ">〒108-0022　東京都港区海岸3-17-7　高取ビル3F</p>

@@ -1193,3 +1193,6 @@ address {
 .media-list-item  {
 	margin-left: 10px!important;
 }
+span.wpcf7-list-item {
+	display: block;
+}
