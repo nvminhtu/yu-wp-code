@@ -17,7 +17,26 @@
               <?php dynamic_sidebar( 'Footer Menu 2' ); ?>
             </div>
             <div class="flink flink03 clearfix">
-              <?php dynamic_sidebar( 'Footer Menu 3' ); ?>
+              <?php //dynamic_sidebar( 'Footer Menu 3' ); ?>
+              <dl>
+                <dt>BLOG</dt>
+                <dd>
+                  <?php
+                    $terms = get_terms( 'blog-cat', array( 'orderby' => 'count', 'hide_empty' => 0, 'order' => 'DESC'));
+                    if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+                      echo '<ul>';
+                      $i = 0;
+                      foreach ( $terms as $term ) {
+                          if($i < 4) {
+                            echo '<li><a href="'.get_term_link($term).'">' . $term->name . '</a></li>';
+                          }
+                          $i++;
+                      }
+                      echo '</ul>';
+                    }
+                   ?>
+                </dd>
+              </dl>
             </div>
           </div>
           <div id="footer_contact" class="clearfix">

@@ -29,6 +29,8 @@
           	);
 
             $the_query = new WP_Query( $args );
+            $number_blogs = $wp_query->found_posts;
+
           	$blog_posts = get_posts($args);
         		if($blog_posts) {
 
@@ -150,7 +152,7 @@
         	 	}
           ?>
 
-        <p class="note_blog">全○○件中12件を表示</p>
+        <p class="note_blog">全○○件中<?php echo $number_blogs; ?>件を表示</p>
         <p class="btn btn01 btn_hblue btn_mw500"><a id="more_blog" href="javascript:void(0)"><span>もっと見る</span></a></p>
       </div>
       <?php get_sidebar(); ?>

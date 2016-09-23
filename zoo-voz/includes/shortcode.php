@@ -71,5 +71,27 @@ function shortcode_author_info() {
 	return $content_shortcode;
 }
 
-
+/* 09- Blog Sidebar Shortcode - show 4 categories has most posts	*/
+add_shortcode('blog-cat-list', 'shortcode_blog_cat_list');
+function shortcode_blog_cat_list() {
+		$content_shortcode = '';
+		$content_shortcode .= '<dl>';
+			$content_shortcode .= '<dt>BLOG</dt>';
+			$content_shortcode .= '<dd>';
+					$terms = get_terms( 'blog-cat', array( 'orderby' => 'count', 'hide_empty' => 0, 'order' => 'DESC'));
+					if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+						$content_shortcode .= '<ul>';
+						$i = 0;
+						foreach ( $terms as $term ) {
+								if($i < 4) {
+									$content_shortcode .= '<li><a href="'.get_term_link($term).'">' . $term->name . '</a></li>';
+								}
+								$i++;
+						}
+						$content_shortcode .= '</ul>';
+					}
+			$content_shortcode .= '</dd>';
+		$content_shortcode .= '</dl>';
+		return $content_shortcode;
+}
 ?>
