@@ -13,21 +13,21 @@
     </div>
   </div>
 </div>
-  
+
   <div id="footer" class="clearfix">
     <div class="inner clearfix">
       <div class="footer_tel_box">
-      
+
        <p class="footer_tel"><a href="tel:05068697951" class="sweetlink btn_call">050-6869-7951</a></p>
           <p class="footer_mail"><a href="mailto:info@joseikin.site" target="_blank">info@joseikin.site</a></p>
       </div>
-      <div class="footer_right">   
+      <div class="footer_right">
         <ul class="footer_link">
           <!--<li><a href="">トップに戻る</a></li>-->
           <li><a href="http://idealogic.co.jp/" target="_blank">運営会社</a></li>
         </ul>
         <address>&copy; toreruca.com</address>
-      </div>    
+      </div>
     </div>
   </div>
   <div id="popup_tel" class="clearfix">
@@ -54,7 +54,13 @@
 <?php /* if(is_front_page()) { ?>
   <script src="<?php bloginfo('template_url'); ?>/js/question.js" type="text/javascript"></script>
 <?php } */ ?>
-<script src="<?php bloginfo('template_url'); ?>/js/question.js" type="text/javascript"></script>
+
+<?php if(is_page('contact')||is_page('confirmation')||is_page('thank-you')) { ?>
+  <script src="<?php bloginfo('template_url'); ?>/js/question.js" type="text/javascript"></script>
+<?php } else { ?>
+  <script src="<?php bloginfo('template_url'); ?>/js/all-page-question.js" type="text/javascript"></script>
+<?php }?>
+
 <script src="<?php bloginfo('template_url'); ?>/js/contact.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/top.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/heightLine.js" type="text/javascript"></script>
