@@ -608,7 +608,7 @@ function showResult() {
         question = quesData.question,
         answers = quesData.answer;
 
-      var thisQuestion = "#cauhoi"+ i,
+      var thisQuestion = "#qa"+ i,
           chooseThis =  $(thisQuestion);
       for(var key in answers) {
         if(result=='') {
@@ -623,7 +623,7 @@ function showResult() {
 }
 
 // running functions
-var stepCheck = localStorage.getItem('send');
-if(stepCheck == 'done'){
-  resetLocalStorage();
-}
+// var stepCheck = localStorage.getItem('send');
+// if(stepCheck == 'done'){
+//   resetLocalStorage();
+// }

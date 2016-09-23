@@ -1,10 +1,10 @@
-var send = localStorage.getItem('send');
+/* var send = localStorage.getItem('send');
 
 if(send == 'confirmation') {
 	$(document).on('mailsent.wpcf7', function () {
 	  localStorage.setItem('step','start');
 	  localStorage.setItem('send','done');
-		
+
 	  //--restore status
   	  checkProgress();
   	  resetLocalStorage();
@@ -23,3 +23,4 @@ if(send == 'confirmation') {
 $('#send-quiz').on("click",function(){
  	localStorage.setItem('send','confirmation');
 });
+*/
