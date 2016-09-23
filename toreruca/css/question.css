@@ -569,7 +569,7 @@ div.wpcf7-mail-sent-ok, div.wpcf7-response-output, div.wpcf7-validation-errors {
 /* contact */
 
 #header.contact h2 {
-	font-size: 50px;
+	font-size: 45px;
 	margin-top: 40px;
 	padding-left: 0;
 	font-weight: bold;
@@ -587,7 +587,7 @@ div.wpcf7-mail-sent-ok, div.wpcf7-response-output, div.wpcf7-validation-errors {
 #header.contact {
 	background: none;
 	text-align: center;
-	height: 250px;
+	height: auto;
 }
 #header.contact #logo {
 	padding: 20px 0 20px 0px;
@@ -631,6 +631,13 @@ div.wpcf7-mail-sent-ok, div.wpcf7-response-output, div.wpcf7-validation-errors {
 	padding: 15px;
 	overflow: auto;
 	box-sizing: border-box;
+}
+.box_ans input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	overflow: auto;
+	box-sizing: border-box;
+	border:1px solid #ccc;
 }
 .box_ct01 {
 	margin-bottom: 40px;

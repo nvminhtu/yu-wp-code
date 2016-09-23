@@ -11,7 +11,7 @@
       <p class="logo_l"><img src="<?php bloginfo('template_url'); ?>/images/logo_l.png" alt="" /></p>
       <!-- progressbar -->
 
-      <!-- <div class="beforequiz">
+      <div class="beforequiz">
         <div class="box_qa clearfix">
           <p class="title_quiz">助成金とは？</p>
           <p>助成金とは、一言でいうと「雇用促進・活発化を行う企業に対し、<br />
@@ -26,12 +26,12 @@
             toreruca（トレルカ）はサービスを開始いたしました。</p>
         </div>
         <p id="get-started" class="btn_slide_qa">次へ</p>
-      </div> -->
+      </div>
 
       <div class="startquiz">
       	<div class="box_qa clearfix">
         	<p class="title_quiz">Let's トレルカ診断！（約5分）</p>
-          <p>今から、貴社の現状に関する「15個の質問」いたします。<br />
+          <p>今から、貴社の現状に関する「15個の質問」いたします。。<br />
           それらの内容を元に、「どんな助成金が貴社で取れるか？」を診断させて頂きます。</p>
           <p>※ 回答が難しい部分があれば、「分からない」を選択ください。</p>
           <p>それでは、診断を開始しましょう！</p>
@@ -85,13 +85,13 @@
             <p>少なくとも1つの項目をチェックしてください</p>
           </div>
           <div id="notify-textarea" class="errors">
-            <p>空欄に入力し、次へを押してください。</p>
+            <p>Please input textarea</p>
           </div>
         <!--end box qa --></div>
         <!-- start button -->
         <ul class="list_btn_qa">
-         <li id="slider-prev" class="btn_slide_qa"></li>
-         <li id="slider-back" class="btn_slide_qa">前へ</li>
+          <li id="slider-prev" class="btn_slide_qa"></li>
+         <!--  <li id="slider-next" class="btn_slide_qa"></li> -->
          <li id="slider-check" class="btn_slide_qa">次へ</li>
         </ul>
         <!-- // end button -->
