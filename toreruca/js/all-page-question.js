@@ -499,12 +499,12 @@ function initLocalStorage() {
         var answers = {};
 
         // case: checkbox or radio
-      /*  $.each(items,function(index,item){
+       $.each(items,function(index,item){
           if($(item).is(':checked')) {
             var $keyItem = $(item).val();
             answers[$keyItem] = $(item).next().text();
           }
-        }); */
+        });
 
         // case: select
       /*  $.each(selects,function(index,item){
@@ -559,7 +559,7 @@ function resetLocalStorage() {
     // === setup default values ===================================
     var
         parentDiv = "#" + order + i,
-        thisChecked = "#" + order + i + " input:first",
+        thisRadio = "#" + order + i + " input[type='radio']:first",
         thisSelected = "#" + order + i + " select option:first",
         thisTextarea = "#" + order + i + " input[type='text']";
 
@@ -570,13 +570,13 @@ function resetLocalStorage() {
         answers[$keySelect] = selectVal;
     } */
 
-    // case: checkbox or radio -----------------------------------
-  /*  if($(parentDiv).find('input').length > 0 ) {
-      var checkVal = $(thisChecked).next().text(),
-          $keyCheck  =  $(thisChecked).val();
+    // case: radio  -----------------------------------
+    if($(parentDiv).find('input[type="radio"]').length > 0 ) {
+      var checkVal = $(thisRadio).next().text(),
+          $keyCheck  =  $(thisRadio).val();
           answers[$keyCheck] = checkVal;
 
-    } */
+    }
     // case: textarea ---------------------------------------------
     if($(parentDiv).find('textarea').length > 0 ) {
       var textVal = '',
