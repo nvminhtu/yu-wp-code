@@ -4,7 +4,7 @@ var slider,
 $(window).load(function() {
     resetLocalStorage();
     localStorage.removeItem('finished');
-    localStorage.removeItem('step');
+    localStorage.setItem('step','start');
 });
 
 $(function() {
@@ -109,6 +109,7 @@ $(document).ready(function() {
 
   $('#btn_close').click(function() {
     $("#modal_quiz_out").fadeOut("");
+    $("#wrapper").removeClass("fixed");
     //slider.reloadSlider();
     //window.history.replaceState(null, null, "http://toreruca.com/");
   });
@@ -161,7 +162,7 @@ function checkItem() {
         quest = $(this).find('.question_txt span').text(),
         thisChecks = "#"+ thisQuiz + " input",
         thisSelected = "#" + thisQuiz + " select",
-        thisTextarea = "#"+ thisQuiz + " textarea";
+        thisText = "#"+ thisQuiz + " input[type='text']";
 
     // ---case: select ---------------------------------------
     $(thisSelected).change(function(){
@@ -197,13 +198,16 @@ function checkItem() {
         var thisChecked = thisQuiz+'-data',
             thisAnswer = {question: quest, answer: answers };
         localStorage.setItem(thisChecked,JSON.stringify(thisAnswer));
+
+        // 03.save data to fields after changed
+        showResult();
     });
 
     // ---case: textarea ---------------------------------------
-    $(thisTextarea).change(function() {
+    $(thisText).change(function() {
       var
         answers = {},
-        items =  $(thisTextarea);
+        items =  $(thisText);
 
       // 01.get value of seleted box
       $.each(items,function(index,item){
@@ -215,6 +219,9 @@ function checkItem() {
       var thisChecked = thisQuiz+'-data',
           thisAnswer = {question: quest, answer: answers };
       localStorage.setItem(thisChecked,JSON.stringify(thisAnswer));
+
+      // 03.save data to fields after changed
+      showResult();
     });
 
   });
@@ -333,8 +340,8 @@ $('#slider-check').on("click",function(){
     findInput = 'hasRadio';
   } else if($('.slide').eq(curEQ).find("select").length > 0 ){
     findInput = 'hasSelect';
-  } else if($('.slide').eq(curEQ).find("textarea").length > 0 ){
-    findInput = 'hasTextArea';
+  } else if($('.slide').eq(curEQ).find("input[type='text']").length > 0 ){
+    findInput = 'hasText';
   } else { }
 
   // 02.check which type?
@@ -360,8 +367,8 @@ $('#slider-check').on("click",function(){
     } else {
       $('#notify-select').addClass('active');
     }
-  } else if(findInput == 'hasTextArea') {
-    var content = $.trim($('.slide').eq(curEQ).find("textarea").val());
+  } else if(findInput == 'hasText') {
+    var content = $.trim($('.slide').eq(curEQ).find("input[type='text']").val());
     if(content.length == 0) {
       $('#notify-textarea').addClass('active');
     } else {
@@ -454,7 +461,9 @@ function initLocalStorage() {
 
     var thisChecks = "#" + order + i + " input",
         thisSelected = "#" + order + i + " select option",
+        thisText = "#" + order + i + " input[type='text']",
         items =  $(thisChecks),
+        texts = $(thisText),
         selects = $(thisSelected);
 
       if(quesData!==null) { //if localStorage has data
@@ -463,20 +472,22 @@ function initLocalStorage() {
           for(var key in answers){
 
             //Is checkbox or radio
-          /*  $.each(items,function(index,item){
-              if($(item).val()==key){
-                $(item).prop('checked', true);
-              }
-            }); */
+             $.each(items,function(index,item){
+                if($(item).val()==key){
+                  $(item).prop('checked', true);
+                }
+              });
 
-            //Is selected
-            $.each(selects,function(index,item){
-              $(item).removeAttr("selected");
-              if($(item).val()==key){
-                $(item).prop("selected", "selected");
-              }
-            });
+              //Is selected
+              $.each(selects,function(index,item){
+                $(item).removeAttr("selected");
+                if($(item).val()==key){
+                  $(item).prop("selected", "selected");
+                }
+              });
 
+              //Is text field
+             texts.val(answers[key]);
           }
       } else { //if localStorage doesn't have data
         var answers = {};
@@ -544,22 +555,22 @@ function resetLocalStorage() {
         parentDiv = "#" + order + i,
         thisChecked = "#" + order + i + " input:first",
         thisSelected = "#" + order + i + " select option:first",
-        thisTextarea = "#" + order + i + " textarea";
+        thisTextarea = "#" + order + i + " input[type='text']";
 
     // case: checkbox or ----------------------------------------
-    if($(parentDiv).find('select').length > 0 ) {
+  /*  if($(parentDiv).find('select').length > 0 ) {
       var selectVal = $(thisSelected).text(),
         $keySelect  =  $(thisSelected).val();
         answers[$keySelect] = selectVal;
-    }
+    } */
 
     // case: checkbox or radio -----------------------------------
-    if($(parentDiv).find('input').length > 0 ) {
+  /*  if($(parentDiv).find('input').length > 0 ) {
       var checkVal = $(thisChecked).next().text(),
           $keyCheck  =  $(thisChecked).val();
           answers[$keyCheck] = checkVal;
 
-    }
+    } */
     // case: textarea ---------------------------------------------
     if($(parentDiv).find('textarea').length > 0 ) {
       var textVal = '',
@@ -597,7 +608,7 @@ function showResult() {
         question = quesData.question,
         answers = quesData.answer;
 
-      var thisQuestion = "#question-"+ i,
+      var thisQuestion = "#cauhoi"+ i,
           chooseThis =  $(thisQuestion);
       for(var key in answers) {
         if(result=='') {
@@ -612,8 +623,7 @@ function showResult() {
 }
 
 // running functions
-/*
 var stepCheck = localStorage.getItem('send');
 if(stepCheck == 'done'){
   resetLocalStorage();
-} */
+}
