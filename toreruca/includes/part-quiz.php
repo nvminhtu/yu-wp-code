@@ -85,13 +85,14 @@
             <p>少なくとも1つの項目をチェックしてください</p>
           </div>
           <div id="notify-textarea" class="errors">
-            <p>Please input textarea</p>
+            <p>空欄に入力し、次へを押してください。</p>
           </div>
         <!--end box qa --></div>
         <!-- start button -->
         <ul class="list_btn_qa">
           <li id="slider-prev" class="btn_slide_qa"></li>
          <!--  <li id="slider-next" class="btn_slide_qa"></li> -->
+         <li id="slider-back" class="btn_slide_qa">前へ</li>
          <li id="slider-check" class="btn_slide_qa">次へ</li>
         </ul>
         <!-- // end button -->

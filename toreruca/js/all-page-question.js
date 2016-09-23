@@ -424,6 +424,12 @@ $('#start-now').on("click", function() {
   history.pushState(null, null, question_dest);
 });
 
+/* event func: start button - go to quiz */
+$('#slider-back').on("click", function() {
+  localStorage.setItem('step','start');
+  checkProgress();
+  slider.reloadSlider();
+});
 
 /**
 *** func: init LocalStorage

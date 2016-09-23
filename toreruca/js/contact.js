@@ -17,9 +17,7 @@ if(send == 'confirmation') {
 
 	});
 }
-/**
-*** func: click send after confirmation go
-**/
+
 $('#send-quiz').on("click",function(){
  	localStorage.setItem('send','confirmation');
 });

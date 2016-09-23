@@ -172,9 +172,6 @@ function checkItem() {
       var thisChecked = thisQuiz+'-data',
           thisAnswer = {question: quest, answer: answers };
       localStorage.setItem(thisChecked,JSON.stringify(thisAnswer));
-
-      // 03.save data to fields after changed
-      showResult();
     });
 
     // ---case: checkboxes ---------------------------------------
@@ -198,7 +195,6 @@ function checkItem() {
 
         // 03.save data to fields after changed
         showResult();
-
     });
 
     // ---case: textarea ---------------------------------------
@@ -422,6 +418,12 @@ $('#start-now').on("click", function() {
   history.pushState(null, null, question_dest);
 });
 
+/* event func: start button - go to quiz */
+$('#slider-back').on("click", function() {
+  localStorage.setItem('step','start');
+  checkProgress();
+  slider.reloadSlider();
+});
 
 /**
 *** func: init LocalStorage
