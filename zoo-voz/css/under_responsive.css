@@ -213,6 +213,9 @@ h4.bh {
 .person_box {
 	margin-bottom: 30px;
 }
+				
+	.box_company{
+	width:100%;
 }
 @media screen and (max-width:950px) {
 				/*	.box_instag01_col01{
@@ -228,8 +231,8 @@ h4.bh {
 						float:none;
 						width:100%;
 					}
-					
-				
+	
+}			
 				}
 
  @media screen and (max-width:900px) {
@@ -325,6 +328,12 @@ h4.bh {
 #content, #sidebar {
 	width: 100%;
 }
+
+.list_btn_social01 li{
+	width:calc(50% - 4px);
+}
+
+
 .navi_ad {
 	text-align: center;
 }

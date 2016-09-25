@@ -18,7 +18,13 @@
          <span class="lf"><?php the_title(); ?></span><br />
          <span><?php echo $service_sub_text; ?></span></h3>
        <p class="serde_t"><?php the_content(); ?></p>
-       <p class="ser_price"><span><?php echo $service_price; ?></span></p>
+       <?php if(!is_null($service_price)&&$service_price!='') { ?>
+         <p class="ser_price"><span><?php echo $service_price; ?></span></p>
+       <?php } ?>
+       <?php if(!is_null($service_period)&&$service_period!='') { ?>
+       <p class="ser_price ser_period"><span><?php echo $service_period; ?></span></p>
+       <?php } ?>
+
     </div>
 
   <?php //--- start Item list -------------------- ?>

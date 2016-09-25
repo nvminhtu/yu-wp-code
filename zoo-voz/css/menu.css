@@ -241,7 +241,8 @@
 }
 #list_menutop_sticky .sub_megamenu ul {
 	display: none;
-    background: #fff none repeat scroll 0 0;
+    /*background: #fff;*/
+	background:rgba(243,243,243,0.9);
     height: auto;
     left: 0;
     padding: 24px 0;
@@ -289,7 +290,9 @@
 }
 #sticky_menu_header #list_menutop_sticky .sub_megamenu ul li a {
     display: block;
-    font-weight: normal;
+    font-weight: 500;
+	transition: all 0.2s ease 0s;
+	
 }
 #sticky_menu_header #list_menutop_sticky .sub_megamenu ul li span {
     display: block;

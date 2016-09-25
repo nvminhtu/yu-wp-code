@@ -17,7 +17,6 @@
     <div id="list_cate_works" class="clearfix" data-active-cat="<?php echo $my_c; ?>">
       <div class="squaredThree">
         <ul>
-
             <li id=""><input class="input_check_all" type="checkbox" value="None" id="active_all" name="check" checked /><label for="active_all">全て</label></li>
           <?php
             $default_posts_per_page = get_option( 'posts_per_page' );
@@ -82,10 +81,12 @@
             $work_id= get_the_ID();
             $work_title = get_the_title($work_id);
             $work_content = get_the_content($work_id);
-          ?>
-
-          <?php
+            // custom fields
             $post_objects = get_field('selected_service',$post->ID);
+            $work_product_title = get_field('work_product_title',$post->ID);
+            $work_product_sub_title = get_field('work_product_sub_title',$post->ID);
+            $work_product_cost = get_field('work_product_cost',$post->ID);
+            $work_product_period = get_field('work_product_period',$post->ID);
             $work_product_title = get_field('work_product_title',$post->ID);
             $work_product_link = get_field('work_product_link',$post->ID);
             $service_slugs = '';
@@ -116,8 +117,18 @@
                 </p>
                 <div class="box_lworks_on">
                   <p class="lworks_on_title"><?php echo $work_title; ?></p>
-                  <?php echo $work_content; ?>
-                  <p class="btn btn_site_adv"><a href="<?php echo $work_product_link; ?>" target="_blank">詳しくみる</a></p>
+                  <p class="lworks_on_title_sub">- <?php echo $work_product_sub_title; ?> - </p>
+                  <p class="lworks_on_des">
+                    <?php echo mb_substr(strip_tags($work_content),0,55) . '...'; ?>
+                  </p>
+                  <ul class="list_price">
+                    <li><?php echo $work_product_cost; ?></li>
+                    <li><?php echo $work_product_period; ?></li>
+                  </ul>
+                  <ul class="list_price">
+                    <li><a href="<?php echo $work_product_link; ?>"><?php echo $work_product_link; ?></a></li>
+                  </ul>
+                  <p class="btn btn_site_adv"><a href="#" target="_blank">詳しくみる</a></p>
                 </div>
               </div>
               <div class="lworks_btitle clearfix">

@@ -97,7 +97,9 @@ address {
 .clear {
 	clear: both;
 }
-.clearfix:after, .col:after ,.blog_idx_info:after,.other_articles:after{
+.clearfix:after, .col:after ,.blog_idx_info:after,.other_articles:after,.sidbar_list_cate:after,
+.title_lworks_out:after
+{
 	content: ".";
 	display: block;
 	height: 0;

@@ -56,12 +56,22 @@
 }
 .list_btn_social01 li{
 	float:left;
-	width:calc(9500% / 300);
-	margin-right:calc(1500% / 600 );
+	width:146px;
+	margin-right:8px;
+	background:#F48D00;
+	text-align:center;
+	-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
 }
-
-.list_btn_social01 li:nth-child(3n+3){
+.list_btn_social01 li img{
+	max-width:40px !important;}
+.list_btn_social01 li a{
+	display:block;
+}
+.list_btn_social01 li:nth-child(2n+2){
 	margin-right:0;
+	background:#89C22E;
 }
 
 

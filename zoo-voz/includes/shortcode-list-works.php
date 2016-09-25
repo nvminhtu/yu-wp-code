@@ -34,6 +34,10 @@ function shortcode_list_works() {
 			$img_works_home_src = $img_works_home[0];
 			$work_product_title = get_field('work_product_title',$post->ID);
 			$work_product_link = get_field('work_product_link',$post->ID);
+			$work_product_sub_title = get_field('work_product_sub_title',$post->ID);
+			$work_product_cost = get_field('work_product_cost',$post->ID);
+			$work_product_period = get_field('work_product_period',$post->ID);
+			$work_product_title = get_field('work_product_title',$post->ID);
 
 			$time = get_the_date('Y.m.d', $post->ID);
 			$nd = get_the_content();
@@ -76,11 +80,19 @@ function shortcode_list_works() {
 
 				$content_shortcode .= '<div class="box_lworks_on">';
 					$content_shortcode .= '<p class="lworks_on_title">'.get_the_title($id).'</p>';
-					$content_shortcode .= $work_content;
+					$content_shortcode .= '<p class="lworks_on_title_sub">- '.$work_product_sub_title.' - </p>';
+					$content_shortcode .= '<p class="lworks_on_des">';
+						$content_shortcode .= mb_substr(strip_tags($work_content),0,55) . '...';
+					$content_shortcode .= '</p>';
+					$content_shortcode .= '<ul class="list_price">';
+						$content_shortcode .= '<li>'.$work_product_cost.'</li>';
+						$content_shortcode .= '<li>'.$work_product_period.'</li>';
+					$content_shortcode .= '</ul>';
+					// $content_shortcode .= $work_content;
 					$content_shortcode .= '<p class="title_site_adv">'.$work_product_title.'<br />';
 					$content_shortcode .= '<a href="'.$work_product_link.'" target="_blank">'.$work_product_link.'</a></p>';
 				$content_shortcode .= '</div>';
-				$content_shortcode .= '<p class="title_lworks">'.get_the_title($id).'</p>';
+				$content_shortcode .= '<div class="title_lworks_out"><p class="title_lworks">'.get_the_title($id).'</p></div>';
 				$content_shortcode .= '</div>';
 
 				$i++;

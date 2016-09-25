@@ -388,6 +388,9 @@ a.box:hover .service_boxct_right .ser_boxct {
 	background-size: 25px auto;
 	display: block;
 }
+.ser_price.ser_period span {
+	background-image: url(../images/icon_time02.png);
+}
 .serde_t {
 	font-size: 18px;
 }
@@ -678,6 +681,10 @@ a.box:hover .service_boxct_right .ser_boxct {
 }
 
 /* COMPANY */
+.box_company{
+	width:80%;
+	margin:0 auto 50px;
+}
 .dlstb {
 	margin-bottom: 50px;
 }

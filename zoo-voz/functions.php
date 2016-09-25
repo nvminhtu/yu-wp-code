@@ -84,3 +84,10 @@ function get_the_slug( $id=null ){
 //     } //endif
 // }
 // add_action('pre_get_posts', 'custom_posts_per_page');
+
+// trim the string function
+function trim_word($text, $length, $startPoint=0, $allowedTags=""){
+    $text = html_entity_decode(htmlspecialchars_decode($text));
+    $text = strip_tags($text, $allowedTags);
+    return $text = substr($text, $startPoint, $length);
+}

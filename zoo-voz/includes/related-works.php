@@ -35,6 +35,10 @@
     $work_title = get_the_title($work_id);
     $work_content = get_the_content($work_id);
     $work_product_title = get_field('work_product_title',$post->ID);
+    $work_product_sub_title = get_field('work_product_sub_title',$post->ID);
+    $work_product_cost = get_field('work_product_cost',$post->ID);
+    $work_product_period = get_field('work_product_period',$post->ID);
+    $work_product_title = get_field('work_product_title',$post->ID);
     $work_product_link = get_field('work_product_link',$post->ID);
 ?>
 
@@ -62,7 +66,15 @@
                 </p>
                 <div class="box_lworks_on">
                   <p class="lworks_on_title"><?php echo $work_title; ?></p>
-                  <?php echo $work_content; ?>
+                  <p class="lworks_on_title_sub">- <?php echo $work_product_sub_title; ?> - </p>
+                  <p class="lworks_on_des">
+                    <?php echo mb_substr(strip_tags($work_content),0,55) . '...'; ?>
+                  </p>
+                  <ul class="list_price">
+                    <li><?php echo $work_product_cost; ?></li>
+                    <li><?php echo $work_product_period; ?></li>
+                  </ul>
+                  <?php //echo $work_content; ?>
                   <p class="title_site_adv"><?php echo $work_product_title; ?><br />
                   <a href="<?php echo $work_product_link; ?>" target="_blank"><?php echo $work_product_link; ?></a></p>
                 </div>

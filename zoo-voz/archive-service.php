@@ -51,7 +51,9 @@
             <div class="ser_boxct clearfix">
               <h4 id="title_service01" class="title_service"><span class="ser_icon"><img src="<?php echo $service_icon; ?>" /></span><?php echo $service_title; ?></h4>
                 <?php echo $service_heading_text; ?>
-                <?php the_content(); ?>
+                <p class="des_ser">
+                  <?php echo mb_substr(strip_tags(get_the_content()),0,120) . '...'; ?>
+                </p>
                 <div class="info_ser clearfix">
                   <ul>
                       <li class="list_price"><?php echo $service_price; ?></li>
@@ -79,7 +81,7 @@
     </div>
   </div>
   <!-- end blog list -->
-  
+
 <!-- #main --></div>
 
 
