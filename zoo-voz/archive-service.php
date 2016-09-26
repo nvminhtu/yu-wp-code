@@ -1,4 +1,4 @@
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 
 <!-- main start -->
 <div id="main" class="clearfix">

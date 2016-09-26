@@ -1,4 +1,4 @@
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 <!-- main start -->
 <div id="main" class="clearfix">
   <div class="inner ftb">
@@ -126,9 +126,9 @@
                     <li><?php echo $work_product_period; ?></li>
                   </ul>
                   <ul class="list_price">
-                    <li><a href="<?php echo $work_product_link; ?>"><?php echo $work_product_link; ?></a></li>
+                    <li><a href="<?php echo $work_product_link; ?>"  target="_blank"><?php echo $work_product_link; ?></a></li>
                   </ul>
-                  <p class="btn btn_site_adv"><a href="#" target="_blank">詳しくみる</a></p>
+                  <p class="btn btn_site_adv"><a href="<?php echo get_permalink($work_id); ?>">詳しくみる</a></p>
                 </div>
               </div>
               <div class="lworks_btitle clearfix">

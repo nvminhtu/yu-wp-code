@@ -2,7 +2,7 @@
 /**
  * @single: service
  */ ?>
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 <!-- main start -->
 <div id="main" class="clearfix">
   <?php while ( have_posts() ) : the_post(); // Start the loop.

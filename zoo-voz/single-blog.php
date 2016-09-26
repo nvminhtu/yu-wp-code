@@ -1,4 +1,4 @@
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 
 <?php
   if ( have_posts() ) :
@@ -64,7 +64,7 @@
             			</div>
             			<p class="person_des"><?php echo $biographical; ?></p>
             	</div>
-              
+
             </div>
           </div>
           <!-- #### sidebar ####-->

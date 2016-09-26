@@ -1,4 +1,4 @@
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 <!-- main start -->
 <div id="main" class="clearfix">
   <div class="inner ftb">
@@ -94,8 +94,7 @@
           wp_reset_query();
         ?>
         </div>
-        <p class="note_blog">全○○件中12件を表示</p>
-        <p class="btn btn01 btn_hblue btn_mw500 wow bounceIn" data-wow-delay="0.2s"><a href="#"><span>もっと見る</span></a></p>
+        <p class="btn btn01 btn_hblue btn_mw500"><a id="more_blog" href="javascript:void(0)"><span>もっと見る</span></a></p>
       </div>
       <?php get_sidebar(); ?>
     </div>

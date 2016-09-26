@@ -418,7 +418,8 @@ body#index {
 	padding-bottom: 2px;
 }
 #gnavi li a:hover{
-	opacity:0.8;
+	opacity:0.6;
+	
 }
 #gnavi li.cl_bt01 a {
 	border-color: #40A2CF;
@@ -854,7 +855,7 @@ address {
 	z-index: 15;
 }
 .title_lworks_out{
-	background:#fff;
+	background: #F4F4F4;
 }
 .title_lworks {
 	background: #F4F4F4;

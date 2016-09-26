@@ -6,7 +6,7 @@
  * @since GrooVoost
  * Content will be gotten from admin editor
  */ ?>
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 
 <!-- main start -->
 <div id="main" class="clearfix">

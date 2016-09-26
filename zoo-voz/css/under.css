@@ -603,7 +603,8 @@ a.box:hover .service_boxct_right .ser_boxct {
 	padding-top: 22px;
 }
 .box_w_top .lworks_on_des {
-	margin: 25px auto 14px auto;
+	margin: 20px auto 14px auto;
+	height:auto;
 }
 .box_w_top .box_lworks_on li {
 	margin-bottom: 0;
