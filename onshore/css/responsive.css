@@ -45,6 +45,32 @@ img {
 .box_pro{
 	width:100%;
 }
+/* container01 */
+.box_difference01 .b_good .dides{
+	left:10%;
+}
+.box_difference01 .b_bad .dides{
+	left:25%;
+}
+.box_difference01 .b_bad .icon_bad{
+	/*left:auto;
+	right:-50px;*/
+}
+.box_difference03 .diff_ct{
+	padding-left:0;
+}
+
+.box_difference03 .dides{
+	position:relative;
+}
+
+.box_difference03 .b_bad .dides{
+	left:10%;
+}
+
+.box_difference03 .b_good .dides{
+	left:20%;
+}
 
 
 .box_skill .title_skill {
@@ -81,15 +107,21 @@ img {
 	font-size:22px;
 	letter-spacing:-1px;
 }
+#container04_out{
+	padding-bottom:90px;
+}
 }
 @media screen and (max-width: 1024px) {
 }
 @media screen and (min-width: 951px) and (max-width: 1150px) {
 }
  @media screen and (max-width: 1150px) {
+	 #container04_out{
+	padding-bottom:50px;
+}
 }
 @media screen and (max-width: 1000px) {
-	#index #header{
+	#header{
 		height:400px;
 	}
 	.box_tl{
@@ -100,6 +132,46 @@ img {
 	#logo{
 		margin-bottom:30px;
 	}
+	
+	/* container01 */
+.box_difference01 .b_good .dides{
+	left:5%;
+}
+.box_difference01 .b_bad .dides{
+	left:18%;
+}
+.box_difference01 .b_bad .icon_bad{
+	/*left:auto;
+	right:-50px;*/
+}
+.box_difference03 .diff_ct{
+	padding-left:0;
+}
+
+.box_difference03 .dides{
+	position:relative;
+}
+
+.box_difference03 .b_bad .dides{
+	left:10%;
+}
+
+.box_difference03 .b_good .dides{
+	left:20%;
+}
+
+.box_difference01:before{
+
+	
+	background-size:35px auto
+}
+.box_difference03:before{
+background-size:35px auto;
+left:-20px;
+}
+
+
+
 	#container02{
 		 padding: 30px 0 50px;
 	}
@@ -206,6 +278,65 @@ h3.titleh302{
  @media screen and (max-width: 950px) {
 }
  @media screen and (max-width: 950px) {
+.box_difference03-1{
+	display:block;
+}
+.box_difference03{
+	display:none;
+}
+.box_difference,.box_difference.box_difference_center{
+	width:100%;
+	background:none;
+	float:none;
+	max-width:360px;
+	margin:0 auto 20px;
+}
+.diff_ct{
+	background:none;
+}
+.box_difference01::before{
+	display:none;
+}
+.box_difference p.tile_difference{
+	font-weight:bold;
+}
+
+.box_difference01 .b_good .dides,
+.box_difference03-1 .b_good .dides{
+	left:40px;
+}
+.box_difference01 .icon_good,
+.box_difference03-1 .icon_good{
+    right: auto;
+	left:-60px;
+    top: -25px;
+}
+
+.box_difference01 .b_bad .icon_bad,
+.box_difference03-1 .b_bad .icon_bad {
+    left: auto;
+	right:-50px;
+    top: 3px;
+}
+.box_difference03-1 .b_good{
+	margin-bottom:30px;
+}
+
+
+.box_difference03-1 .b_good .dides{
+	padding-left:30px;}
+.box_difference01 .b_bad ,
+.box_difference03-1 .b_bad {
+	height:100px;
+
+}
+.box_difference01 .b_bad .dides,
+.box_difference03-1 .b_bad .dides{
+	position:absolute;
+	left:auto;
+	right:40px;
+}
+
 }
  @media screen and (max-width: 850px) {
 	 .title_top span{
@@ -229,7 +360,10 @@ h3.titleh302{
 	
 /* SMART PHONE */
 @media screen and (max-width: 768px) {
-	#index #header{
+	#header_bg_out{
+		background-position:-150px 0;
+	}
+	#header{
 		height:300px;
 	}
 	h1{
@@ -247,13 +381,28 @@ h3.titleh302{
     line-height: 23px;
 
 }
+#logo span.light_logo{
+	 font-family: 'Lato-Regular';
+}
+.alm-btn-wrap button{
+	 font-family: 'Lato-Regular';
+}
 h2 {
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 25px;
 }
-	#container01, #container02, #container03, #container04, #container05, #container06, #container07, #container08, #container09, #container10{
+	#container01, #container02, #container03, #container05, #container06, #container07, #container08, #container09, #contact{
 		padding:40px 0;
+	}
+	#container04{
+		padding-top:40px;
+	}
+	#container04_out{
+		padding-bottom:30px;
+	}
+	 #container05{
+		 padding-top:50px;
 	}
 	h3.title02,h3.title01{
 		font-size:18px;
@@ -382,7 +531,7 @@ h3.titleh302{
 .box_contact_list{
 	width:100%;
 }
-#container10 {
+#contact {
     border: 5px solid #facd89;
 }
 .box_contact_left, .box_contact_right{
@@ -445,6 +594,41 @@ address{
  @media screen and (max-width: 490px) {
 }
  @media screen and (max-width: 450px) {
+.icon_good img{
+	width:40px;
+	height:auto;
+}
+.icon_bad img{
+	width:32px;
+	height:auto;
+}
+.box_difference01 .b_good,
+.box_difference03-01 .b_good{
+	margin-bottom:15px;
+}
+.box_difference01 .b_good .dides, .box_difference03-1 .b_good .dides{
+	left:40px;
+}
+.box_difference01 .b_bad .dides, .box_difference03-1 .b_bad .dides{
+	right:40px;
+}
+.box_difference01 .icon_good, .box_difference03-1 .icon_good {
+    left: -30px;
+    top: -14px;
+}
+
+.box_difference01 .b_bad .icon_bad, .box_difference03-1 .b_bad .icon_bad {
+    right: -30px;
+    top: 3px;
+}
+
+.diff_ct {
+    padding-top: 15px;
+	height: auto;
+}
+.box_difference_center .diff_ct{
+	height:auto;
+}
 }
  @media screen and (max-width: 414px) {
 }

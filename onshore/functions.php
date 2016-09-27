@@ -16,6 +16,7 @@ remove_filter( 'the_content', 'wpautop' );
 require_once (dirname(__FILE__) . '/includes/add_image_size.php');
 require_once (dirname(__FILE__) . '/includes/create_posttype.php');
 require_once (dirname(__FILE__) . '/includes/shortcodes.php');
+require_once (dirname(__FILE__) . '/includes/list_qa.php');
 
 /* add menu */
 if (function_exists('register_nav_menu')) {
