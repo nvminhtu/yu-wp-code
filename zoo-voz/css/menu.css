@@ -187,6 +187,9 @@
 	height:79px;
 }
 
+#sticky_menu_header.fixed01{
+	position:relative !important;
+}
 
 
 #sticky_menu_header.fixed #list_menutop_sticky  li.menu_top01 > a {
@@ -242,7 +245,7 @@
 #list_menutop_sticky .sub_megamenu ul {
 	display: none;
     /*background: #fff;*/
-	background:rgba(243,243,243,0.9);
+	background:rgba(235,235,235,0.9);
     height: auto;
     left: 0;
     padding: 24px 0;

@@ -231,10 +231,15 @@ h4.bh {
 						float:none;
 						width:100%;
 					}
+					
+					.content_inner {
+
+    max-width: 100%;
+
+}
 	
 }			
-				}
-
+			
  @media screen and (max-width:900px) {
 	 .under #header{
 		 height:250px;
@@ -547,6 +552,45 @@ ul.list01 li::before {
 	  text-align: left;
 	  padding:10px;
 }
+
+
+.w_info dl {
+	padding-bottom:15px;
+	margin-bottom:15px;
+
+}
+.w_info dt {
+	width: 100%;
+	float: none;
+	margin-bottom:5px;
+
+}
+.w_info dd {
+	padding-left:20px;
+	width: 100%;
+	float: none;
+}
+
+/* thank you */
+.bl_ct01{
+	width:100%;
+	float:none;
+	margin:0 0 30px;
+}
+.bl_ct01_img{
+	width:100px;
+	margin:0 15px 10px 0;
+	float:left;
+	
+}
+
+	
+	.bl_ct01_title{
+		padding-top:8px;
+		float:left;
+		width:calc(100% - 115px);
+	}
+
 }
  @media screen and (max-width: 600px) {
 h3.title_lblog {

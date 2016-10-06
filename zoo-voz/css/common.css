@@ -40,16 +40,15 @@ cl_yellow
 cl_green*/
 /*title_h301 */
 .title_h301 {
-	font-family: 'LatoWebBold';
 	font-size: 50px;
 	text-align: center;
 	margin-bottom: 40px;
 	letter-spacing: 1px;
+	font-weight:bold;
 }
 .title_h301 span {
 	font-size: 18px;
 	color: #45addf;
-	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 	font-weight: 500;
 	display: block;
 	line-height: 42px;
@@ -94,10 +93,10 @@ cl_green*/
 	text-align: center;
 	margin-left: 14px;
 	transition: all 0.2s ease 0s;
-	font-family: 'LatoWebBold';
 	background: #1A1A1A;
 	border: 2px solid #1A1A1A;
 	color: #fff;
+	font-weight:bold;
 }
 .navi_list li.disable, .navi_list li.active {
 	border: 2px solid #ADADAD;

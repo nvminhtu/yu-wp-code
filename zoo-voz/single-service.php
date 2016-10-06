@@ -49,7 +49,7 @@
         <div class="list_works clearfix">
             <?php include('includes/related-works.php'); ?>
         </div>
-        <p class="btn btn01 btn_horange btn_mw500 wow bounceIn" data-wow-delay="0.2s"><a href="<?php bloginfo('siteurl'); ?>/work/?category=<?php echo get_the_slug($service_id); ?>"><span>もっと見る</span></a></p>
+        <p class="btn btn01 btn_horange btn_mw500 wow" data-wow-delay="0.2s"><a href="<?php bloginfo('siteurl'); ?>/work/?category=<?php echo get_the_slug($service_id); ?>"><span>もっと見る</span></a></p>
       </div>
   </div>
 

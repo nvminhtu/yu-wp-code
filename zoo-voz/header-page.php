@@ -4,9 +4,9 @@
 <link  href="<?php bloginfo('template_url'); ?>/css/animate.css" rel="stylesheet" type="text/css" />
 <link href="<?php bloginfo('template_url'); ?>/css/common.css" rel="stylesheet" type="text/css" />
 <link href="<?php bloginfo('template_url'); ?>/css/menu.css" rel="stylesheet" type="text/css" />
-<?php if(get_post_type() == 'blog'|| is_tag() || is_tax('blog-cat')) { ?>
+<?php //if(get_post_type() == 'blog'|| is_tag() || is_tax('blog-cat')) { ?>
     <link  href="<?php bloginfo('template_url'); ?>/css/blog.css" rel="stylesheet" type="text/css" />
-<?php } ?>
+<?php // } ?>
 <link href="<?php bloginfo('template_url'); ?>/css/owl.carousel.css" rel="stylesheet" type="text/css" />
 <link href="<?php bloginfo('template_url'); ?>/css/responsive.css" rel="stylesheet" type="text/css" />
 <link  href="<?php bloginfo('template_url'); ?>/css/under_responsive.css" rel="stylesheet" type="text/css" />

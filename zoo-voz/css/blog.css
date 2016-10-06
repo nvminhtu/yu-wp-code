@@ -49,6 +49,10 @@
 }
 .navi_btn_twitter{
 	margin-bottom:7px;
+	text-align:center;
+}
+.navi_btn_twitter img{
+	max-width:300px;
 }
 
 .list_btn_social01{
@@ -134,7 +138,7 @@ border-radius: 3px;
 .list_latestpost_sb_date {
 	margin:0;
     line-height: 25px;
-	  font-family: 'Lato-Regular';
+	
     padding-left: 0px;
 	letter-spacing:1px;
 }
@@ -287,8 +291,7 @@ h3.title_lblog {
 	color: #fff;
 	font-size: 15px;
 	letter-spacing:1px;
-
-		font-family: 'LatoWebBold';s
+	font-weight:bold;
 }
 .blog_inew span{
 		position: absolute;

@@ -50,7 +50,7 @@
             $field_id = get_the_ID();
             if($field_id == $service_id) {
               ?>
-              <div class="box_lworks clearfix wow zoomIn" data-wow-delay="0.3s">
+              <div class="box_lworks clearfix wow postItem" data-wow-delay="0.3s">
                 <p class="img_lworks">
                   <a href="<?php echo get_permalink($work_id); ?>">
                     <?php
@@ -78,7 +78,9 @@
                   <p class="title_site_adv"><?php echo $work_product_title; ?><br />
                   <a href="<?php echo $work_product_link; ?>" target="_blank"><?php echo $work_product_link; ?></a></p>
                 </div>
-                <p class="title_lworks abc"><?php echo $work_title; ?></p>
+                <div class="title_lworks_out clearfix">
+                  <p class="title_lworks"><?php echo $work_title; ?></p>
+                </div>
               </div>
               <?php
             }

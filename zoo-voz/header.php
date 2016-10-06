@@ -12,6 +12,9 @@
   //include header for each pages
   if(is_front_page()||is_home()){
     include('header-frontpage.php');
+  }
+  else if(is_page('thank-you')){
+	   include('header-page-nomain.php');
   } else {
     include('header-page.php');
   }

@@ -76,7 +76,12 @@
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.easing.min.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/top.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/top-works.js" type="text/javascript"></script>
- <?php } else { ?>
+ <?php }
+ else if(is_page('thank-you')){ ?>
+	  <script src="<?php bloginfo('template_url'); ?>/js/thanks.js" type="text/javascript"></script>
+<?php	}
+ 
+  else { ?>
    <script src="<?php bloginfo('template_url'); ?>/js/under.js" type="text/javascript"></script>
       <script src="<?php bloginfo('template_url'); ?>/js/work.js" type="text/javascript"></script>
  <?php }?>
@@ -114,6 +119,8 @@
            wow.init();
  });
 </script>
+
+
 
 
  <?php wp_footer(); ?>

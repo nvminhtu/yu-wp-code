@@ -250,7 +250,7 @@ html {
 body {
 	color: #222;
 	text-align: center;
-	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	font-family:'Lato-Regular' , "游ゴシック" , "Yu Gothic";
 }
 body#index {
 	background: #fff;
@@ -518,9 +518,9 @@ body#index {
 	text-align: left;
 }
 #footer_link .flink dt {
-	font-family: 'LatoWebBold';
 	font-size: 18px;
 	margin-bottom: 15px;
+	font-weight:bold;
 }
 #footer_link .flink dd a {
 	font-size: 14px;
@@ -559,7 +559,7 @@ body#index {
 	font-weight: bold;
 }
 .title_name_footer span {
-	font-family: 'Lato-Regular';
+	
 	border-left: 1px solid #fff;
 	padding-left: 10px;
 	margin-left: 10px;
@@ -568,7 +568,7 @@ address {
 	padding: 40px 7% 0 0%;
 	float: right;
 	font-size: 14px;
-	font-family: 'Lato-Regular';
+	
 }
 .totop {
 	display: none;
@@ -610,7 +610,7 @@ address {
 	width: 125px;
 	float: left;
 	color: #45addf;
-	font-family: 'Lato-Regular';
+	
 	letter-spacing: 2px;
 	font-size: 15px;
 }
@@ -751,10 +751,10 @@ address {
 	bottom: 0;
 	background: #57ADDE;
 	font-size: 15px;
-	font-family: 'LatoWebBold';
 	letter-spacing: 2px;
 	padding: 0 8px;
 	line-height: 31px;
+	font-weight:bold;
 }
 .blog_idx_info {
 	background: #fff;
