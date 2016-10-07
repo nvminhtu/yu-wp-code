@@ -218,6 +218,18 @@ h4.bh {
 	width:100%;
 }
 @media screen and (max-width:950px) {
+	.nomain #wrapper{
+		padding-top:40px !important;
+	}
+	#main.mfixed{
+		margin-top:0 !important;
+	}
+	.box_txt_contact .fs22{
+		margin-bottom:15px;
+	}
+	.title_hct{
+		padding-bottom:25px;
+	}
 				/*	.box_instag01_col01{
 						margin:0 0 30px 0;
 						float:none;
@@ -246,6 +258,8 @@ h4.bh {
 		}
 		.under #wrapper{
 	padding-top:250px;}
+	
+	
 .under #header h1 {
     font-size: 18px;
     padding-top: 30px;
@@ -361,6 +375,9 @@ h4.bh {
 }
 }
  @media screen and (max-width:768px) {
+	 .box_txt_contact{
+		 margin-bottom:10px;
+		}
 	 #main #topic_path {
 	padding-left: 0px;
 }
@@ -658,8 +675,15 @@ h3.title_lblog {
     font-size: 14px;
 
 }
+
+.bl_ct01_title{
+		padding-top:2px;
+
+	}
 }
  @media screen and (max-width: 400px) {
+	 
+
 .info_ser li {
 	margin-bottom: 7px;
 }

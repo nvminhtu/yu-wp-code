@@ -581,6 +581,7 @@ a.box:hover .service_boxct_right .ser_boxct {
 .name_cate_w span {
 	vertical-align: middle;
 	display: table-cell;
+	padding-top: 5px;
 }
 .title_cate_w {
 	font-weight: bold;
