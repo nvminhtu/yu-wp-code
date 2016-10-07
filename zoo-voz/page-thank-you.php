@@ -39,7 +39,7 @@
           			$img_blog_thanks = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_blog_thanks');
                 $img_blog_src = $img_blog_thanks[0]; ?>
                 <div class="bl_ct01 clearfix">
-                	<a href="#">
+                	<a href="<?php echo get_permalink(); ?>">
                     <p class="bl_ct01_img">
                       <?php if(has_post_thumbnail($id)) { ?>
                         <img src="<?php echo $img_blog_src; ?>" alt="" />
