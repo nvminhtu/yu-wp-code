@@ -15,14 +15,11 @@
 		while ( have_posts() ) : the_post();
       $img_works_detail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'full');
       $img_works_detail_src = $img_works_detail[0];
-      $work_product_title = get_field('work_product_title',$post->ID);
-      $work_product_sub_title = get_field('work_product_sub_title',$post->ID);
+      $work_target = get_field('work_product_sub_title',$post->ID);
       $work_product_cost = get_field('work_product_cost',$post->ID);
       $work_product_period = get_field('work_product_period',$post->ID);
-      $work_product_title = get_field('work_product_title',$post->ID);
       $work_product_link = get_field('work_product_link',$post->ID);
       $work_client_name = get_field('work_client_name',$post->ID);
-      $work_target_user = get_field('work_target_user',$post->ID);
       $work_devices = get_field('work_devices',$post->ID);
     ?>
 	<div class="content_inner clearfix">
@@ -41,7 +38,7 @@
         </dl>
         <dl>
         	<dt>ターゲットユーザー</dt>
-            <dd><?php echo $work_target_user; ?></dd>
+            <dd><?php echo $work_target; ?></dd>
         </dl>
         <dl>
         	<dt>デバイス</dt>

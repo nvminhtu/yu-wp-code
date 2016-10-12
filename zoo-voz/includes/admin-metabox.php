@@ -112,6 +112,15 @@ class Videoprefix_Admin {
 			'type' => 'wysiwyg',
 			'default' => '',
 		) );
+
+		// Header content
+		$cmb->add_field( array(
+			'name' => __( 'Header Content for Inner Page' ),
+			'desc' => __( 'insert your header content', 'prefixservices' ),
+			'id'   => 'header_content',
+			'type' => 'wysiwyg',
+			'default' => '',
+		) );
 	}
 	/**
 	 * Register settings notices for display

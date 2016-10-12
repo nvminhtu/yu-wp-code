@@ -47,7 +47,8 @@ a.box:hover .service_boxct_right .ser_boxct {
 	width: 192px;
 }
 .under #list_menutop_sticky li a {
-	font-size: 18px;
+	font-size: 16px;
+	color:#333;
 }
 /*fixed */
 .under #sticky_menu_header.fixed {
@@ -1086,4 +1087,11 @@ a.box:hover .service_boxct_right .ser_boxct {
 }
 #main.mfixed {
 	margin-top: 104px;
+}
+
+.title_contact01{
+	font-size:22px;
+	font-weight:bold;
+	margin-bottom:40px;
+	line-height:42px;
 }

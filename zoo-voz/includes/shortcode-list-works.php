@@ -32,12 +32,11 @@ function shortcode_list_works() {
 			$img_url = wp_get_attachment_url($thumb,'full');
 			$img_works_home = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_works_home');
 			$img_works_home_src = $img_works_home[0];
-			$work_product_title = get_field('work_product_title',$post->ID);
+			$work_client_name = get_field('work_client_name',$post->ID);
 			$work_product_link = get_field('work_product_link',$post->ID);
 			$work_product_sub_title = get_field('work_product_sub_title',$post->ID);
 			$work_product_cost = get_field('work_product_cost',$post->ID);
 			$work_product_period = get_field('work_product_period',$post->ID);
-			$work_product_title = get_field('work_product_title',$post->ID);
 
 			$time = get_the_date('Y.m.d', $post->ID);
 			$nd = get_the_content();
@@ -89,7 +88,7 @@ function shortcode_list_works() {
 						$content_shortcode .= '<li>'.$work_product_period.'</li>';
 					$content_shortcode .= '</ul>';
 					// $content_shortcode .= $work_content;
-					$content_shortcode .= '<p class="title_site_adv">'.$work_product_title.'<br />';
+					$content_shortcode .= '<p class="title_site_adv">'.$work_client_name.'<br />';
 					$content_shortcode .= '<a href="'.$work_product_link.'" target="_blank">'.$work_product_link.'</a></p>';
 				$content_shortcode .= '</div>';
 				$content_shortcode .= '<div class="title_lworks_out"><p class="title_lworks">'.get_the_title($id).'</p></div>';

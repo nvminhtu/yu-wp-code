@@ -34,11 +34,10 @@
     $work_id= get_the_ID();
     $work_title = get_the_title($work_id);
     $work_content = get_the_content($work_id);
-    $work_product_title = get_field('work_product_title',$post->ID);
+    $work_client_name = get_field('work_client_name',$post->ID);
     $work_product_sub_title = get_field('work_product_sub_title',$post->ID);
     $work_product_cost = get_field('work_product_cost',$post->ID);
     $work_product_period = get_field('work_product_period',$post->ID);
-    $work_product_title = get_field('work_product_title',$post->ID);
     $work_product_link = get_field('work_product_link',$post->ID);
 ?>
 
@@ -75,7 +74,7 @@
                     <li><?php echo $work_product_period; ?></li>
                   </ul>
                   <?php //echo $work_content; ?>
-                  <p class="title_site_adv"><?php echo $work_product_title; ?><br />
+                  <p class="title_site_adv"><?php echo $work_client_name; ?><br />
                   <a href="<?php echo $work_product_link; ?>" target="_blank"><?php echo $work_product_link; ?></a></p>
                 </div>
                 <div class="title_lworks_out clearfix">

@@ -25,10 +25,11 @@
   <div id="wrapper">
     <div id="header" class="clearfix">
       <div class="inner consulting">
-        <h1><span>Groovoost Inc.</span> 設立記念</h1>
-        <h2><span>WEB</span>コンサルキャンペーン</h2>
-        <p class="btn btn_header01"><a href=""><span>詳しくはこちら</span></a></p>
-        <p class="btn btn_header02"><a href=""><span>この動画をみる</span></a></p>
+        <?php
+          $header_content_data = prefixservices_get_option( 'header_content' );
+          $header_content = apply_filters( 'the_content', $header_content_data  );
+          echo $header_content;
+        ?>
       </div>
       <div id="bg_box_out">&nbsp;</div>
     </div>
