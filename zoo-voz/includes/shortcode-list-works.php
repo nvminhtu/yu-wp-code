@@ -42,7 +42,7 @@ function shortcode_list_works() {
 			$nd = get_the_content();
 			$id= get_the_ID();
 			$work_content = get_the_content($id);
-
+			$link_work = get_the_permalink();
 			$check_new_for_blog = get_post_meta($post->ID, 'check_new_for_blog',true);
 
 			$service_objects = get_field('selected_service',$post->ID);
@@ -78,7 +78,7 @@ function shortcode_list_works() {
 				$content_shortcode .= '</a></p>';
 
 				$content_shortcode .= '<div class="box_lworks_on">';
-					$content_shortcode .= '<p class="lworks_on_title">'.get_the_title($id).'</p>';
+					$content_shortcode .= '<p class="lworks_on_title"><a class="linklw" href="'.$link_work.'">'.get_the_title($id).'</a></p>';
 					$content_shortcode .= '<p class="lworks_on_title_sub">- '.$work_product_sub_title.' - </p>';
 					$content_shortcode .= '<p class="lworks_on_des">';
 						$content_shortcode .= mb_substr(strip_tags($work_content),0,55) . '...';
@@ -89,7 +89,7 @@ function shortcode_list_works() {
 					$content_shortcode .= '</ul>';
 					// $content_shortcode .= $work_content;
 					$content_shortcode .= '<p class="title_site_adv">'.$work_client_name.'<br />';
-					$content_shortcode .= '<a href="'.$work_product_link.'" target="_blank">'.$work_product_link.'</a></p>';
+					$content_shortcode .= '<a class="link_woout" href="'.$work_product_link.'" target="_blank">'.$work_product_link.'</a></p>';
 				$content_shortcode .= '</div>';
 				$content_shortcode .= '<div class="title_lworks_out"><p class="title_lworks">'.get_the_title($id).'</p></div>';
 				$content_shortcode .= '</div>';
@@ -100,7 +100,7 @@ function shortcode_list_works() {
 			wp_reset_postdata();
 	 	 }
 	 $content_shortcode .= '</div>';
-   $content_shortcode .= '<p class="btn btn01 btn_hblue btn_mw500"><a href="'.get_bloginfo('siteurl').'/work/?category='.get_the_slug($service_id).'"><span>もっと見る</span></a></p>';
+   $content_shortcode .= '<p class="btn btn01 btn_hblue btn_mw500"><a href="'.get_bloginfo('siteurl').'/work/"><span>もっと見る</span></a></p>';
 
    return $content_shortcode;
  }

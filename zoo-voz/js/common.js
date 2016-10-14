@@ -161,10 +161,69 @@ $(window).bind('load',function(){
 		 var array_blog = [];
 		 var flag = 0;
 		 $('.box_archive_blog .bloglist_box01').each(function(index, element) {
-           	if($(this).css('display') == 'none'&&flag < 6) {
+           	if($(this).css('display') === 'none'&&flag < 6) {
 				flag++;
 				$(this).fadeIn(500);
 			}
         });
 	});
 });
+
+
+
+$(document).ready(function() {   
+ "use strict"; 
+	 $(".box_lworks_on").on('click', function (e) {
+    	if ($(e.target).closest(".link_woout").length === 0) {
+     		  window.location=$(this).find("a.linklw").attr("href");
+		}
+});
+});
+
+
+
+$(window).bind("load",function(){
+	//hover menu blog on menu
+
+	$(".menu_blog01,#blog_menu_top").hover(function(){
+	 	$("#blog_menu_top").stop(1,0).delay(200).slideDown();
+		
+	},function(){
+		$("#blog_menu_top").stop(1,0).delay(200).slideUp();
+	});
+	
+	//list single menu
+	$("#list_cate_menu01 li a").hover(function(){
+		$("#list_cate_menu01 li a").removeClass("is-active");
+		$(this).addClass("is-active");
+		$(".listsgPost").hide();
+		var active_role = $(this).attr("role");
+		$(active_role).show();
+		
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

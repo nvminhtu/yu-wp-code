@@ -31,6 +31,7 @@
     $img_works_home_src = $img_works_home[0];
     $time = get_the_date('Y.m.d', $post->ID);
     $nd = get_the_content();
+	$link_work = get_the_permalink();
     $work_id= get_the_ID();
     $work_title = get_the_title($work_id);
     $work_content = get_the_content($work_id);
@@ -64,7 +65,7 @@
                   </a>
                 </p>
                 <div class="box_lworks_on">
-                  <p class="lworks_on_title"><?php echo $work_title; ?></p>
+                  <p class="lworks_on_title"><a class="linklw" href="<?php echo $link_work; ?>"><?php echo $work_title; ?></a></p>
                   <p class="lworks_on_title_sub">- <?php echo $work_product_sub_title; ?> - </p>
                   <p class="lworks_on_des">
                     <?php echo mb_substr(strip_tags($work_content),0,55) . '...'; ?>
@@ -75,7 +76,7 @@
                   </ul>
                   <?php //echo $work_content; ?>
                   <p class="title_site_adv"><?php echo $work_client_name; ?><br />
-                  <a href="<?php echo $work_product_link; ?>" target="_blank"><?php echo $work_product_link; ?></a></p>
+                  <a class="link_woout" href="<?php echo $work_product_link; ?>" target="_blank"><?php echo $work_product_link; ?></a></p>
                 </div>
                 <div class="title_lworks_out clearfix">
                   <p class="title_lworks"><?php echo $work_title; ?></p>
