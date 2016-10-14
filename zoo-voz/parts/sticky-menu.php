@@ -19,129 +19,92 @@
                       );
         wp_nav_menu($arg_sticky);
       ?>
-      <!-- nav for blog inner --> 
-      
+      <!-- nav for blog inner -->
+
       <div id="blog_menu_top">
         <div class="list_cate_menu clearfix">
           <div class="list_cate_menu_inner clearfix">
             <ul id="list_cate_menu01">
-              <li><a class="is-active" href="#" role="#cate01">SEO対策</a></li>
-              <li><a href="#" role="#cate02">インターネット広告</a></li>
-              <li><a href="#" role="#cate03">SEO対策1</a></li>
-              <li><a href="#" role="#cate04">SEO対策2</a></li>
-              <li><a href="#" role="#cate05">SEO対策3</a></li>
-              <li><a href="#" role="#cate06">SEO対策4</a></li>
+              <?php
+                $terms = get_terms(array(
+                            'taxonomy' => 'blog-cat',
+                            'hide_empty' => false,
+                        ));
+                $i = 0;
+                if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+                  foreach ( $terms as $term ) {
+                    $i++;
+                    ?>
+                    <li><a <?php if($i==1) { echo 'class="is-active"'; } ?> href="<?php echo get_term_link($term); ?>" role="#<?php echo $term->slug;?>">
+                      <?php echo $term->name; ?></a>
+                    </li>
+                  <?php }
+                }
+              ?>
             </ul>
           </div>
         </div>
         <div class="list_single_menu clearfix">
-          <div class="list_single_menu_inner clearfix"> 
-            <!-- cate 01 -->
-            <div id="cate01" class="listsgPost clearfix">
-              <ul>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">ダミーダミーダミーダミーダミーダミーダミーダミー</p>
-                  </a> </li>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">特定の国からのアクセスを除外すスを除外する </p>
-                  </a> </li>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">特定の国からのアクセスを除外すスを除外する </p>
-                  </a> </li>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">特定の国からのアクセスを除外すスを除外する </p>
-                  </a> </li>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">特定の国からのアクセスを除外すスを除外する </p>
-                  </a> </li>
-                <li>
-                  <div class="header-dropdown-more">
-                    <p class="btn btn01 btn_hblue"><a href="#"><span>もっと見る</span></a></p>
+          <div class="list_single_menu_inner clearfix">
+            <?php
+              $terms = get_terms(array(
+                          'taxonomy' => 'blog-cat',
+                          'hide_empty' => false,
+                      ));
+              $i = 0;
+              if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+                foreach ( $terms as $term ) {
+                  $i++;
+                  ?>
+                  <div id="<?php echo $term->slug; ?>" class="listsgPost clearfix">
+                    <ul>
+                      <?php
+                        global $post;
+                        global $wp_query;
+                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                        $query = new WP_Query( array(
+                            'post_type' => 'blog',       // name of post type.
+                            'posts_per_page' => 5,
+                            'paged' => $paged,
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'blog-cat',   // taxonomy name
+                                    'field' => 'slug',         // term_id, slug or name
+                                    'terms' => $term->slug     // term id, term slug or term name
+                                )
+                            )
+                          ) );
+                          $number_blogs = $query->found_posts;
+                          while ( $query->have_posts() ) : $query->the_post();
+                              $img_sub_menu = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_archive_blog');
+                              $img_sub_menu_src = $img_sub_menu[0];
+                            ?>
+                            <li>
+                              <a href="<?php echo get_permalink(); ?>" class="header-dropdown-item">
+                                <img class="header-dropdown-image" src="<?php echo $img_sub_menu_src; ?>" >
+                                <p class="header-dropdown-title"><?php echo get_the_title(); ?></p>
+                              </a>
+                            </li>
+                          <?php endwhile;
+                          wp_reset_query();
+                        ?>
+                        <li>
+                          <div class="header-dropdown-more">
+                            <p class="btn btn01 btn_hblue"><a href="<?php echo get_term_link($term); ?>"><span>もっと見る</span></a></p>
+                          </div>
+                        </li>
+                    </ul>
                   </div>
-                </li>
-              </ul>
-            </div>
-            <!-- //cate 01 --> 
-            
-            <!-- cate 02 -->
-            <div id="cate02" class="listsgPost clearfix">
-              <ul>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">ダミーダミーダミーダミーダミーダミーダミーダミー</p>
-                  </a> </li>
-                <li>
-                  <div class="header-dropdown-more">
-                    <p class="btn btn01 btn_hblue"><a href="#"><span>もっと見る</span></a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!-- //cate 02 --> 
-            
-            <!-- cate 03 -->
-            <div id="cate03" class="listsgPost clearfix">
-              <ul>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">ダミーダミーダミーダミーダミーダミーダミーダミー</p>
-                  </a> </li>
-                <li>
-                  <div class="header-dropdown-more">
-                    <p class="btn btn01 btn_hblue"><a href="#"><span>もっと見る</span></a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!-- //cate 03 --> 
-            <!-- cate 04 -->
-            <div id="cate04" class="listsgPost clearfix">
-              <ul>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">ダミーダミーダミーダミーダミーダミーダミーダミー</p>
-                  </a> </li>
-                <li>
-                  <div class="header-dropdown-more">
-                    <p class="btn btn01 btn_hblue"><a href="#"><span>もっと見る</span></a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!-- //cate 04 --> 
-            <!-- cate 05 -->
-            <div id="cate05" class="listsgPost clearfix">
-              <ul>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">ダミーダミーダミーダミーダミーダミーダミーダミー</p>
-                  </a> </li>
-                <li>
-                  <div class="header-dropdown-more">
-                    <p class="btn btn01 btn_hblue"><a href="#"><span>もっと見る</span></a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!-- //cate 05 --> 
-            <!-- cate 06 -->
-            <div id="cate06" class="listsgPost clearfix">
-              <ul>
-                <li> <a href="#" class="header-dropdown-item"> <img class="header-dropdown-image" src="http://www.groovoost.com/wp-content/themes/groovoost/images/dummy220x130.jpg" >
-                  <p class="header-dropdown-title">ダミーダミーダミーダミーダミーダミーダミーダミー</p>
-                  </a> </li>
-                <li>
-                  <div class="header-dropdown-more">
-                    <p class="btn btn01 btn_hblue"><a href="#"><span>もっと見る</span></a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!-- //cate 06 --> 
-            
+                  <?php }
+              }
+            ?>
           </div>
         </div>
       </div>
-      <!-- //nav for blog inner --> 
-      
-      <!-- nav for PC --> 
-      
+      <!-- //nav for blog inner -->
+
+      <!-- nav for PC -->
+
       <!-- nav for SP -->
       <?php
        $arg_sticky_2 = array (
@@ -151,8 +114,8 @@
         wp_nav_menu($arg_sticky_2);
 
       ?>
-      
-      <!-- nav for SP --> 
+
+      <!-- nav for SP -->
     </div>
   </div>
 </div>

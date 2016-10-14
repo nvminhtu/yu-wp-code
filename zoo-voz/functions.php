@@ -11,6 +11,7 @@ add_image_size( 'img_works_home', 337, 274, true );
 add_image_size( 'img_works_archive', 446, 260, true );
 add_image_size( 'img_other_blogs', 92, 70, true );
 add_image_size( 'img_sidebar', 92, 70, true );
+add_image_size( 'img_sub_menu', 220, 130, true );
 
 remove_filter( 'the_excerpt', 'wpautop' );
 remove_filter( 'the_content', 'wpautop' );
