@@ -28,7 +28,7 @@
               <?php
                 $terms = get_terms(array(
                             'taxonomy' => 'blog-cat',
-                            'hide_empty' => false,
+                            'hide_empty' => true,
                         ));
                 $i = 0;
                 if ( !empty( $terms ) && !is_wp_error( $terms ) ){
