@@ -34,7 +34,7 @@ function shortcode_list_news() {
 				$content_shortcode .= '<p class="news_title_sidx"><a href="'.get_permalink().'">'.get_the_title().'</a></p>';
 			$content_shortcode .= '</div>';
 			$content_shortcode .= '<div class="idex_news_btnmore clearfix">';
-				$content_shortcode .= '<p id="btn_all_news"><a href="'.get_bloginfo('siteurl').'"><span>MORE</span></a></p>';
+				$content_shortcode .= '<p id="btn_all_news"><a href="'.get_bloginfo('siteurl').'/news/"><span>MORE</span></a></p>';
 			$content_shortcode .= '</div>';
 			$content_shortcode .= '</div>';
 		$i++;

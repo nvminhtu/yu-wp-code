@@ -32,6 +32,8 @@ function prefix_register_all() {
 				'editor',
 				'thumbnail',
 				'excerpt',
+				'author',
+				'revisions',
 				'custom-fields'
 			),
 			'taxonomies'    => array(
@@ -101,6 +103,8 @@ function prefix_register_all() {
 				'editor',
 				'thumbnail',
 				'excerpt',
+				'author',
+				'revisions',
 				'custom-fields',
 			),
 			'has_archive'   => true,
@@ -136,6 +140,8 @@ function prefix_register_all() {
 			'supports'      => array(
 				'title',
 				'editor',
+				'author',
+				'revisions',
 				'thumbnail',
 				'excerpt',
 				'custom-fields',
@@ -173,6 +179,8 @@ function prefix_register_all() {
 			'supports'      => array(
 				'title',
 				'editor',
+				'author',
+				'revisions',
 				'thumbnail',
 				'excerpt',
 				'custom-fields',

@@ -93,7 +93,7 @@ a.box:hover .service_boxct_right .ser_boxct {
 	padding-top: 65px;
 }
 .under #header h1 span {
-	
+
 	font-weight: normal;
 	letter-spacing: 2px;
 }
@@ -1012,13 +1012,13 @@ a.box:hover .service_boxct_right .ser_boxct {
 		  float:left;
 		  box-sizing:border-box;
 		  margin:0 2.5% 25px 0;
-		  
+
 		transition: all 0.2s ease 0s;
 	}
 	.bl_ct01:hover{
 		opacity:0.8;
-		
-		
+
+
 	}
 	.bl_ct01 a{
 		color:#000;
@@ -1033,16 +1033,16 @@ a.box:hover .service_boxct_right .ser_boxct {
 	.bl_ct01_img img{
 		width:100%;
 	}
-	
+
 	.title_hct{
 		font-weight:bold;
 		font-size:20px;
 		text-align:center;
 		padding:30px 0 40px;
 	}
-	
-	
-	
+
+
+
 .fs16 {
 	font-size: 16px;
 }
@@ -1094,4 +1094,92 @@ a.box:hover .service_boxct_right .ser_boxct {
 	font-weight:bold;
 	margin-bottom:40px;
 	line-height:42px;
+}
+
+
+
+
+/*news */
+.box_list_news{
+	margin-bottom:35px;
+}
+
+
+
+.ar_news_img {
+    position: relative;
+    width: 240px;
+    height: 160px;
+    float: left;
+	transition: all 0.3s ease 0s;
+	margin-bottom:0;
+}
+.ar_news_img:hover{
+	opacity:0.8;
+}
+.ar_news_img img {
+    width: 240px;
+    height: 160px;
+}
+
+
+.ar_news_title{
+    font-size: 22px;
+    font-weight: bold;
+	line-height:26px;
+    margin-bottom: 5px;}
+.ar_news_title a{
+	color:#222;
+	text-decoration:none;
+}
+.ar_news_title a:hover{
+	color: #0086c6;
+}
+
+.ar_news_time{
+	font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 60px;
+	letter-spacing:1px;
+	background:url(../images/icon_calendar01.png) 0 4px no-repeat;
+	background-size:20px auto;
+	padding-left:30px;
+	color:#999;
+}
+.ar_news_bt span{
+
+}
+.ar_news_ct {
+    width: calc(100% - 240px);
+    padding-left: 30px;
+    display: block;
+    float: right;
+    position: relative;
+    min-height: 160px;
+	box-sizing:border-box;
+}
+
+
+
+.ar_news_bt {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: -7px;
+	margin-bottom:0;
+	font-weight:500;
+}
+.ar_news_bt span{
+	width:40px;
+	height:40px;
+	float:left;
+	padding-right:10px;
+}
+.ar_news_bt span img{
+	margin-top:-7px;
+	-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+height: auto;
+
 }
