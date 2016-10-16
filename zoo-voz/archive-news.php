@@ -39,14 +39,21 @@
               ?>
               <div class="box_list_news clearfix">
                 <div class="ar_news_img clearfix">
-                  <p><a href="<?php echo get_permalink(); ?>"><img src="<?php echo $img_news_src; ?>" width="" /></a></p>
+                  <p>
+                    <a href="<?php echo get_permalink(); ?>">
+                      <?php if(has_post_thumbnail()) { ?>
+                        <img src="<?php echo $img_news_src; ?>" width="" />
+                      <?php } else { ?>
+                        <img src="<?php bloginfo('template_url'); ?>/images/groovoost-featured-image.png" width="" />
+                      <?php }?>
+                    </a>
+                  </p>
                 </div>
                 <div class="ar_news_ct clearfix">
                   <div class="ar_news_ct_inner clearfix">
                     <p class="ar_news_title clearfix"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a><p>
                     <p class="ar_news_time clearfix"><?php echo $time; ?></p>
                   </div>
-                  <p class="ar_news_bt clearfix"><span><?php echo get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size );  ?></span><?php echo $firstname; ?> <?php echo $lastname; ?></p>
                 </div>
               </div>
               <?php endforeach;
