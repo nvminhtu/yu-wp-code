@@ -16,8 +16,9 @@
     <?php $my_c = get_query_var( 'category' ); ?>
     <div id="list_cate_works" class="clearfix" data-active-cat="<?php echo $my_c; ?>">
       <div class="squaredThree">
+      <form>
         <ul>
-            <li id=""><input class="input_check_all" type="checkbox" value="None" id="active_all" name="check" checked /><label for="active_all">全て</label></li>
+            <li><input class="input_check_all" type="radio" value="None" id="active_all" name="check_cate" checked /><label for="active_all">全て</label></li>
           <?php
             $default_posts_per_page = get_option( 'posts_per_page' );
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -38,7 +39,16 @@
             $i=1;
             foreach($blog_posts as $post) : setup_postdata($post);
           ?>
-          <li class=""><input class="input_check" type="checkbox" value="<?php echo get_the_title($post->ID); ?>" id="<?php echo get_the_slug($post->ID); ?>" name="check" /><label for="<?php echo get_the_slug($post->ID); ?>"><?php echo get_the_title($post->ID); ?></label></li>
+          <li><input class="input_check" type="radio" value="<?php echo get_the_title($post->ID); ?>" id="catel-<?php echo get_the_slug($post->ID); ?>" name="check_cate" />
+          <label for="catel-<?php echo get_the_slug($post->ID); ?>"><?php echo get_the_title($post->ID); ?></label>
+          </li>
+
+
+
+
+          </li>
+
+
           <?php
                   $i++;
               endforeach;
@@ -46,6 +56,7 @@
             }
           ?>
         </ul>
+        </form>
        </div>
     </div>
 
@@ -106,7 +117,7 @@
             $color_class = 'service-'.$color_codes[1];
            ?>
 
-            <div class="<?php echo $color_class; ?> catew <?php echo $service_slugs ; ?> box_w clearfix" data-service-color="<?php echo $color_code; ?>">
+            <div class="<?php echo $color_class; ?> catew catel-<?php echo $service_slugs ; ?> box_w clearfix" data-service-color="<?php echo $color_code; ?>">
               <div class="box_w_top clearfix">
                 <p class="img_lworks">
                 <?php if ( has_post_thumbnail($work_id) ) { ?>

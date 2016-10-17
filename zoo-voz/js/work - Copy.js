@@ -4,7 +4,7 @@ jQuery(function($){
      active_cat = $('#list_cate_works').data('active-cat');
 
  // add active category from query string ?category=service-slug
-/* if(active_cat!=='') {
+ if(active_cat!=='') {
    $('#list_cate_works input').removeAttr('checked');
    var active_selected = '#'+ active_cat;
       active_selected = '#list_cate_works input' + active_selected;
@@ -12,11 +12,10 @@ jQuery(function($){
    console.log(active_selected);
    $(active_selected).addClass('active');
    $(active_selected).prop( 'checked', true );
- }*/
+ }
 
  $('#list_cate_works input').change(function(){
 	var array_active = [];
-	var active_name;
 	$("#txt_notfoud").hide();
 	$(".list_w").stop(1,1).hide().delay(500).fadeIn(500);
 	$("#ajax_bg").stop(1,1).fadeIn(500).delay(500).fadeOut(500);
@@ -36,22 +35,21 @@ jQuery(function($){
 		$(".catew").fadeOut(); //fadeOut all box
 		$(".input_check").each(function(index, element) {	// add tab actived into array
             	if($(this).prop('checked')){
-					 active_name = $(this).attr("id");
-					
-					//array_active.push(active_name);
+					var active_name = $(this).attr("id");
+					array_active.push(active_name);
 				}
-				console.log(active_name);
+				//console.log(array_active);
         });
-		//if(array_active.length > 0){
+		if(array_active.length > 0){
 			//this array is not empty
 
 			var k = 0;
-			//for (var i = 0; i < array_active.length; i++){
-				$("."+active_name).fadeIn();
-				$("."+active_name).each(function(index, element) {
+			for (var i = 0; i < array_active.length; i++){
+				$("."+array_active[i]).fadeIn();
+				$("."+array_active[i]).each(function(index, element) {
                	 k++;
             	});
-		//	}
+			}
 			if(k>0){
 				 $("#txt_notfoud").fadeOut();
 			}
@@ -59,10 +57,10 @@ jQuery(function($){
 				$("#txt_notfoud").delay(1400).fadeIn();
 			}
 
-		//}else{
-		//   $("#txt_notfoud").delay(1400).fadeIn();
+		}else{
+		   $("#txt_notfoud").delay(1400).fadeIn();
 
-		//}
+		}
 
 	}//end else
 

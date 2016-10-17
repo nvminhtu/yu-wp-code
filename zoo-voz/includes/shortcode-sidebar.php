@@ -7,7 +7,7 @@ function search_box() {
     $content_shortcode .= '<div class="search_navi_ct">';
       $content_shortcode .= '<form role="search" method="get" id="searchform" class="searchform" action="'.home_url( '/' ).'">';
         $content_shortcode .= '<div>';
-          $content_shortcode .= '<input type="text" placeholder="テキストテキストテキスト" value="" name="s" id="s">';
+          $content_shortcode .= '<input type="text" placeholder="キーワードで検索" value="" name="s" id="s">';
           $content_shortcode .= '<input type="submit" id="searchsubmit" value="検索">';
         $content_shortcode .= '</div>';
       $content_shortcode .= '</form>';

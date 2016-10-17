@@ -22,6 +22,7 @@
         $query = new WP_Query( $args );
         // The Loop
         $i = 0;
+		$j = 0;
         if ( $query->have_posts() ) {
             while ( $query->have_posts() ) {
               global $post;
@@ -37,7 +38,12 @@
               } else {
                 $last_class = '';
               }
-              $content_shortcode .= '<div class="related_box clearfix '.$last_class.'">';
+			  //set lineheight
+				  if($i%2==0) {
+					$stt_h = $j++;
+				  }
+			  
+              $content_shortcode .= '<div class="related_box heightLine-'.$stt_h.' clearfix '.$last_class.'">';
         				$content_shortcode .= '<div class="list_latestpost_sb_img"><p><a href="'.get_permalink($post->ID).'">';
                 if(has_post_thumbnail($id)) {
                   $content_shortcode .= '<img src="'.$img_blog_src.'" alt="" />';

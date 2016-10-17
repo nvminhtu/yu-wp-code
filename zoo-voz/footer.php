@@ -82,8 +82,12 @@
 <?php	}
  
   else { ?>
+  
    <script src="<?php bloginfo('template_url'); ?>/js/under.js" type="text/javascript"></script>
+     
       <script src="<?php bloginfo('template_url'); ?>/js/work.js" type="text/javascript"></script>
+   <script src="<?php bloginfo('template_url'); ?>/js/scroll_navi.js" type="text/javascript"></script>
+
  <?php }?>
  <?php if(is_singular('service')) { ?>
  <script src="<?php bloginfo('template_url'); ?>/js/service.js" type="text/javascript"></script>

@@ -24,11 +24,11 @@
    line-height:30px;
    display:inline-block;
 }
-.squaredThree input[type=checkbox] {
+.squaredThree input[type=radio] {
  /* visibility: hidden;*/
   display:none;
 }
-.squaredThree input[type=checkbox]:checked + label {
+.squaredThree input[type=radio]:checked + label {
 	  background-color:#57ADDE;
 
 }

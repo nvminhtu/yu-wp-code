@@ -1,7 +1,9 @@
 #container {
 	padding: 0 20px;
 }
-
+#main.menu_fixed{
+	padding-top:104px;
+}
 /* #sidebar */
 #sidebar {
 	width: 300px;
@@ -9,8 +11,15 @@
 
 
 }
+#s_navi{
+	width:300px;
+}
+#navi_social{
+	height:340px;
+}
 .navi_ad{
 	margin-bottom:20px;
+	min-height:600px;
 }
 .search_navi{
 	margin-bottom:20px;
@@ -592,9 +601,10 @@ display:block;
 }
 .related_box{
 	padding:19px;
-	box-sizing:border-box;
+	/*box-sizing:border-box;*/
 	/*width:calc(calc(100% - 1px) / 2);*/
-	width:50%;
+	width:calc(50% - 39px);
+	
 	float:left;
 /*	border:1px solid #ccc;*/
 	border-right:1px solid #ccc;
