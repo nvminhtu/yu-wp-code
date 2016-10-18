@@ -252,7 +252,7 @@ html {
 body {
 	color: #222;
 	text-align: center;
-	font-family:'Lato-Regular' , "游ゴシック" , "Yu Gothic";
+	font-family: "Lato-Regular" ,"游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 }
 body#index {
 	background: #fff;

@@ -44,11 +44,6 @@
           </li>
 
 
-
-
-          </li>
-
-
           <?php
                   $i++;
               endforeach;
@@ -72,6 +67,7 @@
             $args = array(
               'post_type' =>'work',
               'orderby' => date,
+              'posts_per_page' => -1,
               'field' => 'slug',
               'paged' => $paged
             );
@@ -127,7 +123,7 @@
                 <?php } ?>
                 </p>
                 <div class="box_lworks_on">
-                  <p class="lworks_on_title"><?php echo $work_title; ?></p>
+                  <p class="lworks_on_title"><?php echo mb_substr(strip_tags($work_title),0,15) . '...'; ?></p>
                   <p class="lworks_on_title_sub">- <?php echo $work_product_sub_title; ?> - </p>
                   <p class="lworks_on_des">
                     <?php echo mb_substr(strip_tags($work_content),0,55) . '...'; ?>
@@ -144,7 +140,7 @@
               </div>
               <div class="lworks_btitle clearfix">
                 <p class="name_cate_w"><span><?php echo $service_name; ?></span></p>
-                <p class="title_cate_w"><?php echo $work_title; ?><br />
+                <p class="title_cate_w"><?php echo mb_substr(strip_tags($work_title),0,20) . '...'; ?><br />
                   <span><?php echo $work_product_title; ?></span></p>
               </div>
             </div>

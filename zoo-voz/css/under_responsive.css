@@ -229,6 +229,13 @@ h4.bh {
 
 	
 @media screen and (max-width:950px) {
+	#s_navi{
+	position:relative !important;
+	    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%!important;
+}
 	.nomain #wrapper{
 		padding-top:40px !important;
 	}

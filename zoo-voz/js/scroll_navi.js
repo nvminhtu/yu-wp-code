@@ -11,7 +11,7 @@ $(function a($){
 	var min = $('#navi_social').offset().top + 340;
 	
 //	var w_content = $("#content_blog").width()+50;
-	var max = $('#footer').offset().top - $target.outerHeight();
+	var max = $('#footer').offset().top - 65 - $target.outerHeight() ;
 	var top = $target.offset().top - min;
 
 	console.log(min);
