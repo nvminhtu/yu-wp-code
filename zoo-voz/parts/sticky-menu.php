@@ -76,7 +76,7 @@
                           ) );
                           $number_blogs = $query->found_posts;
                           while ( $query->have_posts() ) : $query->the_post();
-                              $img_sub_menu = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_archive_blog');
+                              $img_sub_menu = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_sub_menu');
                               $img_sub_menu_src = $img_sub_menu[0];
                             ?>
                             <li>

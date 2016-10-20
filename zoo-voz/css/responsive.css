@@ -183,6 +183,12 @@ img {
 }
 }
  @media screen and (max-width: 950px) {
+.title_service_video span{
+	font-size:7vw;
+}
+.title_service_video{
+	font-size:3vw;
+	}
 }
  @media screen and (max-width: 850px) {
 }

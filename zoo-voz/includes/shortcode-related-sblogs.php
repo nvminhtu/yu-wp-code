@@ -15,7 +15,7 @@ function shortcode_related_sblogs() {
 
 	$args = array(
 		'post_type' =>'blog',
-		'numberposts' => -1,
+		'numberposts' => 4,
     'posts_per_page' => 4,
 		'orderby' => date,
 		'order' => desc,

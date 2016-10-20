@@ -38,7 +38,7 @@ $(function a($){
 		else{
 			s_h_menu = 0;
 		}
-		if($(window).width()>1400){
+		if($(window).width()>900){
 			
 			$target.css({right:"inherit"});
 			$target.css({left:$dummy.offset().left});

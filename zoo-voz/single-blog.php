@@ -44,6 +44,24 @@
             <div class="blogd_content clearfix">
               <p><img src="<?php echo $img_url; ?>" /></p>
               <?php the_content(); ?>
+              <?php echo do_shortcode('[related_blogs]'); ?>
+
+              <div class="adsense_area_box clearfix">
+                <!-- Start Adsense code -->
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- groovoost.com -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-7469938523971093"
+                     data-ad-slot="1896215165"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <!-- End Adsense code -->
+              </div>
+
+
               <div class="person_box clearfix">
             	 <p class="ptitle_01">記事を書いたひと</p>
                <?php

@@ -121,6 +121,7 @@ class Videoprefix_Admin {
 			'type' => 'wysiwyg',
 			'default' => '',
 		) );
+
 	}
 	/**
 	 * Register settings notices for display

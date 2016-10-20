@@ -15,6 +15,8 @@
     'post_type' =>'work',
     'orderby' => date,
     'field' => 'slug',
+    'numberposts' => 4,
+    'posts_per_page' => 4,
     'paged' => $paged
   );
   $the_query = new WP_Query( $args );
