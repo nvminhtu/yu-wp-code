@@ -15,6 +15,8 @@
     'post_type' =>'work',
     'orderby' => date,
     'field' => 'slug',
+    'numberposts' => -1,
+    'posts_per_page' => -1,
     'paged' => $paged
   );
   $the_query = new WP_Query( $args );
@@ -42,13 +44,14 @@
     $work_product_link = get_field('work_product_link',$post->ID);
 ?>
 
-<?php
+<?php if($i<4) {
         $post_objects = get_field('selected_service',$post->ID);
         if( $post_objects ):
           foreach( $post_objects as $post):
             setup_postdata($post);
             $field_id = get_the_ID();
             if($field_id == $service_id) {
+              $i++;
               ?>
               <div class="box_lworks clearfix wow postItem" data-wow-delay="0.3s">
                 <p class="img_lworks">
@@ -86,8 +89,9 @@
             }
           endforeach;
           wp_reset_postdata();
+
         endif;
-        $i++;
+         } // end check 4 items
       endforeach;
     }
   ?>

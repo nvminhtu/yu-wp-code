@@ -45,7 +45,7 @@
   <div id="container04" class="clearfix">
     <div class="inner clearfix">
       <h3 class="title_h301 title_h3_works " data-wow-delay="0.3s">WORKS<br />
-        <span>コンサルティング 実績紹介</span></h3>
+        <span><?php the_title(); ?> 実績紹介</span></h3>
         <div class="list_works clearfix">
             <?php include('includes/related-works.php'); ?>
         </div>
@@ -62,11 +62,8 @@
 
   <!-- start blog list -->
   <!-- #container03 -->
-  <div id="container03" class="clearfix">
-    <div class="inner clearfix">
-      <?php echo do_shortcode('[related_sblogs]'); ?>
-    </div>
-  </div>
+  <?php echo do_shortcode('[related_sblogs]'); ?>
+
   <!-- end blog list -->
 
   <?php //--- end works list -------------------- ?>

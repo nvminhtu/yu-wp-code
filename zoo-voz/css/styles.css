@@ -1085,6 +1085,7 @@ address {
 	top: -7px;
 	text-align: center;
 	font-weight: bold;
+	padding:0 5px;
 }
 /* set color */
 .cl_blue.box_lservice {

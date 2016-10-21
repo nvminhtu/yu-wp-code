@@ -7,6 +7,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'img_blog', 312, 234, true );
 add_image_size( 'img_blog_thanks', 200, 120, true );
 add_image_size( 'img_archive_blog', 307, 234, true );
+add_image_size( 'img_archive_service', 800, 478, true );
 add_image_size( 'img_works_home', 337, 274, true );
 add_image_size( 'img_works_archive', 446, 260, true );
 add_image_size( 'img_other_blogs', 92, 70, true );

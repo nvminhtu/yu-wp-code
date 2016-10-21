@@ -26,8 +26,8 @@
       <?php
         foreach($blog_posts as $post) : setup_postdata($post);
           $thumb = get_post_thumbnail_id();
-          $img_url = wp_get_attachment_url($thumb,'full'); //get full URL to image
-
+          $img_archive_service = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_archive_service');
+          $img_url = $img_archive_service[0];
           $time = get_the_date('Y.m.d', $post->ID);
           $nd = get_the_content();
           $id= get_the_ID();
@@ -50,7 +50,7 @@
           <div class="<?php echo $align_class; ?> service_box clearfix <?php echo $color_class;  ?>" data-cat-color="<?php echo $color_code; ?>">
             <div class="ser_boxct clearfix">
               <h4 id="title_service01" class="title_service"><span class="ser_icon"><img src="<?php echo $service_icon; ?>" /></span><?php echo $service_title; ?></h4>
-                <?php echo $service_heading_text; ?>
+                <?php echo mb_substr(($service_heading_text),0,120) . '...'; ?>
                 <p class="des_ser">
                   <?php echo mb_substr(strip_tags(get_the_content()),0,120) . '...'; ?>
                 </p>

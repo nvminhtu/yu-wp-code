@@ -7,8 +7,7 @@ function shortcode_related_sblogs() {
 	$service_slug = get_the_slug();
 
 	$content_shortcode = '';
-	$content_shortcode .= '<h3 class="title_h301 title_h3_blog " data-wow-delay="0.3s">BLOG <span>ブログ</span></h3>';
-	$content_shortcode .= '<div class="list_blog clearfix">';
+
 	global $post;
 	global $wp_query;
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -33,7 +32,12 @@ function shortcode_related_sblogs() {
 	$the_query = new WP_Query( $args );
 	$blog_posts = get_posts($args);
 		if($blog_posts) {
-		$i=1;
+			$i=1;
+			$content_shortcode .= '<div id="container03" class="clearfix">';
+			$content_shortcode .= '<div class="inner clearfix">';
+			$content_shortcode .= '<h3 class="title_h301 title_h3_blog " data-wow-delay="0.3s">BLOG <span>ブログ</span></h3>';
+			$content_shortcode .= '<div class="list_blog clearfix">';
+
 
 		foreach($blog_posts as $post) : setup_postdata($post);
 			$thumb = get_post_thumbnail_id();
@@ -81,10 +85,12 @@ function shortcode_related_sblogs() {
 
 			wp_reset_query();
 			wp_reset_postdata();
+
+			$content_shortcode .= '</div>';
+	    $content_shortcode .= '<p class="btn btn01 btn_hblue btn_mw500"><a href="'.get_bloginfo('siteurl').'/blog/blog-cat/'.$service_slug.'"><span>もっと見る</span></a></p>';
+
+			$content_shortcode .= '</div>';
+			$content_shortcode .= '</div>';
 	 	 }
-	 $content_shortcode .= '</div>';
-   $content_shortcode .= '<p class="btn btn01 btn_hblue btn_mw500"><a href="'.get_bloginfo('siteurl').'/blog/blog-cat/'.$service_slug.'"><span>もっと見る</span></a></p>';
-
-
    return $content_shortcode;
  }
