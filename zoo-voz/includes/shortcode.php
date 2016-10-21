@@ -11,23 +11,6 @@ function shortcode_url() {
 	return get_bloginfo('url');
 }
 
-/* 03- Ads Shortcode	*/
-add_shortcode('ads', 'shortcode_ads');
-function shortcode_ads() {
-	$content_shortcode = '';
-
-	$content_shortcode .='<div class="adsense_area_box clearfix">';
-		$content_shortcode .='<div class="adsense_box clearfix">';
-		$content_shortcode .='</div>';
-		$content_shortcode .='<div class="adsense_box clearfix">';
-		$content_shortcode .='</div>';
-	$content_shortcode .='</div>';
-
-	return $content_shortcode;
-}
-
-/* 04- Related Blogs Shortcode	*/
-
 
 /* 05- Twitter	*/
 add_shortcode('twitter', 'shortcode_twitter');
