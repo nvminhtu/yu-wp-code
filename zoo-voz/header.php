@@ -2,12 +2,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="format-detection" content="telephone=no">
+<meta property="og:image" content="http://www.groovoost.com/wp-content/uploads/2016/10/index_bg_main.jpg" />
+<meta name="twitter:image" content="http://www.groovoost.com/wp-content/uploads/2016/10/index_bg_main.jpg" />
 <?php
   //include header for each pages
   if(is_front_page()||is_home()){

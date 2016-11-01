@@ -1,4 +1,5 @@
-
+/* sticky_menu_header
+------------------------------------------------------------------------*/
 a.box {
 	color: #222;
 	text-decoration: none;
@@ -7,6 +8,7 @@ a.box {
 	transition: all 0.3s ease 0s;
 }
 a.box:hover .ser_boxct {
+	/*	left:70px;*/
 	-ms-transform: scale(0.95);
 	-webkit-transform: scale(0.95);
 	transform: scale(0.95);
@@ -14,7 +16,8 @@ a.box:hover .ser_boxct {
 a.box:hover .ser_img {
 }
 a.box:hover .service_boxct_right .ser_boxct {
-
+/*right:70px;
+	left:inherit;*/
 
 }
 .under #sticky_menu_header {
@@ -23,7 +26,7 @@ a.box:hover .service_boxct_right .ser_boxct {
 	background: rgba(255,255,255,1);
 	top: 0;
 	width: 100%;
-
+	/*height: 74px;*/
 	height: 104px;
 }
 .under #sticky_menu_header .inner {
@@ -47,7 +50,7 @@ a.box:hover .service_boxct_right .ser_boxct {
 	font-size: 14px;
 	color: #444;
 }
-
+/*fixed */
 .under #sticky_menu_header.fixed {
 	position: fixed;
 	background: rgba(255,255,255,0.9);
@@ -55,7 +58,6 @@ a.box:hover .service_boxct_right .ser_boxct {
 .lf {
 	font-family: 'Lato-Regular' !important;
 }
-
 .under #header {
 	height: 350px;
 	background: url(../images/bg_header_under.jpg) center center no-repeat;
@@ -67,7 +69,6 @@ a.box:hover .service_boxct_right .ser_boxct {
 	left: 0;
 	width: 100%;
 }
-/* ************************************ */
 .under #wrapper {
 	padding-top: 350px;
 }
@@ -82,25 +83,24 @@ a.box:hover .service_boxct_right .ser_boxct {
 .under #header.fixed {
 	margin-bottom: 99px;
 }
-
-.under #header .header_title {
+/*.under #header a{
+	color:#fff;
+	text-decoration:none;
+}*/
+.under #header h1 {
 	font-size: 24px;
 	font-weight: 500;
 	padding-top: 65px;
-	margin-bottom:0;
-	line-height:1em;
 }
-.under #header .header_title span {
+.under #header h1 span {
 	font-weight: normal;
 	letter-spacing: 2px;
 }
-.under #header h2,
-.under #header p.campaign {
+.under #header h2 {
 	font-size: 60px;
 	font-weight: bold;
 	padding: 15px 0 20px;
 	letter-spacing: -2px;
-	margin-bottom: 0;
 }
 .btn_header01 {
 	text-align: center;
@@ -183,11 +183,14 @@ a.box:hover .service_boxct_right .ser_boxct {
 .btn_header02 a:hover span {
 	background: url(../images/bg_btn_header02_on.png) 0 center no-repeat;
 }
-
+/* main under */
 .under #main {
 	padding: 45px 0;
 }
-
+/*.under #main.fixed{
+	padding-top:144px;
+}*/
+/*service - page */
 
 .service_box {
 	margin-bottom: 50px;
@@ -223,7 +226,7 @@ a.box:hover .service_boxct_right .ser_boxct {
 	left: 0;
 	right: inherit;
 }
-
+/* // .service_boxct_right */
 
 .ser_img p {
 	margin-bottom: 0;
@@ -329,7 +332,6 @@ a.box:hover .service_boxct_right .ser_boxct {
 #service #container05 {
 	background: url(../images/bg_service_container05.jpg) center center no-repeat;
 	background-size: cover;
-
 }
 #service #container05 .title_h301 {
 	color: #fff;
@@ -337,10 +339,8 @@ a.box:hover .service_boxct_right .ser_boxct {
 #service #container05 .title_h301 span {
 	color: #45addf;
 }
-.single_service{
-margin-bottom: 45px;}
 #service #container04 {
-	/*margin-top: 45px;*/
+	margin-top: 45px;
 }
 #service #container03 {
 	background: #fff;
@@ -547,7 +547,7 @@ margin-bottom: 45px;}
 }
 .box_w_top {
 	position: relative;
-}
+} 
 .lworks_btitle {
 	padding-left: 100px;
 	position: relative;
@@ -1158,48 +1158,3 @@ margin-bottom: 45px;}
 	border-radius: 50%;
 	height: auto;
 }
-/*company */
-.social_box01 .social_box01_inner{
-	width:48%;
-	margin:0 4% 30px 0;
-	float:left;
-	background:#F4F4F4;
-	box-sizing:border-box;
-	padding:2%;
-
-}
-.social_box01 .social_box01_inner:last-child{
-	margin-right:0;
-}
-.social_box01 dl dt{
-	background:#DDEFF9;
-	font-size:20px;
-	padding:8px;
-	font-weight:bold;
-	margin-bottom:15px;
-
-}
-
-
-#seclect_cate01{
-	display:none;
-	width:100%;
-	line-height:30px;
-	height:30px;
-}
-#radio_cate01{
-	display:block;
-}
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 

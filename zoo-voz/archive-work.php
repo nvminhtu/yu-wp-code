@@ -17,7 +17,7 @@
     <div id="list_cate_works" class="clearfix" data-active-cat="<?php echo $my_c; ?>">
       <div class="squaredThree">
       <form>
-        <ul>
+        <ul id="radio_cate01">
             <li><input class="input_check_all" type="radio" value="None" id="active_all" name="check_cate" checked /><label for="active_all">全て</label></li>
           <?php
             $default_posts_per_page = get_option( 'posts_per_page' );
@@ -51,6 +51,41 @@
             }
           ?>
         </ul>
+        
+        
+        
+        
+<!-- select -->
+<select id="seclect_cate01">
+  <option value="active_all">全て</option>
+          <?php
+            $default_posts_per_page = get_option( 'posts_per_page' );
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            global $post;
+            global $wp_query;
+            $args = array(
+              'post_type' =>'service',
+              'posts_per_page' => -1,
+              'orderby' => date,
+              'order' => desc,
+              'field' => 'slug'
+            );
+            $the_query = new WP_Query( $args );
+            $blog_posts = get_posts($args);
+            if($blog_posts) {
+            $i=1;
+            foreach($blog_posts as $post) : setup_postdata($post);
+          ?><option value="catel-<?php echo get_the_slug($post->ID); ?>"><?php echo get_the_title($post->ID); ?></option>
+<?php
+                  $i++;
+              endforeach;
+              wp_reset_postdata();
+            }
+          ?>
+</select>
+<!-- //select -->
+
+
         </form>
        </div>
     </div>

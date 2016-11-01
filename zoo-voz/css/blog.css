@@ -147,7 +147,7 @@ border-radius: 3px;
 .list_latestpost_sb_date {
 	margin:0;
     line-height: 25px;
-	
+
     padding-left: 0px;
 	letter-spacing:1px;
 }
@@ -604,7 +604,7 @@ display:block;
 	/*box-sizing:border-box;*/
 	/*width:calc(calc(100% - 1px) / 2);*/
 	width:calc(50% - 39px);
-	
+
 	float:left;
 /*	border:1px solid #ccc;*/
 	border-right:1px solid #ccc;
@@ -652,12 +652,15 @@ display:block;
 
 }
 .adsense_box{
-	height:300px;
+	height:250px;
 	width:300px;
 	background:#333333;
 	float:left;
 	margin:0 30px 0 0;
-
+}
+.adsense_box iframe {
+	width: 300px;
+	height: 300px;
 }
 .adsense_box:last-child{
 	margin-right:0;
@@ -739,4 +742,15 @@ color:#fff;
 	-webkit-border-radius: 48px;
 	-moz-border-radius: 48px;
 	border-radius: 48px;
+}
+#social_share{
+	margin-bottom:30px;
+}
+#social_share li{
+	padding:0;
+	float:left;
+	margin-right:15px;
+}
+#social_share li:before{
+	display:none;
 }

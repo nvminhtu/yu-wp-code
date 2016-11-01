@@ -505,9 +505,15 @@
 	width: 1400px;
 	margin: 0 auto;
 }
+.list_cate_menu_inner ul{
+	text-align:center;
+}
 .list_cate_menu_inner ul li {
-	float: left;
+	/*float: left;
+	*/
+	display:inline;
 	margin: 0 50px 0 0;
+	
 }
 .list_cate_menu_inner ul li a {
 	color: #fff;

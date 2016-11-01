@@ -23,7 +23,9 @@
   $blog_posts = get_posts($args);
   if($blog_posts) {
     $i=1;
+    $show = 0;
 ?>
+
 <?php
   foreach($blog_posts as $post) : setup_postdata($post);
     $post_categories = wp_get_post_categories(get_the_ID());
@@ -44,6 +46,7 @@
     $work_product_link = get_field('work_product_link',$post->ID);
 ?>
 
+
 <?php if($i<4) {
         $post_objects = get_field('selected_service',$post->ID);
         if( $post_objects ):
@@ -52,7 +55,20 @@
             $field_id = get_the_ID();
             if($field_id == $service_id) {
               $i++;
+              $show++;
               ?>
+
+              <?php if($show==1) { //start show container ?>
+                <div id="container04" class="clearfix">
+                  <div class="inner clearfix">
+                    <h3 class="title_h301 title_h3_works " data-wow-delay="0.3s">WORKS<br />
+                      <span><?php the_title(); ?> 実績紹介</span>
+                    </h3>
+                    <div class="list_works clearfix">
+              <?php
+                } //end show container
+              ?>
+
               <div class="box_lworks clearfix wow postItem" data-wow-delay="0.3s">
                 <p class="img_lworks">
                   <a href="<?php echo get_permalink($work_id); ?>">
@@ -92,6 +108,11 @@
 
         endif;
          } // end check 4 items
-      endforeach;
-    }
-  ?>
+      endforeach; ?>
+      <?php if($show >= 1) { //start show container ?>
+        </div>
+        <p class="btn btn01 btn_horange btn_mw500 wow" data-wow-delay="0.2s"><a href="<?php bloginfo('siteurl'); ?>/work/?category=<?php echo get_the_slug($service_id); ?>"><span>もっと見る</span></a></p>
+      </div>
+    </div>
+    <?php } //end show container ?>
+  <?php } ?>

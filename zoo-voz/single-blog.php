@@ -42,24 +42,54 @@
               </div>
             </div>
             <div class="blogd_content clearfix">
-              <p><img src="<?php echo $img_url; ?>" /></p>
+              <p class="center"><img src="<?php echo $img_url; ?>" /></p>
               <?php the_content(); ?>
               <?php echo do_shortcode('[related_blogs]'); ?>
+              
+              <div id="social_share" class="clearfix">
+              <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6&appId";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+              	   <ul id="so_like">
+
+        <li><div class="fb-share-button" data-href="<?php get_permalink(); ?>" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php get_permalink(); ?>">Share</a></div></li>
+        <li><a href="http://twitter.com/share" class="twitter-share-button" data-text="Share post" data-count="horizontal" data-lang="ja" data-url="<?php get_permalink(); ?>">ツイート</a><script type="text/javascript" charset="utf-8" src="http://platform.twitter.com/widgets.js"></script></li>
+      </ul>
+              </div>
 
               <div class="adsense_area_box clearfix">
-                <!-- Start Adsense code -->
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- groovoost.com -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-7469938523971093"
-                     data-ad-slot="1896215165"
-                     data-ad-format="auto"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                <!-- End Adsense code -->
-              </div>
+                <div class="adsense_box clearfix">
+                  <!-- Start Adsense code -->
+                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				  	<!-- groovoost.com - under blog articles 300×250 2 -->
+				  	<ins class="adsbygoogle"
+				  	style="display:inline-block;width:300px;height:250px"
+				  	data-ad-client="ca-pub-7469938523971093"
+				  	data-ad-slot="5845613165"></ins>
+				  	<script>
+				  	(adsbygoogle = window.adsbygoogle || []).push({});
+				  </script>
+                  <!-- End Adsense code -->
+                </div>
+                <div class="adsense_box clearfix">
+                  <!-- Start Adsense code -->
+                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				  	<!-- groovoost.com - under blog articles 300×250 2 -->
+				  	<ins class="adsbygoogle"
+				  	style="display:inline-block;width:300px;height:250px"
+				  	data-ad-client="ca-pub-7469938523971093"
+				  	data-ad-slot="5845613165"></ins>
+				  	<script>
+				  	(adsbygoogle = window.adsbygoogle || []).push({});
+				  </script>
+                  <!-- End Adsense code -->
+                </div>
+              <!-- .adsense_area_box --></div>
 
 
               <div class="person_box clearfix">

@@ -65,12 +65,15 @@
     <!--#footer_info end -->
   </div>
 </div>
+
  <script src="<?php bloginfo('template_url'); ?>/js/jquery.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/jquery.scroll.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/rollover.min.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/sweetlink.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/common.js" type="text/javascript"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+ 
  <?php if(is_home()||is_front_page()) { ?>
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.easing.min.js" type="text/javascript"></script>
@@ -108,8 +111,8 @@
  <?php } ?>
 <script src="<?php bloginfo('template_url'); ?>/js/heightLine.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/wow.js" type="text/javascript"></script>
-
- <script>
+ <script src="<?php bloginfo('template_url'); ?>/js/detect.js" type="text/javascript"></script>
+<!-- <script>
   $(document).ready(function(e) {
     wow = new WOW(
              {
@@ -122,10 +125,17 @@
            )
            wow.init();
  });
-</script>
+</script>-->
 
-
-
-
- <?php wp_footer(); ?>
+    <script>
+              new WOW().init();
+              </script>
+              
+<?php if(is_page('aboutus')){ ?>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+ <script src="<?php bloginfo('template_url'); ?>/js/gmap.js" type="text/javascript"></script>
+<?php }
+wp_footer(); ?>
 </body></html>

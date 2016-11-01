@@ -105,3 +105,14 @@ function add_favicon() {
 // Now, just make sure that function runs when you're on the login page and admin pages
 add_action('login_head', 'add_favicon');
 add_action('admin_head', 'add_favicon');
+
+
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height|class)="\d*"\s/', "", $html );
+   return $html;
+}
+
+add_filter( 'get_image_tag_class', '__return_empty_string' );

@@ -17,7 +17,7 @@
        <h3 class="title_03">
          <span class="lf"><?php the_title(); ?></span><br />
          <span><?php echo $service_sub_text; ?></span></h3>
-       <p class="serde_t"><?php the_content(); ?></p>
+       <p class="des_ser"><?php the_content(); ?></p>
        <?php if(!is_null($service_price)&&$service_price!='') { ?>
          <p class="ser_price"><span><?php echo $service_price; ?></span></p>
        <?php } ?>
@@ -42,17 +42,7 @@
   <!--inner consulting --></div>
 
   <?php //--- start works list -------------------- ?>
-  <div id="container04" class="clearfix">
-    <div class="inner clearfix">
-      <h3 class="title_h301 title_h3_works " data-wow-delay="0.3s">WORKS<br />
-        <span><?php the_title(); ?> 実績紹介</span></h3>
-        <div class="list_works clearfix">
-            <?php include('includes/related-works.php'); ?>
-        </div>
-        <p class="btn btn01 btn_horange btn_mw500 wow" data-wow-delay="0.2s"><a href="<?php bloginfo('siteurl'); ?>/work/?category=<?php echo get_the_slug($service_id); ?>"><span>もっと見る</span></a></p>
-      </div>
-  </div>
-
+  <?php include('includes/related-works.php'); ?>
   <?php
     //--- start service list --------------------
     $service_box_data = prefixservices_get_option( 'service_data' );
