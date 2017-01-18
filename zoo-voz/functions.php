@@ -104,6 +104,7 @@ function remove_width_attribute( $html ) {
 }
 
 add_filter( 'get_image_tag_class', '__return_empty_string' );
+<<<<<<< HEAD
 
 //add <p> tag around image when inser to media
 if( is_admin() ) {
@@ -125,3 +126,5 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 }
+=======
+>>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b

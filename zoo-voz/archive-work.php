@@ -58,10 +58,17 @@
             }
           ?>
         </ul>
+<<<<<<< HEAD
 
 
 
 
+=======
+        
+        
+        
+        
+>>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
 <!-- select -->
 <select id="seclect_cate01">
   <option value="active_all">全て</option>
@@ -82,8 +89,11 @@
             if($blog_posts) {
             $i=1;
             foreach($blog_posts as $post) : setup_postdata($post);
+<<<<<<< HEAD
               $cat_slug_list = get_the_slug($post->ID);
 
+=======
+>>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
           ?><option value="catel-<?php echo get_the_slug($post->ID); ?>"><?php echo get_the_title($post->ID); ?></option>
 <?php
                   $i++;

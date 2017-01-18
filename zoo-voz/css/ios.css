@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 .under #header{position:relative!important}.under #wrapper{padding-top:0}
+=======
+.under #header {
+	position: relative !important;
+	
+	}
+.under #wrapper {
+    padding-top: 0;
+}
+>>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b

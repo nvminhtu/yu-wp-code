@@ -6,7 +6,12 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="format-detection" content="telephone=no">
+<<<<<<< HEAD
 
+=======
+<meta property="og:image" content="http://www.groovoost.com/wp-content/uploads/2016/10/index_bg_main.jpg" />
+<meta name="twitter:image" content="http://www.groovoost.com/wp-content/uploads/2016/10/index_bg_main.jpg" />
+>>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
 <?php
   //include header for each pages
   if(is_front_page()||is_home()){

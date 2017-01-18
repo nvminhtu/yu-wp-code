@@ -9,7 +9,18 @@
 <?php wp_head(); ?>
 </head>
 <body id="index">
+<<<<<<< HEAD
 
+=======
+<!--<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7&appId=677685095613478";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>-->
+>>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
   <div id="wrapper">
     <div id="header" class="clearfix">
     <div id="main_video" class="clearfix">

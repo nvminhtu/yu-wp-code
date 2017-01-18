@@ -75,7 +75,11 @@
  <script src="<?php bloginfo('template_url'); ?>/js/sweetlink.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/common.js" type="text/javascript"></script>
 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
  <?php if(is_home()||is_front_page()) { ?>
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.easing.min.js" type="text/javascript"></script>
@@ -128,6 +132,7 @@
            wow.init();
  });
 </script>-->
+<<<<<<< HEAD
 
     <script>
               new WOW().init();
@@ -147,5 +152,18 @@
 
 
 
+=======
+
+    <script>
+              new WOW().init();
+              </script>
+              
+<?php if(is_page('aboutus')){ ?>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+ <script src="<?php bloginfo('template_url'); ?>/js/gmap.js" type="text/javascript"></script>
+<?php }
+>>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
 wp_footer(); ?>
 </body></html>
