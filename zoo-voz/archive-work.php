@@ -17,7 +17,7 @@
     <div id="list_cate_works" class="clearfix" data-active-cat="<?php echo $my_c; ?>">
       <div class="squaredThree">
       <form>
-        <ul>
+        <ul id="radio_cate01">
             <li><input class="input_check_all" type="radio" value="None" id="active_all" name="check_cate" checked /><label for="active_all">全て</label></li>
           <?php
             $default_posts_per_page = get_option( 'posts_per_page' );
@@ -37,9 +37,16 @@
             $blog_posts = get_posts($args);
             if($blog_posts) {
             $i=1;
+            $checked = '';
             foreach($blog_posts as $post) : setup_postdata($post);
+
+              if($my_c == get_the_slug($post->ID)) {
+                $checked = 'checked';
+              } else {
+                $checked = '';
+              }
           ?>
-          <li><input class="input_check" type="radio" value="<?php echo get_the_title($post->ID); ?>" id="catel-<?php echo get_the_slug($post->ID); ?>" name="check_cate" />
+          <li><input class="input_check" type="radio" value="<?php echo get_the_title($post->ID); ?>" id="catel-<?php echo get_the_slug($post->ID); ?>" name="check_cate" <?php echo $checked; ?> />
           <label for="catel-<?php echo get_the_slug($post->ID); ?>"><?php echo get_the_title($post->ID); ?></label>
           </li>
 
@@ -51,6 +58,43 @@
             }
           ?>
         </ul>
+
+
+
+
+<!-- select -->
+<select id="seclect_cate01">
+  <option value="active_all">全て</option>
+          <?php
+            $default_posts_per_page = get_option( 'posts_per_page' );
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            global $post;
+            global $wp_query;
+            $args = array(
+              'post_type' =>'service',
+              'posts_per_page' => -1,
+              'orderby' => date,
+              'order' => desc,
+              'field' => 'slug'
+            );
+            $the_query = new WP_Query( $args );
+            $blog_posts = get_posts($args);
+            if($blog_posts) {
+            $i=1;
+            foreach($blog_posts as $post) : setup_postdata($post);
+              $cat_slug_list = get_the_slug($post->ID);
+
+          ?><option value="catel-<?php echo get_the_slug($post->ID); ?>"><?php echo get_the_title($post->ID); ?></option>
+<?php
+                  $i++;
+              endforeach;
+              wp_reset_postdata();
+            }
+          ?>
+</select>
+<!-- //select -->
+
+
         </form>
        </div>
     </div>
@@ -102,6 +146,7 @@
             if( $post_objects ):
               foreach( $post_objects as $post):
                 $service_slugs .= get_the_slug($post->ID). ' ';
+                $service_slug = get_the_slug($post->ID);
                 $service_name = get_the_title($post->ID);
                   $field_id = get_the_ID();
                   $color_code = get_field('service_color',$field_id);
@@ -111,9 +156,15 @@
 
             $color_codes = explode("#", $color_code);
             $color_class = 'service-'.$color_codes[1];
-           ?>
+            $active_query = '';
+            if($service_slug == $my_c) {
+              $active_query = 'active_query';
+            } else {
+              $active_query = 'disable_query';
+            }
 
-            <div class="<?php echo $color_class; ?> catew catel-<?php echo $service_slugs ; ?> box_w clearfix" data-service-color="<?php echo $color_code; ?>">
+            ?>
+            <div class="<?php echo $color_class; echo ' '.$active_query; ?> catew catel-<?php echo $service_slugs ; ?> box_w clearfix" data-service-color="<?php echo $color_code; ?>">
               <div class="box_w_top clearfix">
                 <p class="img_lworks">
                 <?php if ( has_post_thumbnail($work_id) ) { ?>
@@ -145,8 +196,7 @@
               </div>
             </div>
 
-          <?php
-
+            <?php
             $i++;
           endforeach;
         }

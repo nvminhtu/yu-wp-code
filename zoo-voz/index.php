@@ -17,6 +17,4 @@
    ?>
  </div>
  <!-- main end -->
- <?php //kriesi_pagination();  ?>
-<?php //wp_pagenavi( ); ?>
 <?php get_footer();?>

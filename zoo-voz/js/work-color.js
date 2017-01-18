@@ -32,7 +32,7 @@
               $border_cat_name.css('border', str_border );
               $border_cat_name.css('color', service_color );
 
-              console.log(hover_override);
+            
               $('head').append(hover_override);
        });
 

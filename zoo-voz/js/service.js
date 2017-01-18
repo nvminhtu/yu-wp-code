@@ -17,8 +17,6 @@
          cat_color = $wrap_color.data('cat-color'),
          cat_wrap_color = $wrap_color.data('cat-color');
 
-      console.log(cat_wrap_color);
-      console.log(cat_color);
       var rgb_code = hexToRgb(cat_color);
       //add inline CSS
       $cat_text.css('color', cat_color);

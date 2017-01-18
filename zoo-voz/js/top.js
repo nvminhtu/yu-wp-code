@@ -41,11 +41,22 @@ $(document).ready(function(e) {
 		$("#video_service")[0].play();
 		//$('#video_service')[0].pause();
 	});
+	
+	
+	 $(".idex_news_title").click(function(){
+		$("#video_main")[0].play();
+		//$('#video_service')[0].pause();
+	});
+	
+	
+	setTimeout(function(){ $(".idex_news_title").trigger( "click" ); }, 3000);
+	
 });
 
 
 
-$(document).ready(function() {   
+
+/*$(document).ready(function() {   
  "use strict"; 
 	  $('#slider_index_list01').bxSlider({
 	    mode: 'fade',
@@ -55,6 +66,6 @@ $(document).ready(function() {
 	  pause: 5000,
 		
 	  });
-});
+});*/
 
 

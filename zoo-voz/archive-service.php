@@ -50,16 +50,18 @@
           <div class="<?php echo $align_class; ?> service_box clearfix <?php echo $color_class;  ?>" data-cat-color="<?php echo $color_code; ?>">
             <div class="ser_boxct clearfix">
               <h4 id="title_service01" class="title_service"><span class="ser_icon"><img src="<?php echo $service_icon; ?>" /></span><?php echo $service_title; ?></h4>
-                <?php echo mb_substr(($service_heading_text),0,120) . '...'; ?>
+                <?php echo mb_substr(($service_heading_text),0,120); ?>
                 <p class="des_ser">
-                  <?php echo mb_substr(strip_tags(get_the_content()),0,120) . '...'; ?>
+                  <?php echo mb_substr(strip_tags(get_the_content()),0,120); ?>
                 </p>
+                <?php if($service_price!=''|| $service_period!='') { ?>
                 <div class="info_ser clearfix">
                   <ul>
-                      <li class="list_price"><?php echo $service_price; ?></li>
-                      <li class="list_period"><?php echo $service_period; ?></li>
-                    </ul>
+                    <li class="list_price"><?php echo $service_price; ?></li>
+                    <li class="list_period"><?php echo $service_period; ?></li>
+                  </ul>
                 </div>
+                <?php } ?>
             </div>
             <div class="ser_img clearfix">
               <p><img src="<?php echo $img_url; ?>" alt="<?php echo $service_sub_text; ?>" /></p>

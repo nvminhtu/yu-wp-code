@@ -14,7 +14,7 @@
         $args = array(
           'post_type' => 'blog',
           'post__not_in' => array($postID),
-          'posts_per_page' => -1,
+          'posts_per_page' => 4,
           'orderby' => date,
           'order' => desc,
           'field' => 'slug'
@@ -42,7 +42,7 @@
 				  if($i%2==0) {
 					$stt_h = $j++;
 				  }
-			  
+
               $content_shortcode .= '<div class="related_box heightLine-'.$stt_h.' clearfix '.$last_class.'">';
         				$content_shortcode .= '<div class="list_latestpost_sb_img"><p><a href="'.get_permalink($post->ID).'">';
                 if(has_post_thumbnail($id)) {

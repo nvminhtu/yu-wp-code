@@ -23,10 +23,12 @@ $(window).bind("load scroll",function(){
 	if ($(this).scrollTop() > top_sticky_menu_header - 99) {
 		
 		$(".under #blog_menu_top").css("top","79px" );
+		$(".under #works_menu_top").css("top","79px" );
 		
 	}
 	else{
 		$(".under #blog_menu_top").css("top",top_blog_menu_top );
+		$(".under #works_menu_top").css("top",top_blog_menu_top );
 	}
 
 });

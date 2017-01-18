@@ -23,7 +23,7 @@
 ?>
 <body id="<?php echo $classID; ?>" class="under nomain">
   <div id="wrapper">
-    
+
 
   <!-- sticky_header start -->
   <?php include('parts/sticky-menu.php'); ?>

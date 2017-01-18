@@ -191,6 +191,13 @@ $(window).bind("load",function(){
 	},function(){
 		$("#blog_menu_top").stop(1,0).delay(200).slideUp();
 	});
+		//hover menu works on menu
+	$(".menu_works01,#works_menu_top").hover(function(){
+	 	$("#works_menu_top").stop(1,0).delay(200).slideDown();
+		
+	},function(){
+		$("#works_menu_top").stop(1,0).delay(200).slideUp();
+	});
 	
 	//list single menu
 	$("#list_cate_menu01 li a").hover(function(){

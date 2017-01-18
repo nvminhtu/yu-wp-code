@@ -40,7 +40,12 @@ function categories_list() {
 
 /* 03- Related Posts Sidebar	*/
 add_shortcode('sb_related_posts', 'sb_related_posts');
-function sb_related_posts() {
+function sb_related_posts($atts) {
+
+  extract(shortcode_atts(array(
+     'number_posts' => 3
+  ), $atts));
+
 	$content_shortcode = '';
 
   $content_shortcode .= '<dl class="sidebar_list sidbar_list_post">';
@@ -51,7 +56,7 @@ function sb_related_posts() {
         $args = array(
   				'post_type' => 'blog',
   				'post__not_in' => array($postID),
-  				'posts_per_page' => -1,
+  				'posts_per_page' => $number_posts,
   				'orderby' => date,
   				'order' => desc,
   				'field' => 'slug'
@@ -92,6 +97,7 @@ function sb_related_posts() {
           wp_reset_postdata();
 
   $content_shortcode .= '</dl>';
+  $content_shortcode .= '<div class="view_blog btn01 btn_hblue"><a href="'.get_bloginfo('siteurl').'/blog/"><span>一覧はこちら</span></a></div>';
 
   return $content_shortcode;
 }

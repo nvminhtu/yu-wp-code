@@ -42,24 +42,40 @@
               </div>
             </div>
             <div class="blogd_content clearfix">
-              <p><img src="<?php echo $img_url; ?>" /></p>
+              <p class="center"><img src="<?php echo $img_url; ?>" /></p>
               <?php the_content(); ?>
               <?php echo do_shortcode('[related_blogs]'); ?>
 
+              <?php include('parts/social-bottom.php') ?>
+
               <div class="adsense_area_box clearfix">
-                <!-- Start Adsense code -->
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- groovoost.com -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-7469938523971093"
-                     data-ad-slot="1896215165"
-                     data-ad-format="auto"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                <!-- End Adsense code -->
-              </div>
+                <div class="adsense_box clearfix">
+                  <!-- Start Adsense code -->
+                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				  	<!-- groovoost.com - under blog articles 300×250 2 -->
+				  	<ins class="adsbygoogle"
+				  	style="display:inline-block;width:300px;height:250px"
+				  	data-ad-client="ca-pub-7469938523971093"
+				  	data-ad-slot="5845613165"></ins>
+				  	<script>
+				  	(adsbygoogle = window.adsbygoogle || []).push({});
+				  </script>
+                  <!-- End Adsense code -->
+                </div>
+                <div class="adsense_box clearfix">
+                  <!-- Start Adsense code -->
+                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				  	<!-- groovoost.com - under blog articles 300×250 2 -->
+				  	<ins class="adsbygoogle"
+				  	style="display:inline-block;width:300px;height:250px"
+				  	data-ad-client="ca-pub-7469938523971093"
+				  	data-ad-slot="5845613165"></ins>
+				  	<script>
+				  	(adsbygoogle = window.adsbygoogle || []).push({});
+				  </script>
+                  <!-- End Adsense code -->
+                </div>
+              <!-- .adsense_area_box --></div>
 
 
               <div class="person_box clearfix">
@@ -72,13 +88,15 @@
                 $fullname = $firstname.' '.$lastname;
                 $author_id = get_the_author_meta('ID');
                 $user_position = get_field('user_position', 'user_'. $author_id);
+                $user_jp_name =  get_field('member_jp_name', 'user_'. $author_id);
+                $slug_member_blog = str_replace(' ', '', $user_jp_name);
               ?>
             	 <div class="img_person clearfix">
                  	<p><?php echo get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size );  ?></p>
             	</div>
             			<div class="info_person clearfix">
-            				<p class="person_name"><?php echo $fullname; ?></p>
-            					<p class="person_positon"><?php echo $user_position; ?></p>
+            				<p class="person_name"><a href="<?php bloginfo('siteurl'); ?>/member/"><?php echo $user_jp_name; ?></a></p>
+            				<p class="person_positon"><?php echo $user_position; ?></p>
             			</div>
             			<p class="person_des"><?php echo $biographical; ?></p>
             	</div>
