@@ -25,29 +25,8 @@
             <h1 class="bh"><?php the_title(); ?></h1>
 
             <div class="blogd_content clearfix">
-              <p><img src="<?php echo $img_url; ?>" /></p>
+              <p class="center"><img src="<?php echo $img_url; ?>" /></p>
               <?php the_content(); ?>
-              <?php /* <div class="person_box clearfix">
-            	 <p class="ptitle_01">記事を書いたひと</p>
-               <?php
-                //get the author meta information
-                $firstname = get_the_author_meta( 'user_firstname' );
-                $lastname = get_the_author_meta( 'user_lastname' );
-                $biographical = get_the_author_meta( 'description' );
-                $fullname = $firstname.' '.$lastname;
-                $author_id = get_the_author_meta('ID');
-                $user_position = get_field('user_position', 'user_'. $author_id);
-              ?>
-            	 <div class="img_person clearfix">
-                 	<p><?php echo get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size );  ?></p>
-            	</div>
-            			<div class="info_person clearfix">
-            				<p class="person_name"><?php echo $fullname; ?></p>
-            					<p class="person_positon"><?php echo $user_position; ?></p>
-            			</div>
-            			<p class="person_des"><?php echo $biographical; ?></p>
-            	</div>
-              */ ?>
             </div>
           </div>
           <!-- #### sidebar ####-->

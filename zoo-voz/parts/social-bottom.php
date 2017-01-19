@@ -8,13 +8,15 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
   	   <ul id="so_like">
-
-      <li><div class="fb-share-button" data-href="<?php get_permalink(); ?>" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php get_permalink(); ?>">Share</a></div></li>
-        <li>
-          <a href="http://twitter.com/share" class="twitter-share-button" data-text="Share post" data-count="horizontal" data-lang="ja" data-url="<?php get_permalink(); ?>">ツイート</a><script type="text/javascript" charset="utf-8" src="http://platform.twitter.com/widgets.js"></script>
-          </li>
-      
-        <li><!-- #twitter -->
+          <li><!-- #facebookshare -->
+            <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" class="share_button">
+              <img src="<?php bloginfo('template_url'); ?>/images/social/fb-icon.png" alt="Facebook Share">
+            </a>
+          <!-- facebookshare --></li>
+          <li><!-- #facebook -->
+            <div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+          <!-- facebook --></li>
+          <li><!-- #twitter -->
           <script type="text/javascript"
                 src="//jsoon.digitiminimi.com/js/widgetoon.js"></script>
                 <a href="http://twitter.com/share"
