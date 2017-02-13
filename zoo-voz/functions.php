@@ -104,7 +104,6 @@ function remove_width_attribute( $html ) {
 }
 
 add_filter( 'get_image_tag_class', '__return_empty_string' );
-<<<<<<< HEAD
 
 //add <p> tag around image when inser to media
 if( is_admin() ) {
@@ -126,5 +125,19 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 }
-=======
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
+
+// add custom size for image size choose
+add_image_size( 'custom_small', 500, 9999);
+add_image_size( 'custom_medium', 700, 9999 );
+add_image_size( 'custom_large', 1000, 9999 );
+
+add_filter('image_size_names_choose', 'custom_image_sizes');
+  function custom_image_sizes($sizes) {
+  $addsizes = array(
+   "custom_small" => __( "Custom Small Size"),
+   "custom_medium" => __( "Custom Medium Size"),
+   "custom_large" => __( "Custom Large Size")
+  );
+  $newsizes = array_merge($sizes, $addsizes);
+  return $newsizes;
+}

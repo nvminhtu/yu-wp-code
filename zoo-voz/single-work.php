@@ -21,6 +21,7 @@
       $work_product_link = get_field('work_product_link',$post->ID);
       $work_client_name = get_field('work_client_name',$post->ID);
       $work_devices = get_field('work_devices',$post->ID);
+      $is_video_work = get_field('video_work',$post->ID);
     ?>
 	<div class="content_inner clearfix">
        <h3 class="title_h302"><?php the_title(); ?></h3>
@@ -62,6 +63,14 @@
               </ul>
               </dd>
         </dl>
+        <?php if($is_video_work=='Yes') { 
+          $pizza  = $work_product_link;
+          $pieces = explode("=", $pizza);
+        ?>
+        <dl>
+          <div class="video-container"><iframe width="100%" height="auto" src="https://www.youtube.com/embed/<?php echo $pieces[1]; ?>" frameborder="0" allowfullscreen></iframe></div>
+        </dl>
+        <?php } ?>
       </div>
 
 

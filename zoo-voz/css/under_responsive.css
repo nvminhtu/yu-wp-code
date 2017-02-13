@@ -376,24 +376,11 @@ h4.bh {
 .dummy_navi{
 	display:none !important;
 }
-<<<<<<< HEAD
 .under #header {
 	height: 250px;
 }
 .under #wrapper {
 	padding-top: 285px;
-=======
- .under #header .header_title {
- font-size: 18px;
- padding-top: 30px;
-}
-.under #header h2,
-.under #header p.campaign {
- font-size: 30px;
- font-weight: bold;
- letter-spacing: -2px;
- padding: 10px 0 15px;
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
 }
 .under #header .header_title {
 	font-size: 18px;
@@ -509,7 +496,6 @@ h4.bh {
 .title_concep02 {
 	font-size: 5vw;
 }
-<<<<<<< HEAD
 .social_box01 .social_box01_inner {
 	width: 100%;
 	margin: 0 0 30px 0;
@@ -517,21 +503,6 @@ h4.bh {
 	background: #F4F4F4;
 	box-sizing: border-box;
 	padding: 2%;
-=======
- @media screen and (max-width:768px) {
-.social_box01 .social_box01_inner{
-	width:100%;
-	margin:0 0 30px 0;
-	float:left;
-	background:#F4F4F4;
-	box-sizing:border-box;
-	padding:2%;
-
-}
-
- .box_txt_contact {
- margin-bottom:10px;
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
 }
 .box_txt_contact {
 	margin-bottom: 10px;
@@ -765,9 +736,9 @@ ul.list01 li::before {
 	width: calc(100% - 115px);
 }
 }
-<<<<<<< HEAD
 
 @media screen and (max-width: 640px) {
+	.video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden}.video-container embed,.video-container iframe,.video-container object{position:absolute;top:0;left:0;width:100%;height:100%}
 /* contact */
 	.list_button_confirm li{
 
@@ -876,19 +847,6 @@ ul.list01 li::before {
 }
 
 @media screen and (max-width: 600px) {
-=======
- @media screen and (max-width: 640px) {
-
-#seclect_cate01{
-	display:block;
-}
-#radio_cate01{
-	display:none;
-}
- }
-
- @media screen and (max-width: 600px) {
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
 h3.title_lblog {
 	font-size: 25px;
 }
@@ -931,7 +889,6 @@ h3.title_lblog {
 .img_person, .info_person, #content.blog_detail .person_des {
 	width: 100%;
 }
-<<<<<<< HEAD
 .under #header .header_title {
 	font-size: 16px;
 	padding-top: 30px;
@@ -939,16 +896,6 @@ h3.title_lblog {
 .under #header h2, .under #header p.campaign {
 	font-size: 25px;
 	padding: 15px 0 20px;
-=======
- .under #header .header_title {
- font-size: 16px;
- padding-top: 30px;
-}
-.under #header h2,
-.under #header p.campaign {
- font-size: 25px;
- padding: 15px 0 20px;
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
 }
 .btn_header01 {
 	max-width: 180px;
@@ -991,6 +938,12 @@ h3.title_lblog {
 }
 }
 
+
+@media screen and (max-width: 450px) {
+	.adsense_area_box iframe{
+		min-height: 250px!important;
+	}
+}
 @media screen and (max-width: 350px) {
 	.adsense_area_box{
 		margin-left:-15px;

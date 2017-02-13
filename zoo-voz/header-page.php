@@ -47,13 +47,6 @@
             </div>
             <div id="bg_box_out">&nbsp;</div>
           </div>
-          <script>
-	$(document).ready(function(e) {
-        	var myVideo =  $("#main_unvideo").find("iframe"); 
-			myVideo.mute();
-    });
-
-</script>
         <?php endif; ?>
 
 
