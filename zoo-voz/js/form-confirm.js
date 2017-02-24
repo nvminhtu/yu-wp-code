@@ -6,15 +6,13 @@
     }
 
     function gotoConfirm(){
-      $(window).load(function() {
+      //getdata: get data and show to textarea
+      var note_data = localStorage.getItem('your-note');
+      $('#your-note-confirm').html(note_data);
 
-        //getdata: get data and show to textarea
-        var note_data = localStorage.getItem('your-note');
-        $('#your-note-confirm').html(note_data);
-
-        //backdata: check data has or not
-        $('#your-note').html(note_data);
-      });
+      //backdata: check data has or not
+      $('#your-note').html(note_data);
+      
 
       
       //action: click button - go to confirm page - save data
