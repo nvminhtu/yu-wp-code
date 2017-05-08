@@ -63,12 +63,13 @@
               </ul>
               </dd>
         </dl>
-        <?php if($is_video_work=='Yes') { 
+        <?php if($is_video_work=='Yes') {
           $pizza  = $work_product_link;
           $pieces = explode("=", $pizza);
+          $ratio = 560 / 315;
         ?>
         <dl>
-          <div class="video-container"><iframe width="100%" height="auto" src="https://www.youtube.com/embed/<?php echo $pieces[1]; ?>" frameborder="0" allowfullscreen></iframe></div>
+          <div class="video-container" id="ytube"><iframe width="100%" data-ratio="<?php echo $ratio; ?>" src="https://www.youtube.com/embed/<?php echo $pieces[1]; ?>" frameborder="0" allowfullscreen></iframe></div>
         </dl>
         <?php } ?>
       </div>

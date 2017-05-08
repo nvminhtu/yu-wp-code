@@ -69,8 +69,6 @@
 </div>
 
  <script src="<?php bloginfo('template_url'); ?>/js/jquery.js" type="text/javascript"></script>
-  <script src="<?php bloginfo('template_url'); ?>/js/form-confirm.js" type="text/javascript"></script>
-  
  <script src="<?php bloginfo('template_url'); ?>/js/jquery.scroll.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/rollover.min.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.js" type="text/javascript"></script>
@@ -116,7 +114,7 @@
 <script src="<?php bloginfo('template_url'); ?>/js/heightLine.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/wow.js" type="text/javascript"></script>
  <script src="<?php bloginfo('template_url'); ?>/js/detect.js" type="text/javascript"></script>
-
+ <script src="<?php bloginfo('template_url'); ?>/js/form-confirm.js" type="text/javascript"></script>
 <!-- <script>
   $(document).ready(function(e) {
     wow = new WOW(

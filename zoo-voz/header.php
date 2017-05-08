@@ -1,8 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<?php /* <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
-*/ ?>
+<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />

@@ -17,30 +17,18 @@ var markerOptions = {
 position: latlng,
 map: map,
 icon: icon,
-<<<<<<< HEAD
 title: 'Groovoost Inc.',/*タイトル*/
-=======
-title: 'kuruTon+',/*タイトル*/
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
 animation: google.maps.Animation.DROP/*アニメーション*/
 };
 var marker = new google.maps.Marker(markerOptions);
 var styleOptions = [
 {
 "stylers": [
-<<<<<<< HEAD
 { "hue": '#a3b1bb' }
 ]
 }
 ];
 var styledMapOptions = { name: 'Groovoost Inc.' }/*地図右上のタイトル*/
-=======
-{ "hue": '#57ADDE' }
-]
-}
-];
-var styledMapOptions = { name: 'kuruTon+' }/*地図右上のタイトル*/
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
 var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
 map.mapTypes.set('style', sampleType);
 map.setMapTypeId('style');

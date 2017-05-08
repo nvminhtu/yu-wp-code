@@ -22,11 +22,7 @@
   $the_query = new WP_Query( $args );
   $blog_posts = get_posts($args);
   if($blog_posts) {
-<<<<<<< HEAD
     $i=0;
-=======
-    $i=1;
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
     $show = 0;
 ?>
 
@@ -51,11 +47,7 @@
 ?>
 
 
-<<<<<<< HEAD
 <?php
-=======
-<?php if($i<4) {
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
         $post_objects = get_field('selected_service',$post->ID);
         if( $post_objects ):
           foreach( $post_objects as $post):
@@ -75,10 +67,7 @@
                     <div class="list_works clearfix">
               <?php
                 } //end show container
-<<<<<<< HEAD
                 if($i<=4) {
-=======
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
               ?>
 
               <div class="box_lworks clearfix wow postItem" data-wow-delay="0.3s">
@@ -120,11 +109,7 @@
           wp_reset_postdata();
 
         endif;
-<<<<<<< HEAD
 
-=======
-         } // end check 4 items
->>>>>>> 0d2f802675c860a6a84fe59f2bb6320c792a2a3b
       endforeach; ?>
       <?php if($show >= 1) { //start show container ?>
         </div>
